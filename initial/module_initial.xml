@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_initial" default="compile.module.initial">
+  <dirname property="module.initial.basedir" file="${ant.file.module_initial}"/>
+  
+  <property name="module.jdk.home.initial" value="${jdk.home.1.8}"/>
+  <property name="module.jdk.bin.initial" value="${jdk.bin.1.8}"/>
+  <property name="module.jdk.classpath.initial" value="jdk.classpath.1.8"/>
+  
+  <property name="compiler.args.initial" value="-encoding UTF-8 -source 1.8 -target 1.8 ${compiler.args}"/>
+  
+  <property name="initial.output.dir" value="${module.initial.basedir}/target/classes"/>
+  <property name="initial.testoutput.dir" value="${module.initial.basedir}/target/test-classes"/>
+  
+  <path id="initial.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="initial.module.production.classpath">
+    <path refid="${module.jdk.classpath.initial}"/>
+    <path refid="library.maven:_io.grpc:grpc-netty:1.10.0.classpath"/>
+    <path refid="library.maven:_io.grpc:grpc-core:1.10.0.classpath"/>
+    <path refid="library.maven:_io.grpc:grpc-context:1.10.0.classpath"/>
+    <path refid="library.maven:_com.google.code.gson:gson:2.7.classpath"/>
+    <path refid="library.maven:_com.google.errorprone:error_prone_annotations:2.1.2.classpath"/>
+    <path refid="library.maven:_com.google.code.findbugs:jsr305:3.0.0.classpath"/>
+    <path refid="library.maven:_io.opencensus:opencensus-api:0.11.0.classpath"/>
+    <path refid="library.maven:_io.opencensus:opencensus-contrib-grpc-metrics:0.11.0.classpath"/>
+    <path refid="library.maven:_io.netty:netty-codec-http2:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-codec-http:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-codec:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-handler:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-buffer:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-common:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-handler-proxy:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-transport:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-resolver:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-codec-socks:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.grpc:grpc-protobuf:1.10.0.classpath"/>
+    <path refid="library.maven:_com.google.guava:guava:19.0.classpath"/>
+    <path refid="library.maven:_com.google.protobuf:protobuf-java-util:3.5.1.classpath"/>
+    <path refid="library.maven:_com.google.api.grpc:proto-google-common-protos:1.0.0.classpath"/>
+    <path refid="library.maven:_io.grpc:grpc-protobuf-lite:1.10.0.classpath"/>
+    <path refid="library.maven:_io.grpc:grpc-stub:1.10.0.classpath"/>
+    <path refid="library.maven:_io.netty:netty-tcnative-boringssl-static:2.0.7.final.classpath"/>
+    <path refid="library.maven:_com.google.protobuf:protobuf-java:3.5.1.classpath"/>
+    <path refid="library.maven:_org.bouncycastle:bcpkix-jdk15on:1.59.classpath"/>
+    <path refid="library.maven:_org.bouncycastle:bcprov-jdk15on:1.59.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_commons-cli:commons-cli:1.4.classpath"/>
+    <path refid="library.maven:_org.apache.commons:commons-compress:1.16.1.classpath"/>
+    <path refid="library.maven:_org.objenesis:objenesis:2.6.classpath"/>
+    <path refid="library.maven:_commons-io:commons-io:2.6.classpath"/>
+    <path refid="library.maven:_log4j:log4j:1.2.17.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient:4.5.5.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpcore:4.4.9.classpath"/>
+    <path refid="library.maven:_commons-codec:commons-codec:1.10.classpath"/>
+    <path refid="library.maven:_org.hyperledger.fabric-sdk-java:fabric-sdk-java:1.0.1.classpath"/>
+    <path refid="library.maven:_org.yaml:snakeyaml:1.19.classpath"/>
+    <path refid="library.maven:_org.glassfish:javax.json:1.1.2.classpath"/>
+    <path refid="library.maven:_javax.json:javax.json-api:1.1.2.classpath"/>
+  </path>
+  
+  <path id="initial.runtime.production.module.classpath">
+    <pathelement location="${initial.output.dir}"/>
+    <path refid="library.maven:_io.grpc:grpc-netty:1.10.0.classpath"/>
+    <path refid="library.maven:_io.grpc:grpc-core:1.10.0.classpath"/>
+    <path refid="library.maven:_io.grpc:grpc-context:1.10.0.classpath"/>
+    <path refid="library.maven:_com.google.code.gson:gson:2.7.classpath"/>
+    <path refid="library.maven:_com.google.errorprone:error_prone_annotations:2.1.2.classpath"/>
+    <path refid="library.maven:_com.google.code.findbugs:jsr305:3.0.0.classpath"/>
+    <path refid="library.maven:_io.opencensus:opencensus-api:0.11.0.classpath"/>
+    <path refid="library.maven:_io.opencensus:opencensus-contrib-grpc-metrics:0.11.0.classpath"/>
+    <path refid="library.maven:_io.netty:netty-codec-http2:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-codec-http:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-codec:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-handler:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-buffer:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-common:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-handler-proxy:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-transport:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-resolver:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-codec-socks:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.grpc:grpc-protobuf:1.10.0.classpath"/>
+    <path refid="library.maven:_com.google.guava:guava:19.0.classpath"/>
+    <path refid="library.maven:_com.google.protobuf:protobuf-java-util:3.5.1.classpath"/>
+    <path refid="library.maven:_com.google.api.grpc:proto-google-common-protos:1.0.0.classpath"/>
+    <path refid="library.maven:_io.grpc:grpc-protobuf-lite:1.10.0.classpath"/>
+    <path refid="library.maven:_io.grpc:grpc-stub:1.10.0.classpath"/>
+    <path refid="library.maven:_io.netty:netty-tcnative-boringssl-static:2.0.7.final.classpath"/>
+    <path refid="library.maven:_com.google.protobuf:protobuf-java:3.5.1.classpath"/>
+    <path refid="library.maven:_org.bouncycastle:bcpkix-jdk15on:1.59.classpath"/>
+    <path refid="library.maven:_org.bouncycastle:bcprov-jdk15on:1.59.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_commons-cli:commons-cli:1.4.classpath"/>
+    <path refid="library.maven:_org.apache.commons:commons-compress:1.16.1.classpath"/>
+    <path refid="library.maven:_org.objenesis:objenesis:2.6.classpath"/>
+    <path refid="library.maven:_commons-io:commons-io:2.6.classpath"/>
+    <path refid="library.maven:_log4j:log4j:1.2.17.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient:4.5.5.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpcore:4.4.9.classpath"/>
+    <path refid="library.maven:_commons-codec:commons-codec:1.10.classpath"/>
+    <path refid="library.maven:_org.hyperledger.fabric-sdk-java:fabric-sdk-java:1.1.0-alpha.classpath"/>
+    <path refid="library.maven:_org.yaml:snakeyaml:1.19.classpath"/>
+    <path refid="library.maven:_org.glassfish:javax.json:1.1.2.classpath"/>
+    <path refid="library.maven:_javax.json:javax.json-api:1.1.2.classpath"/>
+  </path>
+  
+  <path id="initial.module.classpath">
+    <path refid="${module.jdk.classpath.initial}"/>
+    <pathelement location="${initial.output.dir}"/>
+    <path refid="library.maven:_junit:junit:4.12.classpath"/>
+    <path refid="library.maven:_org.hamcrest:hamcrest-core:1.3.classpath"/>
+    <path refid="library.maven:_io.grpc:grpc-netty:1.10.0.classpath"/>
+    <path refid="library.maven:_io.grpc:grpc-core:1.10.0.classpath"/>
+    <path refid="library.maven:_io.grpc:grpc-context:1.10.0.classpath"/>
+    <path refid="library.maven:_com.google.code.gson:gson:2.7.classpath"/>
+    <path refid="library.maven:_com.google.errorprone:error_prone_annotations:2.1.2.classpath"/>
+    <path refid="library.maven:_com.google.code.findbugs:jsr305:3.0.0.classpath"/>
+    <path refid="library.maven:_io.opencensus:opencensus-api:0.11.0.classpath"/>
+    <path refid="library.maven:_io.opencensus:opencensus-contrib-grpc-metrics:0.11.0.classpath"/>
+    <path refid="library.maven:_io.netty:netty-codec-http2:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-codec-http:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-codec:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-handler:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-buffer:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-common:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-handler-proxy:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-transport:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-resolver:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-codec-socks:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.grpc:grpc-protobuf:1.10.0.classpath"/>
+    <path refid="library.maven:_com.google.guava:guava:19.0.classpath"/>
+    <path refid="library.maven:_com.google.protobuf:protobuf-java-util:3.5.1.classpath"/>
+    <path refid="library.maven:_com.google.api.grpc:proto-google-common-protos:1.0.0.classpath"/>
+    <path refid="library.maven:_io.grpc:grpc-protobuf-lite:1.10.0.classpath"/>
+    <path refid="library.maven:_io.grpc:grpc-stub:1.10.0.classpath"/>
+    <path refid="library.maven:_io.netty:netty-tcnative-boringssl-static:2.0.7.final.classpath"/>
+    <path refid="library.maven:_com.google.protobuf:protobuf-java:3.5.1.classpath"/>
+    <path refid="library.maven:_org.bouncycastle:bcpkix-jdk15on:1.59.classpath"/>
+    <path refid="library.maven:_org.bouncycastle:bcprov-jdk15on:1.59.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_commons-cli:commons-cli:1.4.classpath"/>
+    <path refid="library.maven:_org.apache.commons:commons-compress:1.16.1.classpath"/>
+    <path refid="library.maven:_org.objenesis:objenesis:2.6.classpath"/>
+    <path refid="library.maven:_commons-io:commons-io:2.6.classpath"/>
+    <path refid="library.maven:_log4j:log4j:1.2.17.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient:4.5.5.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpcore:4.4.9.classpath"/>
+    <path refid="library.maven:_commons-codec:commons-codec:1.10.classpath"/>
+    <path refid="library.maven:_org.hyperledger.fabric-sdk-java:fabric-sdk-java:1.1.0-alpha.classpath"/>
+    <path refid="library.maven:_org.yaml:snakeyaml:1.19.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpmime:4.5.5.classpath"/>
+    <path refid="library.maven:_org.glassfish:javax.json:1.1.2.classpath"/>
+    <path refid="library.maven:_javax.json:javax.json-api:1.1.2.classpath"/>
+  </path>
+  
+  <path id="initial.runtime.module.classpath">
+    <pathelement location="${initial.testoutput.dir}"/>
+    <pathelement location="${initial.output.dir}"/>
+    <path refid="library.maven:_junit:junit:4.12.classpath"/>
+    <path refid="library.maven:_org.hamcrest:hamcrest-core:1.3.classpath"/>
+    <path refid="library.maven:_io.grpc:grpc-netty:1.10.0.classpath"/>
+    <path refid="library.maven:_io.grpc:grpc-core:1.10.0.classpath"/>
+    <path refid="library.maven:_io.grpc:grpc-context:1.10.0.classpath"/>
+    <path refid="library.maven:_com.google.code.gson:gson:2.7.classpath"/>
+    <path refid="library.maven:_com.google.errorprone:error_prone_annotations:2.1.2.classpath"/>
+    <path refid="library.maven:_com.google.code.findbugs:jsr305:3.0.0.classpath"/>
+    <path refid="library.maven:_io.opencensus:opencensus-api:0.11.0.classpath"/>
+    <path refid="library.maven:_io.opencensus:opencensus-contrib-grpc-metrics:0.11.0.classpath"/>
+    <path refid="library.maven:_io.netty:netty-codec-http2:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-codec-http:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-codec:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-handler:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-buffer:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-common:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-handler-proxy:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-transport:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-resolver:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.netty:netty-codec-socks:4.1.17.final.classpath"/>
+    <path refid="library.maven:_io.grpc:grpc-protobuf:1.10.0.classpath"/>
+    <path refid="library.maven:_com.google.guava:guava:19.0.classpath"/>
+    <path refid="library.maven:_com.google.protobuf:protobuf-java-util:3.5.1.classpath"/>
+    <path refid="library.maven:_com.google.api.grpc:proto-google-common-protos:1.0.0.classpath"/>
+    <path refid="library.maven:_io.grpc:grpc-protobuf-lite:1.10.0.classpath"/>
+    <path refid="library.maven:_io.grpc:grpc-stub:1.10.0.classpath"/>
+    <path refid="library.maven:_io.netty:netty-tcnative-boringssl-static:2.0.7.final.classpath"/>
+    <path refid="library.maven:_com.google.protobuf:protobuf-java:3.5.1.classpath"/>
+    <path refid="library.maven:_org.bouncycastle:bcpkix-jdk15on:1.59.classpath"/>
+    <path refid="library.maven:_org.bouncycastle:bcprov-jdk15on:1.59.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_commons-cli:commons-cli:1.4.classpath"/>
+    <path refid="library.maven:_org.apache.commons:commons-compress:1.16.1.classpath"/>
+    <path refid="library.maven:_org.objenesis:objenesis:2.6.classpath"/>
+    <path refid="library.maven:_commons-io:commons-io:2.6.classpath"/>
+    <path refid="library.maven:_log4j:log4j:1.2.17.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient:4.5.5.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpcore:4.4.9.classpath"/>
+    <path refid="library.maven:_commons-codec:commons-codec:1.10.classpath"/>
+    <path refid="library.maven:_org.hyperledger.fabric-sdk-java:fabric-sdk-java:1.1.0-alpha.classpath"/>
+    <path refid="library.maven:_org.yaml:snakeyaml:1.19.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpmime:4.5.5.classpath"/>
+    <path refid="library.maven:_org.glassfish:javax.json:1.1.2.classpath"/>
+    <path refid="library.maven:_javax.json:javax.json-api:1.1.2.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.initial">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.initial">
+    <patternset refid="excluded.from.module.initial"/>
+  </patternset>
+  
+  <path id="initial.module.sourcepath">
+    <dirset dir="${module.initial.basedir}">
+      <include name="src/main/java"/>
+    </dirset>
+  </path>
+  
+  <path id="initial.module.test.sourcepath">
+    <dirset dir="${module.initial.basedir}">
+      <include name="src/test/java"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.initial" depends="compile.module.initial.production,compile.module.initial.tests" description="Compile module initial"/>
+  
+  <target name="compile.module.initial.production" depends="register.custom.compilers" description="Compile module initial; production classes">
+    <mkdir dir="${initial.output.dir}"/>
+    <javac2 destdir="${initial.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.initial}/javac">
+      <compilerarg line="${compiler.args.initial}"/>
+      <bootclasspath refid="initial.module.bootclasspath"/>
+      <classpath refid="initial.module.production.classpath"/>
+      <src refid="initial.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.initial"/>
+    </javac2>
+    
+    <copy todir="${initial.output.dir}">
+      <fileset dir="${module.initial.basedir}/src/main/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.initial.tests" depends="register.custom.compilers,compile.module.initial.production" description="compile module initial; test classes" unless="skip.tests">
+    <mkdir dir="${initial.testoutput.dir}"/>
+    <javac2 destdir="${initial.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.initial}/javac">
+      <compilerarg line="${compiler.args.initial}"/>
+      <bootclasspath refid="initial.module.bootclasspath"/>
+      <classpath refid="initial.module.classpath"/>
+      <src refid="initial.module.test.sourcepath"/>
+      <patternset refid="excluded.from.compilation.initial"/>
+    </javac2>
+    
+    <copy todir="${initial.testoutput.dir}">
+      <fileset dir="${module.initial.basedir}/src/test/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="clean.module.initial" description="cleanup module">
+    <delete dir="${initial.output.dir}"/>
+    <delete dir="${initial.testoutput.dir}"/>
+  </target>
+</project>
