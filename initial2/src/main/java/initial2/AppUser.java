@@ -2,6 +2,7 @@ package initial2;
 
 import org.bouncycastle.openssl.PEMWriter;
 import org.hyperledger.fabric.sdk.Enrollment;
+import org.hyperledger.fabric.sdk.NetworkConfig;
 import org.hyperledger.fabric.sdk.User;
 import org.hyperledger.fabric_ca.sdk.HFCAClient;
 
@@ -28,10 +29,10 @@ public class AppUser implements User, Serializable {
         // no-arg constructor
     }
 
-    public AppUser(String name, String org, String mspId, Enrollment enrollment, HFCAClient clientCA){
+    public AppUser(String name, String affiliation, String mspId, Enrollment enrollment, HFCAClient clientCA){
         this.name = name;
         //this.clientCA = clientCA;
-        this.affiliation = org;
+        this.affiliation = affiliation;
         this.mspId = mspId;
         this.enrollment = enrollment;
     }

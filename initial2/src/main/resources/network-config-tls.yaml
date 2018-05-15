@@ -38,27 +38,12 @@ client:
   # Which organization does this application instance belong to? The value must be the name of an org
   # defined under "organizations"
   organization: Org1
-  csr:
-    key:
-      algo: ecdsa
-      size: 256
-    names:
-      - C: Portugal
-        ST:
-        L:
-        O: Hyperledger Fabric
-        OU: Fabric CA
-    hosts:
-     - ca.initial.com
-    ca:
-      pathlen:
-      pathlenzero:
-      expiry:
-
+  #tlsCACerts:
+  #  path: /home/jorge/Documents/definit/crypto-config/peerOrganizations/org1.initial.com/tlsca/tlsca.org1.initial.com-cert.pem
 
 channels:
   # name of the channel
-  mychannel:
+  channel4:
     # Required. list of orderers designated by the application to use for transactions on this
     # channel. This list can be a result of access control ("org1" can only access "ordererA"), or
     # operational decisions to share loads from applications among the orderers.  The values must
@@ -127,7 +112,7 @@ organizations:
     # this way. The SDK should allow applications to set the org admin identity via APIs, and only use
     # this route as an alternative when it exists.
     adminPrivateKey:
-      path: /home/jorge/Documents/definit/crypto-config/peerOrganizations/org1.initial.com/users/Admin@org1.initial.com/msp/keystore/fca2e4235ebab79bf87c62147a4c37c1c1c6032b3f01902d01051c9b4ffaa793_sk
+      path: /home/jorge/Documents/definit/crypto-config/peerOrganizations/org1.initial.com/users/Admin@org1.initial.com/msp/keystore/admin1-key.pem
 
     signedCert:
       path: /home/jorge/Documents/definit/crypto-config/peerOrganizations/org1.initial.com/users/Admin@org1.initial.com/msp/signcerts/Admin@org1.initial.com-cert.pem
@@ -169,7 +154,7 @@ orderers:
       hostnameOverride: orderer0.initial.com
       grpc-max-send-message-length: 15
     
-    tlsCACerts: 
+    tlsCACerts:
         path: /home/jorge/Documents/definit/crypto-config/ordererOrganizations/initial.com/tlsca/tlsca.initial.com-cert.pem
       #ssl-target-name-override: orderer.example.com
 
@@ -306,12 +291,13 @@ certificateAuthorities:
     # the properties specified under this object are passed to the 'http' client verbatim when
     # making the request to the Fabric-CA server
     httpOptions:
-      verify: true
+      verify: false
+
     tlsCACerts:
       # Comma-Separated list of paths
-      path: /home/jorge/Documents/definit/crypto-config/peerOrganizations/org1.initial.com/ca/ca.org1.initial.com-cert.pem
+      path: /home/jorge/Documents/definit/crypto-config/peerOrganizations/org1.initial.com/ca/ca-cert.pem
       client:
-        keyfile: /home/jorge/Documents/definit/crypto-config/peerOrganizations/org1.initial.com/tlsca/8e2364e9a7b17c7760f324058f8b758511c828e45eed8407edfd0488d8265240_sk
+        keyfile: /home/jorge/Documents/definit/crypto-config/peerOrganizations/org1.initial.com/tlsca/tlsca-key.pem
         certfile: /home/jorge/Documents/definit/crypto-config/peerOrganizations/org1.initial.com/tlsca/tlsca.org1.initial.com-cert.pem
 
       # Client key and cert for TLS mutual auth with Fabric CA. If the target Fabric CA server
@@ -326,4 +312,3 @@ certificateAuthorities:
       enrollId: admin
       enrollSecret: adminpw
     # [Optional] The optional name of the CA.
-    caName: ca

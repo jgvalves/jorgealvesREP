@@ -10,17 +10,21 @@ networks:
 
 services:
   ca.initial.com:
-    image: hyperledger/fabric-ca
+    image: hyperledger/fabric-ca:x86_64-1.1.0
     environment:
       - FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server
-      - FABRIC_CA_SERVER_TLS_ENABLED=true
     ports:
       - "7054:7054"
+    #command: sh -c 'fabric-ca-server start --ca.keyfile /etc/hyperledger/fabric-ca-server-config/$CA1_PRIVATE_KEY'
+    #command: sh -c 'fabric-ca-server start --ca.certfile /etc/hyperledger/fabric-ca-server-config/ca.org1.initial.com-cert.pem --ca.keyfile /etc/hyperledger/fabric-ca-initial-config/$CA1_PRIVATE_KEY -b admin:adminpw --cfg.affiliations.allowremove --cfg.identities.allowremove -d'
+    command: sh -c 'fabric-ca-server start'
     volumes:
-      - ./crypto-config/peerOrganizations/org1.initial.com/ca:/etc/hyperledger/fabric-ca-server/:ro
-    command: sh -c 'fabric-ca-server start -n ca.initial.com --ca.certfile /etc/hyperledger/fabric-ca-server-config/ca.org1.example.com-cert.pem --ca.keyfile $(ls /etc/hyperledger/fabric-ca-server-config/ | grep sk) -b admin:adminpw --tls.enabled --tls.certfile /etc/hyperledger/fabric-ca-server-config/ca.org1.example.com-cert.pem --tls.keyfile $(ls /etc/hyperledger/fabric-ca-server-config/ | grep sk) -d'
+      - ./crypto-config/peerOrganizations/org1.initial.com/ca/:/etc/hyperledger/fabric-ca-server-config/
+      - ./fabric-ca-server-config.yaml:/etc/hyperledger/fabric-ca-server/fabric-ca-server-config.yaml
+      - ./crypto-config/peerOrganizations/org1.initial.com/tlsca/tlsca.org1.initial.com-cert.pem:/etc/hyperledger/fabric-ca-server-config/client/tlsca.org1.initial.com-cert.pem
+      - ./crypto-config/peerOrganizations/org1.initial.com/users/Admin@org1.initial.com/tls/:/etc/hyperledger/fabric-ca-server-config/client/
+      - ./crypto-config/peerOrganizations/org1.initial.com/users/Admin@org1.initial.com/msp/signcerts/Admin@org1.initial.com-cert.pem:/etc/hyperledger/fabric-ca-server-config/client/Admin@org1.initial.com-cert.pem
     container_name: ca.initial.com
-    
     networks:
       - basic
 
@@ -50,30 +54,30 @@ services:
     networks:
       - basic
 
-  orderer1.initial.com:
-    container_name: orderer1.initial.com
-    image: hyperledger/fabric-orderer
-    environment:
-      - ORDERER_GENERAL_LOGLEVEL=debug
-      - ORDERER_GENERAL_LISTENADDRESS=0.0.0.0
-      - ORDERER_GENERAL_GENESISMETHOD=file
-      - ORDERER_GENERAL_GENESISFILE=/etc/hyperledger/orderer/genesis.block
-      - ORDERER_GENERAL_LOCALMSPID=OrdererMSP
-      - ORDERER_GENERAL_LOCALMSPDIR=/etc/hyperledger/msp/orderer/msp
-      - ORDERER_GENERAL_TLS_ENABLED=true
-      - ORDERER_GENERAL_TLS_PRIVATEKEY=/etc/hyperledger/msp/orderer/tls/server.key
-      - ORDERER_GENERAL_TLS_CERTIFICATE=/etc/hyperledger/msp/orderer/tls/server.crt
-      - ORDERER_GENERAL_TLS_ROOTCAS=[/etc/hyperledger/msp/orderer/tls/ca.crt]
-    working_dir: /opt/gopath/src/github.com/hyperledger/fabric/orderer
-    command: orderer
-    ports:
-      - 7052:7052
-    volumes:
-        - ./channel-artifacts/genesis.block:/etc/hyperledger/orderer/genesis.block
-        - ./crypto-config/ordererOrganizations/initial.com/orderers/orderer1.initial.com/:/etc/hyperledger/msp/orderer
-        - ./crypto-config/peerOrganizations/org1.initial.com/peers/peer0.org1.initial.com/:/etc/hyperledger/msp/peerOrg1
-    networks:
-      - basic
+  # orderer1.initial.com:
+  #   container_name: orderer1.initial.com
+  #   image: hyperledger/fabric-orderer
+  #   environment:
+  #     - ORDERER_GENERAL_LOGLEVEL=debug
+  #     - ORDERER_GENERAL_LISTENADDRESS=0.0.0.0
+  #     - ORDERER_GENERAL_GENESISMETHOD=file
+  #     - ORDERER_GENERAL_GENESISFILE=/etc/hyperledger/orderer/genesis.block
+  #     - ORDERER_GENERAL_LOCALMSPID=OrdererMSP
+  #     - ORDERER_GENERAL_LOCALMSPDIR=/etc/hyperledger/msp/orderer/msp
+  #     - ORDERER_GENERAL_TLS_ENABLED=true
+  #     - ORDERER_GENERAL_TLS_PRIVATEKEY=/etc/hyperledger/msp/orderer/tls/server.key
+  #     - ORDERER_GENERAL_TLS_CERTIFICATE=/etc/hyperledger/msp/orderer/tls/server.crt
+  #     - ORDERER_GENERAL_TLS_ROOTCAS=[/etc/hyperledger/msp/orderer/tls/ca.crt]
+  #   working_dir: /opt/gopath/src/github.com/hyperledger/fabric/orderer
+  #   command: orderer
+  #   ports:
+  #     - 7052:7052
+  #   volumes:
+  #       - ./channel-artifacts/genesis.block:/etc/hyperledger/orderer/genesis.block
+  #       - ./crypto-config/ordererOrganizations/initial.com/orderers/orderer1.initial.com/:/etc/hyperledger/msp/orderer
+  #       - ./crypto-config/peerOrganizations/org1.initial.com/peers/peer0.org1.initial.com/:/etc/hyperledger/msp/peerOrg1
+  #   networks:
+  #     - basic
 
   peer0.org1.initial.com:
     container_name: peer0.org1.initial.com
@@ -199,7 +203,7 @@ services:
         - ./crypto-config/peerOrganizations/org1.initial.com/peers/peer2.org1.initial.com/msp:/etc/hyperledger/msp/peer
         - ./crypto-config/peerOrganizations/org1.initial.com/peers/peer2.org1.initial.com/tls:/etc/hyperledger/msp/tls
         - ./crypto-config/peerOrganizations/org1.initial.com/users:/etc/hyperledger/msp/users
-        - ./channel-artifacts/Org1MSPanchors.tx:/etc/hyperledger/configtx/Org1MSPanchors.tx
+        - ./channel-artifacts/Org1MSPanchors.tx:/etc/hyperledger/configtx/Org1MSPanchxors.tx
         - ./channel-artifacts/channel.tx:/etc/hyperledger/configtx/channel.tx
     depends_on:
       - orderer0.initial.com

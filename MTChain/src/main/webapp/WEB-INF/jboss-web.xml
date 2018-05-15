@@ -1,0 +1,3 @@
+<jboss-web>
+	<context-root>mtchain</context-root>
+</jboss-web>

@@ -15,13 +15,16 @@ import org.hyperledger.fabric.sdk.TransactionRequest.Type;
 import org.apache.log4j.Logger;
 import org.hyperledger.fabric_ca.sdk.RegistrationRequest;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.security.KeyPair;
 import java.security.PrivateKey;
+import java.security.PublicKey;
+import java.security.cert.CertificateFactory;
+import java.security.cert.X509Certificate;
 import java.util.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
@@ -41,18 +44,21 @@ public class App
     private static Orderer orderer0;
     private static final Logger log = Logger.getLogger(App.class);
     private static final Map<String, Properties> clientTLSProperties = new HashMap< >();
+    protected static final String CHAINCODE_NAME = "channel4";
 
 
     //Fluxo install: install, instatiate, use
     //Fluxo upgrade: install, upgrade, use
-    private static String currentVersion = "1.81";
-    private static int query = 1;
-    private static int newEmp = 1;
+    private static String currentVersion = "1.0";
+    private static int query = 0;
+    private static int newEmp = 0;
     private static int install = 0;
     private static int upgrade = 0;
     private static int see = 1;
     private static int inst = 1;
     private static int policy = 0;
+    private static int userTest = 0;
+    private static String nu = "user1.31";
 
     public static void main( String[] args )
     {
@@ -67,62 +73,82 @@ public class App
             NetworkConfig.CAInfo caInfo = nc.getClientOrganization().getCertificateAuthorities().get(0);
 
 
-            HFCAClient caClient = HFCAClient.createNewInstance(caInfo.getUrl(), caInfo.getProperties());
-            caClient.setCryptoSuite(CryptoSuite.Factory.getCryptoSuite(caInfo.getProperties()));
+
+            HFCAClient caClient = HFCAClient.createNewInstance(caInfo);
+            caClient.setCryptoSuite(CryptoSuite.Factory.getCryptoSuite());
+            //caClient.
+
+            //for(String s: caInfo.getHttpOptions().stringPropertyNames()){
+            //    out(s + ": " + caInfo.getProperties().getProperty(s));
+            //}
+
 
 
             UserInfo adminInfo = nc.getPeerAdmin();
 
-            AppUser newAdmin = new AppUser("admin", "org1", "Org1MSP", adminInfo.getEnrollment(), caClient);
+            //PublicKey pk = caClient.getCryptoSuite().bytesToCertificate(adminInfo.getEnrollment().getCert().getBytes(StandardCharsets.UTF_8)).getPublicKey();
+            //KeyPair keypair = new KeyPair(pk, adminInfo.getEnrollment().getKey());
+            //String pem = caClient.getCryptoSuite().generateCertificationRequest(adminInfo.getName(), keypair);
+
+            //Enrollment adminEnroll = caClient.enroll("admin", "adminpw", new EnrollmentRequest());
+            //adminInfo.setEnrollment(adminEnroll);
+
+
+            //Collection<UserInfo> registrars = caInfo.getRegistrars();
+            //UserInfo registrar = registrars.iterator().next();
+            //User aux;
+
+
+            //Enrollment regEnroll = caClient.enroll("admin", "adminpw", new EnrollmentRequest());
+            //registrar.setEnrollment(regEnroll);
+
+
+            //ADDING USER
+            /*final EnrollmentRequest enrollmentRequestTLS = new EnrollmentRequest();
+            enrollmentRequestTLS.addHost("localhost");
+            enrollmentRequestTLS.setProfile("tls");
+            User user1;
+            aux = tryDeserialize(nu);
+
+            if(aux == null){
+                RegistrationRequest rr = new RegistrationRequest(nu, "org1");
+                String enrSecret = caClient.register(rr, registrar);
+                Enrollment enr = caClient.enroll(nu, enrSecret, enrollmentRequestTLS);
+                user1 = new AppUser(nu, "Org1", adminInfo.getMspId(), enr, caClient);
+                serialize(user1);
+            }
+            else{
+                user1 = deserialize(nu);
+                Enrollment enr = caClient.reenroll(user1, enrollmentRequestTLS);
+                serialize(user1);
+            }*/
 
             HFClient client = HFClient.createNewInstance();
             client.setCryptoSuite(CryptoSuite.Factory.getCryptoSuite());
 
             client.setUserContext(adminInfo);
 
-            Channel channel = client.loadChannelFromConfig("mychannel", nc);
+
+            Channel channel = client.loadChannelFromConfig(CHAINCODE_NAME, nc);
             channel.initialize();
 
-//
-            Collection<UserInfo> registrars = caInfo.getRegistrars();
-            UserInfo registrar = registrars.iterator().next();
-            out(caClient.info().toString());exit(0);
-//
-//          //ADDING USER
-            RegistrationRequest rr = new RegistrationRequest("user1", "org1");
-            String enrSecret = caClient.register(rr, registrar);
-//
-            final EnrollmentRequest enrollmentRequestTLS = new EnrollmentRequest();
-            enrollmentRequestTLS.addHost("localhost");
-            enrollmentRequestTLS.setProfile("tls");
-            Enrollment enr = caClient.enroll("user1", enrSecret, enrollmentRequestTLS);
-//
-            //Enrollment enr = caClient.enroll("user1", enrSecret);
-//
-            User user1 = new AppUser("user1", "Org1", adminInfo.getMspId(), enr, caClient);
-
-
-
-
-
-
-
-
-            exit(0);
-
-            out("Peers: " + channel.getPeers().toString());
-            //out(channel.queryBlockchainInfo().toString());
-
-            channel.getPeers().iterator().next();
-
+/*            Channel channel2 = null;
+            if(userTest == 1) {
+                client.setUserContext(user1);
+                channel2 = client.getChannel("mychannel");
+            }
+*/
             System.out.println("\n\nVERSION :" + currentVersion + "\n\n");
 
             if(install == 1) {
-                if(policy == 1) ccInstall(client, channel, endorsementPolicy); else ccInstall(client, channel);
-
+                if(policy == 1){
+                    if(userTest == 0) ccInstall(client, channel, endorsementPolicy);// else ccInstall(client, channel2, endorsementPolicy);
+                } else {
+                    if(userTest == 0) ccInstall(client, channel);// else ccInstall(client, channel2);
+                }
             }
 
-            testEndorsement(client, endorsementPolicy);
+            //testEndorsement(client, endorsementPolicy);
             //exit(0);
 
 
@@ -279,7 +305,7 @@ public class App
 
     public static void testEndorsement(HFClient client, ChaincodeEndorsementPolicy endorsementPolicies) throws Exception{
         ChaincodeID chaincodeID = ChaincodeID.newBuilder().setName("cc").setVersion(currentVersion).build();
-        Channel channel = client.getChannel("mychannel");
+        Channel channel = client.getChannel(CHAINCODE_NAME);
 
         Collection<ProposalResponse> responses;
         Collection<ProposalResponse> successful = new LinkedList<>();
@@ -313,7 +339,7 @@ public class App
     public static void chaincodeInstantiate(HFClient client, ChaincodeEndorsementPolicy... endorsementPolicies) throws Exception{
 
         ChaincodeID chaincodeID = ChaincodeID.newBuilder().setName("cc").setVersion(currentVersion).build();
-        Channel channel = client.getChannel("mychannel");
+        Channel channel = client.getChannel(CHAINCODE_NAME);
 
         Collection<ProposalResponse> responses;
         Collection<ProposalResponse> successful = new LinkedList<>();
@@ -442,7 +468,7 @@ public class App
         final Properties tlsProperties = new Properties();
 
         AppUser admin = new AppUser("admin", "org1",  "Org1MSP", enroll , caClient);
-        serialize(admin);
+
 
         //System.out.println("Cert: " + admin.getCert().toString() + "\nPEM: " + admin.getPEMStringPrivKey());
 
@@ -453,15 +479,14 @@ public class App
 
         clientTLSProperties.put("admin", tlsProperties);
 
+        serialize(admin);
         return admin;
     }
 
     public static File getNetworkConfigFileYAML() {
         String fname = "network-config-tls.yaml";
         String pname = "/home/jorge/Documents/initial2/src/main/resources/";
-        System.out.println(pname + fname);
         File ret = new File(pname, fname);
-        out(ret.isFile() + "");
 
         return ret;
     }
@@ -471,7 +496,6 @@ public class App
 
         String fname = "chaincodeendorsementpolicy.yaml";
         String pname = "/home/jorge/Documents/initial2/src/main/resources/";
-        System.out.println(pname + fname);
         File ret = new File(pname, fname);
 
         chaincodeEndorsementPolicy.fromYamlFile(ret);
@@ -486,21 +510,27 @@ public class App
         orderer0 = client.newOrderer("orderer0.initial.com", "grpc://localhost:7050");
     }
 
-    private static void serialize(AppUser appUser) throws IOException {
+    private static void serialize(User appUser) throws IOException {
         try (ObjectOutputStream oos = new ObjectOutputStream(Files.newOutputStream(Paths.get(appUser.getName() + ".jso")))) {
 
             oos.writeObject(appUser);
         }
     }
 
-    static AppUser tryDeserialize(String name) throws Exception {
-        if (Files.exists(Paths.get(name + ".jso"))) {
-            return deserialize(name);
+    static User tryDeserialize(String name) {
+        try {
+            if (Files.exists(Paths.get(name + ".jso"))) {
+                return deserialize(name);
+            }
+            return null;
         }
-        return null;
+        catch(Exception e){
+            out("User " + name + " non existant.");
+            return null;
+        }
     }
 
-    static AppUser deserialize(String name) throws Exception {
+    static User deserialize(String name) throws Exception {
         try (ObjectInputStream decoder = new ObjectInputStream(
                 Files.newInputStream(Paths.get(name + ".jso")))) {
             return (AppUser) decoder.readObject();
@@ -510,7 +540,7 @@ public class App
     //static String queryEmp(HFClient client, String arg) throws ProposalException, InvalidArgumentException {
     static String queryEmp(HFClient client, String arg) throws Exception {
         // get channel instance from client
-        Channel channel = client.getChannel("mychannel");
+        Channel channel = client.getChannel(CHAINCODE_NAME);
         // create chaincode request
         QueryByChaincodeRequest qpr = client.newQueryProposalRequest();
         // build cc id providing the chaincode name. Version is omitted here.
@@ -545,7 +575,7 @@ public class App
         Collection<ProposalResponse> successful = new LinkedList<>();
         Collection<ProposalResponse> failed = new LinkedList<>();
 
-        Channel channel = client.getChannel("mychannel");
+        Channel channel = client.getChannel(CHAINCODE_NAME);
         TransactionProposalRequest transactionRequest = client.newTransactionProposalRequest();
 
         // build cc id providing the chaincode name. Version is omitted here.
@@ -584,6 +614,8 @@ public class App
 
 
     }
+
+
 
 
 }

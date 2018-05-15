@@ -4,7 +4,7 @@ export FABRIC_CFG_PATH=$PWD
 export CHANNEL_NAME=$1
 
 if [$CHANNEL_NAME == ""]; then
-	export CHANNEL_NAME="mychannel"
+	export CHANNEL_NAME="channel4"
 fi
 
 rm -rf crypto-config
@@ -71,14 +71,17 @@ echo
 
 
 chmod 777 -R crypto-config channel-artifacts
+export CA1_PRIVATE_KEY=$(echo $(ls /home/jorge/Documents/definit/crypto-config/peerOrganizations/org1.initial.com/ca/ | grep sk))
+echo $CA1_PRIVATE_KEY
+cp /home/jorge/Documents/definit/crypto-config/peerOrganizations/org1.initial.com/ca/$CA1_PRIVATE_KEY /home/jorge/Documents/definit/crypto-config/peerOrganizations/org1.initial.com/ca/ca_key.pem
 
 ##3. Inicializar o sistema: o CA peer, 2 Orderers, 1 Org com 2 Peers. Definido em docker-compose.yml
 
-CA_PRIVATE=$(ls /etc/hyperledger/fabric-ca-server-config/ | grep sk)
-
 echo "Composing docker images"
 docker rm -f $(docker ps -aq) --force
+docker rmi -f $(docker images | grep dev)
 yes | docker network prune
+
 
 
 if [[ $2 == "ord1" ]] ; then
@@ -121,8 +124,12 @@ docker ps -a
 
 sleep 2
 
+docker cp ca.initial.com:/etc/hyperledger/fabric-ca-server/ca-cert.pem ./crypto-config/peerOrganizations/org1.initial.com/ca/ca-cert.pem
+mv ./crypto-config/peerOrganizations/org1.initial.com/users/Admin@org1.initial.com/msp/keystore/* ./crypto-config/peerOrganizations/org1.initial.com/users/Admin@org1.initial.com/msp/keystore/admin1-key.pem
+mv /home/jorge/Documents/definit/crypto-config/peerOrganizations/org1.initial.com/tlsca/*_sk /home/jorge/Documents/definit/crypto-config/peerOrganizations/org1.initial.com/tlsca/tlsca-key.pem
+
 echo
 echo
 echo
 echo
-docker logs -f cli
+#docker logs cli

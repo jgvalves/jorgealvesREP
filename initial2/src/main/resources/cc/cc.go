@@ -86,7 +86,9 @@ func (s *smart) queryEmp (APIstub shim.ChaincodeStubInterface, args []string) sc
 	buffer.WriteString("NEXT VERSION - 181")
 
 	fmt.Printf("NICE")
-	//return shim.Success(buffer.Bytes())
+
+
+
 	return shim.Success(buffer.Bytes())
 }
 

@@ -1,0 +1,7 @@
+multicert/Application/Platform.class
+multicert/FireStarter.class
+multicert/ApplicationController.class
+multicert/Application/Blockchain.class
+multicert/Application/Logs.class
+multicert/Application/FileReader.class
+multicert/Application/RESTController.class

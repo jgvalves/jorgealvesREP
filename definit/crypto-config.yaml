@@ -15,7 +15,7 @@ OrdererOrgs:
     Users:
       Count: 0
     Template:
-      Count: 2
+      Count: 1
       Start: 0
     # ---------------------------------------------------------------------------
     # "Specs" - See PeerOrgs below for complete description
@@ -37,6 +37,8 @@ PeerOrgs:
       # Hostname: {{.Prefix}}{{.Index}} # default
     Users:
       Count: 1
+    CA:
+      
     # ---------------------------------------------------------------------------
     # "Users"
     # ---------------------------------------------------------------------------
