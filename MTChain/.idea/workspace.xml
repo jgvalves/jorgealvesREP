@@ -17,44 +17,71 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FireStarter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/multicert/FireStarter.java">
+      <file leaf-file-name="FireStarter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/FireStarter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="127" column="0" lean-forward="false" selection-start-line="127" selection-start-column="0" selection-end-line="129" selection-end-column="5" />
+            <state relative-caret-position="730">
+              <caret line="161" column="38" lean-forward="false" selection-start-line="161" selection-start-column="19" selection-end-line="161" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#main#0;class#FireStarter#0" expanded="false" />
                 <element signature="method#initializeHyperledgerConnection#0;class#FireStarter#0" expanded="false" />
+                <element signature="method#getChaincodeList#0;class#FireStarter#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Blockchain.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/multicert/Application/Blockchain.java">
+      <file leaf-file-name="ManagementApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Manager/ManagementApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="68" column="58" lean-forward="false" selection-start-line="68" selection-start-column="58" selection-end-line="68" selection-end-column="58" />
+            <state relative-caret-position="85">
+              <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ManagerController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Manager/ManagerController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Blockchain.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Application/Blockchain.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="333">
+              <caret line="325" column="20" lean-forward="false" selection-start-line="325" selection-start-column="20" selection-end-line="325" selection-end-column="20" />
               <folding>
                 <element signature="docComment;class#Blockchain#0" expanded="false" />
-                <element signature="e#1987#1988#0" expanded="true" />
-                <element signature="e#2028#2029#0" expanded="true" />
+                <element signature="docComment;method#updateChaincode#0;class#Blockchain#0" expanded="false" />
                 <element signature="docComment;method#upgradeChaincode#0;class#Blockchain#0" expanded="false" />
-                <element signature="docComment;method#instatiateChaincode#0;class#Blockchain#0" expanded="false" />
-                <element signature="method#instatiateChaincode#0;class#Blockchain#0" expanded="false" />
                 <element signature="docComment;method#downgradeChaincode#0;class#Blockchain#0" expanded="false" />
                 <element signature="method#downgradeChaincode#0;class#Blockchain#0" expanded="false" />
+                <element signature="docComment;method#downgradeChaincode#1;class#Blockchain#0" expanded="false" />
                 <element signature="method#downgradeChaincode#1;class#Blockchain#0" expanded="false" />
-                <element signature="method#queryDocument#0;class#Blockchain#0" expanded="false" />
-                <element signature="e#10003#10004#0" expanded="true" />
-                <element signature="e#10059#10060#0" expanded="true" />
+                <element signature="docComment;method#getIncrementedVersion#0;class#Blockchain#0" expanded="false" />
+                <element signature="e#11156#11157#0" expanded="true" />
+                <element signature="e#11212#11213#0" expanded="true" />
+                <element signature="e#11243#11244#0" expanded="true" />
+                <element signature="e#11270#11271#0" expanded="true" />
                 <element signature="docComment;method#getUpgradingPattern#0;class#Blockchain#0" expanded="false" />
+                <element signature="e#11420#11421#0" expanded="true" />
+                <element signature="e#11459#11460#0" expanded="true" />
                 <element signature="docComment;method#setUpgradingPattern#0;class#Blockchain#0" expanded="false" />
+                <element signature="docComment;method#updateChaincodeVersion#0;class#Blockchain#0" expanded="false" />
                 <element signature="method#updateChaincodeVersion#0;class#Blockchain#0" expanded="false" />
                 <element signature="method#recoverVersionFromError#0;class#Blockchain#0" expanded="false" />
+                <element signature="method#updateVariables#0;class#Blockchain#0" expanded="false" />
+                <element signature="docComment;method#getCurrentVersion#0;class#Blockchain#0" expanded="false" />
                 <element signature="docComment;method#resolveChaincodeVersion#0;class#Blockchain#0" expanded="false" />
                 <element signature="method#start_op#0;class#Blockchain#0" expanded="false" />
-                <element signature="method#sign_op#0;class#Blockchain#0" expanded="false" />
+                <element signature="method#op_query#0;class#Blockchain#0" expanded="false" />
                 <element signature="method#install#0;class#Blockchain#0" expanded="false" />
                 <element signature="method#upgrade#0;class#Blockchain#0" expanded="false" />
                 <element signature="method#instantiate#0;class#Blockchain#0" expanded="false" />
@@ -65,19 +92,20 @@
         </entry>
       </file>
       <file leaf-file-name="Utils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/multicert/Application/Utils.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Application/Utils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+            <state relative-caret-position="696">
+              <caret line="67" column="37" lean-forward="true" selection-start-line="67" selection-start-column="37" selection-end-line="67" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#writeFile#0;class#Utils#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Logs.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/multicert/Application/Logs.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Application/Logs.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
               <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
@@ -101,6 +129,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>put</find>
+      <find>IDHashtable</find>
+      <find>serialize</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -148,10 +178,15 @@
         <option value="$PROJECT_DIR$/.factorypath" />
         <option value="$PROJECT_DIR$/src/main/resources/chaincode/fabcar.go" />
         <option value="$PROJECT_DIR$/src/main/Chaincode/cc2.go" />
-        <option value="$PROJECT_DIR$/src/main/java/multicert/Application/Utils.java" />
         <option value="$PROJECT_DIR$/src/main/resources/chaincode/cc2.go" />
+        <option value="$PROJECT_DIR$/src/main/java/multicert/Application/Utils.java" />
         <option value="$PROJECT_DIR$/src/main/java/multicert/FireStarter.java" />
         <option value="$PROJECT_DIR$/src/main/java/multicert/Application/Blockchain.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Manager/ManagementApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Application/Utils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Manager/ManagerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Application/Blockchain.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/FireStarter.java" />
       </list>
     </option>
   </component>
@@ -213,7 +248,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="multicert" type="462c0819:PsiDirectoryNode" />
+              <item name="Manager" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MTChain" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MTChain" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Plataform" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MTChain" type="b2602c69:ProjectViewProjectNode" />
@@ -282,7 +325,7 @@
     </configuration>
     <configuration name="FireStarter" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="multicert.FireStarter" />
+      <option name="MAIN_CLASS_NAME" value="Plataform.FireStarter" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -401,7 +444,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1922" height="1047" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -423,9 +465,10 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3379679" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3379679" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1625" sideWeight="0.49441788" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1625" sideWeight="0.50558215" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -433,7 +476,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -476,8 +518,8 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/multicert/Application/Blockchain.java</url>
-          <line>610</line>
+          <url>file://$PROJECT_DIR$/src/main/java/Plataform/Application/Blockchain.java</url>
+          <line>678</line>
           <properties />
           <option name="timeStamp" value="13" />
         </line-breakpoint>
@@ -488,43 +530,23 @@
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/multicert/Application/Blockchain.java</url>
-          <line>327</line>
-          <properties />
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/multicert/Application/Blockchain.java</url>
-          <line>152</line>
-          <properties />
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/multicert/Application/Blockchain.java</url>
-          <line>462</line>
+          <url>file://$PROJECT_DIR$/src/main/java/Plataform/Application/Blockchain.java</url>
+          <line>520</line>
           <properties />
           <option name="timeStamp" value="49" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Plataform/FireStarter.java</url>
+          <line>64</line>
+          <properties />
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="55" />
+      <option name="time" value="66" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1641">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/Runtime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="869" column="0" lean-forward="false" selection-start-line="869" selection-start-column="0" selection-end-line="869" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/ClassLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
@@ -611,7 +633,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/gfx/logo.png" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/gfx/banner.png" />
     <entry file="file://$PROJECT_DIR$/src/main/java/WsApplication.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/multicert/Application/Platform.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Application/Platform.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
@@ -620,7 +642,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/multicert/ServletInitializer.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/multicert/Application/FileReader.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Application/FileReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
@@ -678,7 +700,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/multicert/Application/RESTController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Application/RESTController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
@@ -717,34 +739,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/chaincode/fabcar.go" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/multicert/Application/Logs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/multicert/Application/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hyperledger/fabric-sdk-java/fabric-sdk-java/1.1.0-SNAPSHOT/fabric-sdk-java-1.1.0-20180430.125343-42-sources.jar!/org/hyperledger/fabric/sdk/HFClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="343" column="0" lean-forward="false" selection-start-line="343" selection-start-column="0" selection-end-line="343" selection-end-column="0" />
-          <folding>
-            <element signature="e#12882#12883#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/chaincode/cc2.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -761,45 +755,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/multicert/FireStarter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Application/Logs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="127" column="0" lean-forward="false" selection-start-line="127" selection-start-column="0" selection-end-line="129" selection-end-column="5" />
+        <state relative-caret-position="68">
+          <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hyperledger/fabric-sdk-java/fabric-sdk-java/1.1.0-SNAPSHOT/fabric-sdk-java-1.1.0-20180430.125343-42-sources.jar!/org/hyperledger/fabric/sdk/HFClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="343" column="0" lean-forward="false" selection-start-line="343" selection-start-column="0" selection-end-line="343" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#initializeHyperledgerConnection#0;class#FireStarter#0" expanded="false" />
+            <element signature="e#12882#12883#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/multicert/Application/Blockchain.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Application/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="68" column="58" lean-forward="false" selection-start-line="68" selection-start-column="58" selection-end-line="68" selection-end-column="58" />
+        <state relative-caret-position="696">
+          <caret line="67" column="37" lean-forward="true" selection-start-line="67" selection-start-column="37" selection-end-line="67" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#writeFile#0;class#Utils#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Manager/ManagementApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Manager/ManagerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Application/Blockchain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="325" column="20" lean-forward="false" selection-start-line="325" selection-start-column="20" selection-end-line="325" selection-end-column="20" />
           <folding>
             <element signature="docComment;class#Blockchain#0" expanded="false" />
-            <element signature="e#1987#1988#0" expanded="true" />
-            <element signature="e#2028#2029#0" expanded="true" />
+            <element signature="docComment;method#updateChaincode#0;class#Blockchain#0" expanded="false" />
             <element signature="docComment;method#upgradeChaincode#0;class#Blockchain#0" expanded="false" />
-            <element signature="docComment;method#instatiateChaincode#0;class#Blockchain#0" expanded="false" />
-            <element signature="method#instatiateChaincode#0;class#Blockchain#0" expanded="false" />
             <element signature="docComment;method#downgradeChaincode#0;class#Blockchain#0" expanded="false" />
             <element signature="method#downgradeChaincode#0;class#Blockchain#0" expanded="false" />
+            <element signature="docComment;method#downgradeChaincode#1;class#Blockchain#0" expanded="false" />
             <element signature="method#downgradeChaincode#1;class#Blockchain#0" expanded="false" />
-            <element signature="method#queryDocument#0;class#Blockchain#0" expanded="false" />
-            <element signature="e#10003#10004#0" expanded="true" />
-            <element signature="e#10059#10060#0" expanded="true" />
+            <element signature="docComment;method#getIncrementedVersion#0;class#Blockchain#0" expanded="false" />
+            <element signature="e#11156#11157#0" expanded="true" />
+            <element signature="e#11212#11213#0" expanded="true" />
+            <element signature="e#11243#11244#0" expanded="true" />
+            <element signature="e#11270#11271#0" expanded="true" />
             <element signature="docComment;method#getUpgradingPattern#0;class#Blockchain#0" expanded="false" />
+            <element signature="e#11420#11421#0" expanded="true" />
+            <element signature="e#11459#11460#0" expanded="true" />
             <element signature="docComment;method#setUpgradingPattern#0;class#Blockchain#0" expanded="false" />
+            <element signature="docComment;method#updateChaincodeVersion#0;class#Blockchain#0" expanded="false" />
             <element signature="method#updateChaincodeVersion#0;class#Blockchain#0" expanded="false" />
             <element signature="method#recoverVersionFromError#0;class#Blockchain#0" expanded="false" />
+            <element signature="method#updateVariables#0;class#Blockchain#0" expanded="false" />
+            <element signature="docComment;method#getCurrentVersion#0;class#Blockchain#0" expanded="false" />
             <element signature="docComment;method#resolveChaincodeVersion#0;class#Blockchain#0" expanded="false" />
             <element signature="method#start_op#0;class#Blockchain#0" expanded="false" />
-            <element signature="method#sign_op#0;class#Blockchain#0" expanded="false" />
+            <element signature="method#op_query#0;class#Blockchain#0" expanded="false" />
             <element signature="method#install#0;class#Blockchain#0" expanded="false" />
             <element signature="method#upgrade#0;class#Blockchain#0" expanded="false" />
             <element signature="method#instantiate#0;class#Blockchain#0" expanded="false" />
             <element signature="method#requestInfo#0;class#Blockchain#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/FireStarter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="730">
+          <caret line="161" column="38" lean-forward="false" selection-start-line="161" selection-start-column="19" selection-end-line="161" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#main#0;class#FireStarter#0" expanded="false" />
+            <element signature="method#initializeHyperledgerConnection#0;class#FireStarter#0" expanded="false" />
+            <element signature="method#getChaincodeList#0;class#FireStarter#0" expanded="false" />
           </folding>
         </state>
       </provider>

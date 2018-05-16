@@ -1,13 +1,4 @@
-package multicert.Application;
-
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseStatus;
+package Plataform.Application;
 
 //@Controller
 //@RequestMapping(value = "/controller")
@@ -40,7 +31,7 @@ public class RESTController {
         String.format(template);
 
         /*try {
-            multicert.Application.Blockchain.instatiateChaincode(client, client.getChannel("mychannel"), CHAINCODE_NAME);
+            Plataform.Application.Blockchain.instatiateChaincode(client, client.getChannel("mychannel"), CHAINCODE_NAME);
         }
         catch(Exception a){
             a.printStackTrace();

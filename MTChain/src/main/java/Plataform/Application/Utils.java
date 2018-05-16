@@ -1,14 +1,14 @@
-package multicert.Application;
+package Plataform.Application;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.nio.charset.Charset;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Collection;
-import java.util.Hashtable;
-import java.util.List;
-import java.util.UUID;
+import java.nio.file.StandardOpenOption;
+import java.util.*;
 
 public final class Utils {
 
@@ -45,17 +45,37 @@ public final class Utils {
      * @return
      * @throws Exception
      */
-    static Object tryDeserialize(String name) throws Exception {
+    public static Object tryDeserialize(String name) throws Exception {
         if (Files.exists(Paths.get("src/main/resources/JSON/" + name + ".jso"))) {
             return deserialize(name);
         }
         throw new IOException();
     }
 
-    static Object deserialize(String name) throws Exception {
+    private static Object deserialize(String name) throws Exception {
         try (ObjectInputStream decoder = new ObjectInputStream(
                 Files.newInputStream(Paths.get("src/main/resources/JSON/" + name + ".jso")))) {
             return decoder.readObject();
+        }
+    }
+
+    public static double round(double value, int places) {
+        if (places < 0) throw new IllegalArgumentException();
+
+        long factor = (long) Math.pow(10, places);
+        value = value * factor;
+        long tmp = Math.round(value);
+        return (double) tmp / factor;
+    }
+
+    public static void writeFile(String str){
+        try {
+            List<String> lines = Arrays.asList(str);
+            Path file = Paths.get("/home/jorge/Documents/MTChain/log.txt");
+            Files.write(file, lines, Charset.forName("UTF-8"), StandardOpenOption.APPEND);
+        }
+        catch(Exception e){
+            e.printStackTrace();
         }
     }
 }

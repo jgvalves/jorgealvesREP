@@ -1,9 +1,9 @@
-package multicert;
+package Plataform;
 
-import multicert.Application.Blockchain;
-import multicert.Application.FileReader;
-import multicert.Application.Logs;
-import multicert.Application.Utils;
+import Plataform.Application.Blockchain;
+import Plataform.Application.FileReader;
+import Plataform.Application.Logs;
+import Plataform.Application.Utils;
 import org.apache.log4j.Logger;
 import org.hyperledger.fabric.sdk.Channel;
 import org.hyperledger.fabric.sdk.HFClient;
@@ -11,29 +11,24 @@ import org.hyperledger.fabric.sdk.NetworkConfig;
 import org.hyperledger.fabric.sdk.security.CryptoSuite;
 import org.hyperledger.fabric_ca.sdk.HFCAClient;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.rmi.CORBA.Util;
-import java.io.PrintWriter;
+import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import static java.lang.System.exit;
-import static multicert.FireStarter.DOCUMENT_NAME;
 
 
 @SpringBootApplication
@@ -45,7 +40,7 @@ public class FireStarter extends SpringBootServletInitializer{
     protected static NetworkConfig networkConfig;
     protected static NetworkConfig.UserInfo adminInfo;
     protected static Channel channel = null;
-    private static Class<FireStarter> applicationClass = FireStarter.class;
+    private static List<Blockchain> chaincodeInstantiations;
 
     protected final static String CHANNEL_NAME = "channel4";
     protected final static String CHAINCODE_NAME = "cc2";
@@ -62,32 +57,37 @@ public class FireStarter extends SpringBootServletInitializer{
 
     public static void main(String[] args) {
 
+        Blockchain blockchain = null;
 
-
-        try {
-            initializeHyperledgerConnection(CHANNEL_NAME);
-            Blockchain.initializeBlockchainClass();
-            ///install();
-            //instant();
-            //startOpChaincode(DOCUMENT_NAME);
-            //Blockchain.sign_op(client, client.getChannel(CHANNEL_NAME), CHAINCODE_NAME, DOCUMENT_NAME, "assinatura".getBytes());
-            //Blockchain.sign_op(client, client.getChannel(CHANNEL_NAME), CHAINCODE_NAME, DOCUMENT_NAME, "assinatura2".getBytes());
-            //System.out.println("\n\n\nQUERY RESULT :\n\n" + queryChaincode(DOCUMENT_NAME) + "\n\n");
-        }catch(Exception e){e.printStackTrace();}
+        chaincodeInstantiations = getChaincodeList();
         SpringApplication.run(FireStarter.class, args);
+        /*try {
+            initializeHyperledgerConnection(CHANNEL_NAME);
+
+            try{
+                blockchain = (Blockchain) Utils.tryDeserialize(CHAINCODE_NAME + ":" + CHANNEL_NAME);
+            }
+            catch(IOException e) {
+                blockchain = new Blockchain(CHAINCODE_NAME);
+            }
+        }catch(Exception e){e.printStackTrace();}*/
+
     }
 
 
-    private static void writeFile(String str){
-        try {
-            List<String> lines = Arrays.asList(str);
-            Path file = Paths.get("/home/jorge/Documents/MTChain/log.txt");
-            Files.write(file, lines, Charset.forName("UTF-8"), StandardOpenOption.APPEND);
-        }
-        catch(Exception e){
-            e.printStackTrace();
-        }
-    }
+            /*blockchain.updateChaincode(client, client.getChannel(CHANNEL_NAME));
+
+            blockchain.start_op(client, client.getChannel(CHANNEL_NAME), DOCUMENT_NAME, "assinatura".getBytes());
+            blockchain.sign_op(client, client.getChannel(CHANNEL_NAME), DOCUMENT_NAME, "assinatura1".getBytes());
+            blockchain.sign_op(client, client.getChannel(CHANNEL_NAME), DOCUMENT_NAME, "assinatura2".getBytes());
+            blockchain.sign_op(client, client.getChannel(CHANNEL_NAME), DOCUMENT_NAME, "assinatura3".getBytes());
+            blockchain.end_op(client, client.getChannel(CHANNEL_NAME), DOCUMENT_NAME, "assinatura4".getBytes());
+
+            Utils.serialize(blockchain, CHAINCODE_NAME + ":" + CHANNEL_NAME);*/
+            //System.out.println("\n\n\nQUERY RESULT :\n\n" + blockchain.queryDocument(client, client.getChannel(CHANNEL_NAME), DOCUMENT_NAME) + "\n\n");
+
+            //exit(0);
+
 
 
 
@@ -125,21 +125,44 @@ public class FireStarter extends SpringBootServletInitializer{
         return channel;
     }
 
-    public static void instantiateChaincode(){
+    public static Blockchain getChaincode(String chaincodeName){
+        if(chaincodeInstantiations.size() > 0){
+            for(Blockchain bc: chaincodeInstantiations){
+                if(bc.getName().equals(chaincodeName)){
+                    return bc;
+                }
+            }
+            Blockchain bc = new Blockchain(chaincodeName);
+            Logs.write("Creating new instance of chaincode named: " + chaincodeName);
+            chaincodeInstantiations.add(bc);
+            return bc;
+
+        }
+        else{
+            Logs.write("Creating new instance of chaincode named: " + chaincodeName);
+            Blockchain bc = new Blockchain(chaincodeName);
+            chaincodeInstantiations.add(bc);
+            return bc;
+        }
+    }
+
+    private static List<Blockchain> getChaincodeList(){
+        try{
+            List<Blockchain> l = (List<Blockchain>) Utils.tryDeserialize("BlockchainObjectsList");
+            Logs.write("Found BlockchainObjectsList file, getting blockchain objects...");
+            return l;
+        }
+        catch(Exception e){
+            Logs.write("Didn't find BlockchainObjectsList file. Initializing new List...");
+            return new ArrayList<>();
+        }
+    }
+
+    public void instantiateChaincode(){
         Blockchain.instatiateChaincode(client, client.getChannel(CHANNEL_NAME), CHAINCODE_NAME);
     }
 
-    public static void instant() throws Exception{
-        Blockchain.setCurrentVersion(1);
-        Blockchain.instantiate(client, client.getChannel(CHANNEL_NAME), CHAINCODE_NAME);
-    }
-
-    public static void install() throws Exception{
-        Blockchain.setCurrentVersion(1);
-        Blockchain.install(client, client.getChannel(CHANNEL_NAME), CHAINCODE_NAME);
-    }
-
-    public static void upgradeChaincode(){
+    public static void (){
         Blockchain.upgradeChaincode(client, client.getChannel(CHANNEL_NAME), CHAINCODE_NAME);
     }
 
@@ -188,18 +211,21 @@ public class FireStarter extends SpringBootServletInitializer{
     }
 }
 
+
 @RestController
 class ApplicationController{
 
     @RequestMapping("/init")
-    String hello() {
+    String hello(@RequestParam(value="chaincode") String chaincodeName) {
 
 
         try{
-            FireStarter.initializeHyperledgerConnection(FireStarter.CHANNEL_NAME);
+            Blockchain blockchain = FireStarter.getChaincode(chaincodeName);
+            blockchain.upgradeChaincode(FireStarter.client, FireStarter.channel);
+            blockchain.upgradeChaincode(FireStarter.client, FireStarter.channel);
         }
         catch (Exception e){return "ERROR!";}
-        return "Success Initializing Platform. Connected to " + FireStarter.CHAINCODE_NAME + "!";
+        return "Success Initializing Client. Connected to " + FireStarter.CHAINCODE_NAME + "!";
     }
 
     @RequestMapping("/install")

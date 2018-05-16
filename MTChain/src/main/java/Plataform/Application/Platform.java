@@ -1,4 +1,4 @@
-package multicert.Application;
+package Plataform.Application;
 
 import org.hyperledger.fabric.sdk.ChaincodeEndorsementPolicy;
 import org.hyperledger.fabric.sdk.Channel;

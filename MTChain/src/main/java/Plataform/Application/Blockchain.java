@@ -1,9 +1,10 @@
-package multicert.Application;
+package Plataform.Application;
 
 import org.hyperledger.fabric.protos.peer.Query;
 import org.hyperledger.fabric.sdk.*;
 import org.hyperledger.fabric.sdk.exception.ProposalException;
 
+import java.io.Serializable;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Paths;
 import java.util.*;
@@ -38,36 +39,121 @@ import static org.apache.commons.compress.utils.CharsetNames.UTF_8;
  *
  */
 
-public class Blockchain {
+public class Blockchain implements Serializable {
 
     //The version of the chaincode functioning. Will always be the one used
     //Upgrade will increment, downgrade will decrement
     private String name;
-    private double currentVersion = 0;
-    private double upgradingPattern = 0.1;
-    private boolean instatiated = false;
-    private List<Double> chaincodeVersions = new ArrayList<>();
-    private Hashtable<String, List<UUID>> IDHashtable = new Hashtable<>();
-    private Hashtable<String, Double> ChaincodeVersionHashtable = new Hashtable<>();
+    private double currentVersion;
+    private double upgradingPattern;
+    private boolean instantiated;
+    private List<Double> chaincodeVersions;
+    private Hashtable<String, List<UUID>> IDHashtable;
+    private Hashtable<String, Object> ChaincodeVersionHashtable;
 
     public Blockchain(String chaincodeName){
         this.name = chaincodeName;
+        initializeBlockchainClass(chaincodeName);
     }
 
-    public void initializeBlockchainClass(){
-        try {
-            IDHashtable = (Hashtable<String, List<UUID>>) Utils.tryDeserialize("IDHashtable");
+    public void initializeBlockchainClass(String chaincodeName){
+        //Getting IDHashtable from file
+        /*try {
+            IDHashtable = (Hashtable<String, List<UUID>>) Utils.tryDeserialize("IDHashtable:" + name);
         }
         catch(Exception e) {
             IDHashtable = new Hashtable<>();
         }
 
+        //Getting ChaincodeVersionHashtable from file
         try{
-            ChaincodeVersionHashtable = (Hashtable<String, Double>) Utils.tryDeserialize("ChaincodeVersionHashtable");
+            ChaincodeVersionHashtable = (Hashtable<String, Object>) Utils.tryDeserialize("ChaincodeVersionHashtable:" + chaincodeName);
+            currentVersion = (Double) ChaincodeVersionHashtable.get("currentVersion");
+            upgradingPattern = (Double) ChaincodeVersionHashtable.get("upgradingPattern");
+            chaincodeVersions = (List<Double>) ChaincodeVersionHashtable.get("chaincodeVersions");
+            instantiated = (boolean) ChaincodeVersionHashtable.get("instantiated");
         }
         catch(Exception e){
             ChaincodeVersionHashtable = new Hashtable<>();
+            currentVersion = 0; ChaincodeVersionHashtable.put("currentVersion", currentVersion);
+            upgradingPattern = 0.1; ChaincodeVersionHashtable.put("upgradingPattern", upgradingPattern);
+            instantiated = false; ChaincodeVersionHashtable.put("instantiated", instantiated);
+            chaincodeVersions = new ArrayList<>(); ChaincodeVersionHashtable.put("chaincodeVersions", chaincodeVersions);
+
+            try {
+                Utils.serialize(ChaincodeVersionHashtable, "ChaincodeVersionHashtable:" + chaincodeName);
+            }
+            catch(Exception a){a.printStackTrace();}
+        }*/
+
+        IDHashtable = new Hashtable<>();
+        ChaincodeVersionHashtable = new Hashtable<>();
+        currentVersion = 0; ChaincodeVersionHashtable.put("currentVersion", currentVersion);
+        upgradingPattern = 0.1; ChaincodeVersionHashtable.put("upgradingPattern", upgradingPattern);
+        instantiated = false; ChaincodeVersionHashtable.put("instantiated", instantiated);
+        chaincodeVersions = new ArrayList<>(); ChaincodeVersionHashtable.put("chaincodeVersions", chaincodeVersions);
+    }
+
+
+    /**
+     *
+     * To be used for the first installation of chaincode, and only then. Started the chaincode cycle
+     *
+     * @param client
+     * @param channel
+     * @param endorsementPolicies
+     * @return
+     */
+    public int updateChaincode(HFClient client, Channel channel, ChaincodeEndorsementPolicy... endorsementPolicies){
+
+        if(instantiated && currentVersion!=0){
+            Logs.write("Upgrading chaincode!");
+            return upgradeChaincode(client, channel, endorsementPolicies);
         }
+
+
+
+        //if chaincode installed but not instantiated due to error of some kind...
+        if(chaincodeVersions.contains(currentVersion)){
+            Logs.write("Chaincode version " + currentVersion + " already installed. Moving on to instantiation...");
+        }
+        else{
+
+            setCurrentVersion(1.0);
+            Logs.write("Installing Chaincode 1.0...");
+
+            try {
+                install(client, channel, name, endorsementPolicies);
+            }
+            catch(Exception e){
+                Logs.write("Error installing chaincode. " + e.getLocalizedMessage());
+                setCurrentVersion(0);
+                return -1;
+            }
+
+            chaincodeVersions.add(new Double(getCurrentVersion()));
+            updateVariables();
+            Logs.write("Installed new chaincode version! New version: " + getCurrentVersion());
+        }
+
+
+
+        Logs.write("Instantiating chaincode...");
+
+        try{
+            instantiate(client, channel, name, endorsementPolicies);
+        }
+        catch(Exception e){
+            Logs.write("Error instantiating the chaincode.");
+            return -1;
+        }
+
+        instantiated = true;
+        updateVariables();
+        Logs.write("Success deploying new chaincode version! Current Version: " + getCurrentVersion());
+
+        return 0;
+
     }
 
     /**
@@ -83,16 +169,7 @@ public class Blockchain {
      *      0, is ok
      *      -1, ups
      */
-    public int upgradeChaincode(HFClient client, Channel channel, String chaincodeName, ChaincodeEndorsementPolicy... endorsementPolicies){
-        if(currentVersion == 0){
-            if(!instatiated) {
-                Logs.write("Cannot upgrade chaincode if no version is running");
-                return -1;
-            }
-            resolveChaincodeVersion(client, channel, chaincodeName);
-        }
-
-        Logs.write("Installing version " + getCurrentVersion() + "...");
+    public int upgradeChaincode(HFClient client, Channel channel, ChaincodeEndorsementPolicy... endorsementPolicies){
 
 
         //If upgrading from a downgraded version...
@@ -100,6 +177,7 @@ public class Blockchain {
             currentVersion = chaincodeVersions.get(chaincodeVersions.size()-1);
         }
         updateChaincodeVersion();
+        Logs.write("Installing version " + getCurrentVersion() + "...");
 
         //If upgrade failed, but install succeded
         if(chaincodeVersions.contains(currentVersion)){
@@ -107,16 +185,16 @@ public class Blockchain {
         }
         else {
 
-            chaincodeVersions.add(new Double(getCurrentVersion()));
-
             try {
-                install(client, channel, chaincodeName, endorsementPolicies);
+                install(client, channel, name, endorsementPolicies);
             } catch (Exception e) {
                 Logs.write("Error installing chaincode upgrade. Failed to upgrade to version " + getCurrentVersion());
                 recoverVersionFromError(false);
                 return -1;
             }
 
+            chaincodeVersions.add(new Double(getCurrentVersion()));
+            updateVariables();
             Logs.write("Installed new chaincode version! New version: " + getCurrentVersion());
 
         }
@@ -124,7 +202,7 @@ public class Blockchain {
         Logs.write("Upgrading version...");
 
         try{
-            upgrade(client, channel, chaincodeName, endorsementPolicies);
+            upgrade(client, channel, name, endorsementPolicies);
         }
         catch(Exception e){
             Logs.write("Error upgrading chaincode. Failed to upgrade to " + getCurrentVersion());
@@ -141,63 +219,6 @@ public class Blockchain {
 
     /**
      *
-     * To be used for the first installation of chaincode, and only then. Started the chaincode cycle
-     *
-     * @param client
-     * @param channel
-     * @param endorsementPolicies
-     * @return
-     */
-    public static int instatiateChaincode(HFClient client, Channel channel, String chaincodeName, ChaincodeEndorsementPolicy... endorsementPolicies){
-
-        if(instatiated || currentVersion != 0 || !chaincodeVersions.isEmpty()){
-            Logs.write("Chaincode already instantiated, proceeding to upgrade!");
-            return upgradeChaincode(client, channel, chaincodeName, endorsementPolicies);
-        }
-        updateChaincodeVersion();
-
-        //if chaincode installed but not instantiated due to error of some king...
-        if(chaincodeVersions.contains(currentVersion)){
-            Logs.write("Chaincode version " + currentVersion + " already installed. Moving on to instantiation...");
-        }
-        else{
-            chaincodeVersions.add(new Double(getCurrentVersion()));
-
-            Logs.write("Installing Chaincode...");
-            try {
-                install(client, channel, chaincodeName, endorsementPolicies);
-            }
-            catch(Exception e){
-                Logs.write("Error installing chaincode. " + e.getLocalizedMessage());
-                recoverVersionFromError(false);
-                return -1;
-            }
-
-            Logs.write("Installed new chaincode version! New version: " + getCurrentVersion());
-        }
-
-
-
-        Logs.write("Instantiating chaincode...");
-
-        try{
-            instantiate(client, channel, chaincodeName, endorsementPolicies);
-        }
-        catch(Exception e){
-            Logs.write("Error instantiating the chaincode.");
-            recoverVersionFromError(true);
-            return -1;
-        }
-
-        Logs.write("Success deploying new chaincode version! Current Version: " + getCurrentVersion());
-
-        return 0;
-
-    }
-
-
-    /**
-     *
      * For management purposes, it is possible to downgrade the chaincode version to the previous deployed version
      *
      * @param client
@@ -205,14 +226,14 @@ public class Blockchain {
      * @param endorsementPolicies
      * @return
      */
-    public static int downgradeChaincode(HFClient client, Channel channel, String chaincodeName, ChaincodeEndorsementPolicy... endorsementPolicies){
+    public int downgradeChaincode(HFClient client, Channel channel, ChaincodeEndorsementPolicy... endorsementPolicies){
 
         if(currentVersion == 0){
-            if(!instatiated) {
+            if(!instantiated) {
                 Logs.write("Cannot upgrade chaincode if no version is running");
                 return -1;
             }
-            resolveChaincodeVersion(client, channel, chaincodeName);
+            resolveChaincodeVersion(client, channel);
         }
 
         Logs.write("Downgrading version " + getCurrentVersion() + " to " + chaincodeVersions.get(chaincodeVersions.size()-1) + "...");
@@ -232,14 +253,14 @@ public class Blockchain {
      * @param endorsementPolicies
      * @return
      */
-    public static int downgradeChaincode(HFClient client, Channel channel, double version, String chaincodeName, ChaincodeEndorsementPolicy... endorsementPolicies){
+    public int downgradeChaincode(HFClient client, Channel channel, double version, ChaincodeEndorsementPolicy... endorsementPolicies){
 
         if(currentVersion == 0){
-            if(!instatiated) {
+            if(!instantiated) {
                 Logs.write("Cannot upgrade chaincode if no version is running");
                 return -1;
             }
-            resolveChaincodeVersion(client, channel, chaincodeName);
+            resolveChaincodeVersion(client, channel);
         }
 
         Logs.write("Downgrading version " + getCurrentVersion() + " to " + version + "...");
@@ -248,7 +269,7 @@ public class Blockchain {
             updateChaincodeVersion(version);
         }
         else{
-            if(instatiated) Logs.write("Version " + version + " is not installed.");
+            if(instantiated) Logs.write("Version " + version + " is not installed.");
             else Logs.write("Chaincode not instantiated.");
             return -1;
         }
@@ -256,18 +277,7 @@ public class Blockchain {
     }
 
 
-
-    /**
-     *
-     * Simple getter for the current chaincode version
-     *
-     * @return
-     */
-    public static double getCurrentVersion(){return currentVersion;}
-
-    public static void setCurrentVersion(double newVersion){currentVersion = newVersion;}
-
-    public static String queryDocument(HFClient client, Channel channel, String chaincodeName, String documentName){
+    public String queryDocument(HFClient client, Channel channel, String documentName){
 
         try {
             String str = new String();
@@ -275,7 +285,7 @@ public class Blockchain {
                 List<UUID> idList = IDHashtable.get(documentName);
 
                 for (UUID id : idList) {
-                    str = str + op_query(client, channel, chaincodeName, documentName, id) + "\n";
+                    str = str + op_query(client, channel, documentName, id) + "\n";
                 }
                 return str;
             } else {
@@ -289,6 +299,18 @@ public class Blockchain {
     }
 
 
+
+
+
+    /*****************************************************************
+     *
+     *                      CLASS VARIABLES AND LOGIC
+     *                            MAINTENANCE
+     *
+     *
+     *
+     ******************************************************************/
+
     /**
      *
      * For logging purposes mostly. Returns the next version "name" without commiting it.
@@ -296,10 +318,13 @@ public class Blockchain {
      * @return
      */
     //TODO: add version incrementation constant
-    private static double getIncrementedVersion(){
+    private double getIncrementedVersion(){
         return currentVersion + upgradingPattern;
     }
 
+    public String getName() {
+        return name;
+    }
 
     /**
      *
@@ -307,46 +332,71 @@ public class Blockchain {
      *
      * @return
      */
-    public static double getUpgradingPattern (){
+    public double getUpgradingPattern (){
         return upgradingPattern;
     }
 
-
     /**
      *
      * The pattern in which the chaincode version is upgraded
      *
      * @return
      */
-    public static void setUpgradingPattern(double newUpgradingPattern){upgradingPattern = newUpgradingPattern;}
-
+    public void setUpgradingPattern(double newUpgradingPattern){upgradingPattern = newUpgradingPattern;}
 
     /**
      * Commit chaincode version
      */
-    private static void updateChaincodeVersion(double... version){
-        if(currentVersion==0) {currentVersion++; instatiated = true; return;}
-
-        if(version.length > 0) {
+    private void updateChaincodeVersion(double... version){
+        if(currentVersion==0) {currentVersion++; updateVariables();return;}
+        else if(version.length > 0) {
             currentVersion = version[0];
         }
         else if(version.length == 0) {
-            currentVersion = currentVersion + upgradingPattern;
+            currentVersion = Utils.round(currentVersion + upgradingPattern, 1);
         }
         else {
             Logs.write("Error updating version");
+            return;
         }
+        updateVariables();
     }
 
-    private static void recoverVersionFromError(boolean isInstalled){
+    private void recoverVersionFromError(boolean isInstalled){
         if(isInstalled) {
             currentVersion = currentVersion - upgradingPattern;
         }
         else{
             chaincodeVersions.remove(currentVersion);
             currentVersion = currentVersion - upgradingPattern;
+
         }
+        updateVariables();
     }
+
+    private void updateVariables(){
+        ChaincodeVersionHashtable.replace("currentVersion", currentVersion);
+        ChaincodeVersionHashtable.replace("upgradingPattern", upgradingPattern);
+        ChaincodeVersionHashtable.replace("instantiated", instantiated);
+        ChaincodeVersionHashtable.replace("chaincodeVersions", chaincodeVersions);
+
+        /*try {
+            Utils.serialize(ChaincodeVersionHashtable, "ChaincodeVersionHashtable:" + name);
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }*/
+    }
+
+    /**
+     *
+     * Simple getter for the current chaincode version
+     *
+     * @return
+     */
+    public double getCurrentVersion(){return currentVersion;}
+
+    public void setCurrentVersion(double newVersion){currentVersion = newVersion;}
 
     /**
      *
@@ -360,10 +410,18 @@ public class Blockchain {
      * @param channel
      * TODO
      */
-    private static void resolveChaincodeVersion(HFClient client, Channel channel, String chaincodeName){}
+    private static void resolveChaincodeVersion(HFClient client, Channel channel){}
 
 
-    public static int start_op(HFClient client, Channel channel, String chaincodeName, String documentName, byte[] signature) throws Exception{
+
+    /*****************************************************************
+     *
+     *                      CHAINCODE OPERATIONS
+     *
+     *
+     *
+     ******************************************************************/
+    public int start_op(HFClient client, Channel channel, String documentName, byte[] signature) throws Exception{
 
 
         UUID id = Utils.generateID(IDHashtable);
@@ -374,7 +432,7 @@ public class Blockchain {
         TransactionProposalRequest transactionRequest = client.newTransactionProposalRequest();
 
 
-        ChaincodeID ccId = ChaincodeID.newBuilder().setName(chaincodeName).setVersion(""+currentVersion).build();
+        ChaincodeID ccId = ChaincodeID.newBuilder().setName(name).setVersion(""+currentVersion).build();
         transactionRequest.setChaincodeID(ccId);
         transactionRequest.setFcn("op_start");
         transactionRequest.setArgs(id.toString(), documentName);
@@ -411,12 +469,12 @@ public class Blockchain {
         List<UUID> idList = new ArrayList();
         idList.add(id);
         IDHashtable.put(documentName, idList);
-        Utils.serialize(IDHashtable, "IDHashtable");
+        //Utils.serialize(IDHashtable, "IDHashtable:" + name);
         return 0;
 
     }
 
-    public static int sign_op(HFClient client, Channel channel, String chaincodeName, String documentName, byte[] hash) throws Exception{
+    public int sign_op(HFClient client, Channel channel, String documentName, byte[] hash) throws Exception{
 
         UUID id = Utils.generateID(IDHashtable);
         Logs.write("Signing document " + documentName + "...");
@@ -426,7 +484,7 @@ public class Blockchain {
         TransactionProposalRequest transactionRequest = client.newTransactionProposalRequest();
 
 
-        ChaincodeID ccId = ChaincodeID.newBuilder().setName(chaincodeName).setVersion(""+currentVersion).build();
+        ChaincodeID ccId = ChaincodeID.newBuilder().setName(name).setVersion(""+currentVersion).build();
         transactionRequest.setChaincodeID(ccId);
         transactionRequest.setFcn("op_sign");
         transactionRequest.setArgs(id.toString(), documentName);
@@ -462,12 +520,12 @@ public class Blockchain {
 
         List<UUID> idList = IDHashtable.get(documentName);
         idList.add(id);
-        Utils.serialize(IDHashtable, "IDHashtable");
+        //Utils.serialize(IDHashtable, "IDHashtable:" + name);
         return 0;
 
     }
 
-    public static int end_op(HFClient client, Channel channel, String chaincodeName, String documentName, byte[] signature) throws Exception{
+    public int end_op(HFClient client, Channel channel, String documentName, byte[] signature) throws Exception{
 
         UUID id = Utils.generateID(IDHashtable);
         Logs.write("Signing document " + documentName + "...");
@@ -477,7 +535,7 @@ public class Blockchain {
         TransactionProposalRequest transactionRequest = client.newTransactionProposalRequest();
 
 
-        ChaincodeID ccId = ChaincodeID.newBuilder().setName(chaincodeName).setVersion(""+currentVersion).build();
+        ChaincodeID ccId = ChaincodeID.newBuilder().setName(name).setVersion(""+currentVersion).build();
         transactionRequest.setChaincodeID(ccId);
         transactionRequest.setFcn("op_end");
         transactionRequest.setArgs(id.toString(), documentName);
@@ -513,16 +571,16 @@ public class Blockchain {
 
         List<UUID> idList = IDHashtable.get(documentName);
         idList.add(id);
-        Utils.serialize(IDHashtable, "IDHashtable");
+        //Utils.serialize(IDHashtable, "IDHashtable:" + name);
         return 0;
     }
 
-    public static String op_query(HFClient client, Channel channel, String chaincodeName, String documentName, UUID id) throws Exception{
+    private String op_query(HFClient client, Channel channel, String documentName, UUID id) throws Exception{
 
         Logs.write("Query blockchain for document " + documentName);
 
         QueryByChaincodeRequest qpr = client.newQueryProposalRequest();
-        ChaincodeID ccId = ChaincodeID.newBuilder().setName(chaincodeName).setVersion(""+currentVersion).build();
+        ChaincodeID ccId = ChaincodeID.newBuilder().setName(name).setVersion(""+currentVersion).build();
         qpr.setChaincodeID(ccId);
         qpr.setFcn("op_query");
         qpr.setArgs(id.toString());
@@ -554,7 +612,18 @@ public class Blockchain {
 
     }
 
-    public static void install(HFClient client, Channel channel, String chaincodeName, ChaincodeEndorsementPolicy... endorsementPolicies) throws Exception{
+
+
+
+    /*****************************************************************
+     *
+     *                      CHAINCODE MAINTENANCE
+     *
+     *
+     *
+     ******************************************************************/
+
+    private void install(HFClient client, Channel channel, String chaincodeName, ChaincodeEndorsementPolicy... endorsementPolicies) throws Exception{
         Collection<ProposalResponse> responses;
         Collection<ProposalResponse> successful = new LinkedList<>();
         Collection<ProposalResponse> failed = new LinkedList<>();
@@ -605,8 +674,7 @@ public class Blockchain {
 
     }
 
-
-    private static void upgrade(HFClient client, Channel channel, String chaincodeName, ChaincodeEndorsementPolicy... endorsementPolicies) throws Exception{
+    private void upgrade(HFClient client, Channel channel, String chaincodeName, ChaincodeEndorsementPolicy... endorsementPolicies) throws Exception{
 
         Collection<ProposalResponse> responses;
         Collection<ProposalResponse> successful = new LinkedList<>();
@@ -666,7 +734,7 @@ public class Blockchain {
         Logs.write(format("Finished instantiate transaction with transaction id %s", event.getTransactionID()));
     }
 
-    public static void instantiate(HFClient client, Channel channel, String chaincodeName, ChaincodeEndorsementPolicy... endorsementPolicies) throws Exception{
+    private void instantiate(HFClient client, Channel channel, String chaincodeName, ChaincodeEndorsementPolicy... endorsementPolicies) throws Exception{
 
         ChaincodeID chaincodeID = ChaincodeID.newBuilder().setPath("main/resources/chaincode/").setName(chaincodeName).setVersion(""+currentVersion).build();
         //ChaincodeID chaincodeID = chaincodeIDHashtable.get(chaincodeName);
@@ -723,7 +791,7 @@ public class Blockchain {
 
     }
 
-    public static void requestInfo(HFClient client, Channel channel, String chaincode) throws Exception{
+    public void requestInfo(HFClient client, Channel channel, String chaincode) throws Exception{
 
         for(Peer s: channel.getPeers()) {
             List<Query.ChaincodeInfo> chainInfo = client.queryInstalledChaincodes(s);
