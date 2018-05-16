@@ -17,14 +17,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FireStarter.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FireStarter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/FireStarter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="730">
-              <caret line="161" column="38" lean-forward="false" selection-start-line="161" selection-start-column="19" selection-end-line="161" selection-end-column="38" />
+            <state relative-caret-position="-1711">
+              <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#main#0;class#FireStarter#0" expanded="false" />
+                <element signature="method#init#0;class#FireStarter#0" expanded="false" />
                 <element signature="method#initializeHyperledgerConnection#0;class#FireStarter#0" expanded="false" />
                 <element signature="method#getChaincodeList#0;class#FireStarter#0" expanded="false" />
               </folding>
@@ -32,22 +32,82 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ManagementApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Manager/ManagementApplication.java">
+      <file leaf-file-name="WebService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/WebService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-              <folding />
+            <state relative-caret-position="342">
+              <caret line="25" column="40" lean-forward="false" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#890#891#0" expanded="true" />
+                <element signature="e#951#952#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ManagerController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Manager/ManagerController.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="-1147">
+              <caret line="24" column="41" lean-forward="false" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
               <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HFClient.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/hyperledger/fabric-sdk-java/fabric-sdk-java/1.1.0-SNAPSHOT/fabric-sdk-java-1.1.0-20180511.112809-43.jar!/org/hyperledger/fabric/sdk/HFClient.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="179" column="0" lean-forward="false" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
+              <folding>
+                <marker date="1526396587214" expanded="false" signature="0:104" ph="/.../" />
+                <marker date="1526396587214" expanded="false" signature="150:1248" ph="..." />
+                <marker date="1526396587214" expanded="true" signature="1400:1518" ph="{...}" />
+                <marker date="1526396587214" expanded="false" signature="1694:1705" ph=" { " />
+                <marker date="1526396587214" expanded="false" signature="1733:1739" ph=" }" />
+                <marker date="1526396587214" expanded="false" signature="1773:1784" ph=" { " />
+                <marker date="1526396587214" expanded="false" signature="1808:1814" ph=" }" />
+                <marker date="1526396587214" expanded="true" signature="1839:1846" ph="{}" />
+                <marker date="1526396587214" expanded="false" signature="1887:1898" ph=" { " />
+                <marker date="1526396587214" expanded="false" signature="1922:1928" ph=" }" />
+                <marker date="1526396587214" expanded="true" signature="2035:2396" ph="{...}" />
+                <marker date="1526396587214" expanded="false" signature="2444:2455" ph=" { " />
+                <marker date="1526396587214" expanded="false" signature="2477:2483" ph=" }" />
+                <marker date="1526396587214" expanded="true" signature="2638:3258" ph="{...}" />
+                <marker date="1526396587214" expanded="true" signature="3335:4084" ph="{...}" />
+                <marker date="1526396587214" expanded="true" signature="4285:5096" ph="{...}" />
+                <marker date="1526396587214" expanded="true" signature="5216:5459" ph="{...}" />
+                <marker date="1526396587214" expanded="true" signature="5589:6516" ph="{...}" />
+                <marker date="1526396587214" expanded="true" signature="6626:6727" ph="{...}" />
+                <marker date="1526396587214" expanded="true" signature="6814:6921" ph="{...}" />
+                <marker date="1526396587214" expanded="true" signature="6965:6976" ph=" { " />
+                <marker date="1526396587214" expanded="true" signature="7016:7022" ph=" }" />
+                <marker date="1526396587214" expanded="false" signature="7085:7096" ph=" { " />
+                <marker date="1526396587214" expanded="false" signature="7148:7154" ph=" }" />
+                <marker date="1526396587214" expanded="true" signature="7228:7300" ph="{...}" />
+                <marker date="1526396587214" expanded="false" signature="7363:7374" ph=" { " />
+                <marker date="1526396587214" expanded="false" signature="7426:7432" ph=" }" />
+                <marker date="1526396587214" expanded="true" signature="7504:7584" ph="{...}" />
+                <marker date="1526396587214" expanded="true" signature="7647:7724" ph="{...}" />
+                <marker date="1526396587214" expanded="true" signature="7807:8252" ph="{...}" />
+                <marker date="1526396587214" expanded="true" signature="8370:8497" ph="{...}" />
+                <marker date="1526396587214" expanded="true" signature="8592:8693" ph="{...}" />
+                <marker date="1526396587214" expanded="true" signature="8786:8886" ph="{...}" />
+                <marker date="1526396587214" expanded="true" signature="9002:9106" ph="{...}" />
+                <marker date="1526396587214" expanded="true" signature="9207:9808" ph="{...}" />
+                <marker date="1526396587214" expanded="true" signature="9928:10469" ph="{...}" />
+                <marker date="1526396587214" expanded="true" signature="10610:10802" ph="{...}" />
+                <marker date="1526396587214" expanded="true" signature="10961:11165" ph="{...}" />
+                <marker date="1526396587214" expanded="true" signature="11349:11576" ph="{...}" />
+                <marker date="1526396587214" expanded="true" signature="11641:11848" ph="{...}" />
+                <marker date="1526396587214" expanded="true" signature="11890:12137" ph="{...}" />
+                <marker date="1526396587214" expanded="true" signature="12150:12423" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -55,32 +115,33 @@
       <file leaf-file-name="Blockchain.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Application/Blockchain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="325" column="20" lean-forward="false" selection-start-line="325" selection-start-column="20" selection-end-line="325" selection-end-column="20" />
+            <state relative-caret-position="717">
+              <caret line="210" column="9" lean-forward="false" selection-start-line="210" selection-start-column="9" selection-end-line="210" selection-end-column="9" />
               <folding>
                 <element signature="docComment;class#Blockchain#0" expanded="false" />
-                <element signature="docComment;method#updateChaincode#0;class#Blockchain#0" expanded="false" />
+                <element signature="method#initializeBlockchainClass#0;class#Blockchain#0" expanded="false" />
                 <element signature="docComment;method#upgradeChaincode#0;class#Blockchain#0" expanded="false" />
                 <element signature="docComment;method#downgradeChaincode#0;class#Blockchain#0" expanded="false" />
                 <element signature="method#downgradeChaincode#0;class#Blockchain#0" expanded="false" />
                 <element signature="docComment;method#downgradeChaincode#1;class#Blockchain#0" expanded="false" />
                 <element signature="method#downgradeChaincode#1;class#Blockchain#0" expanded="false" />
+                <element signature="method#queryDocument#0;class#Blockchain#0" expanded="false" />
                 <element signature="docComment;method#getIncrementedVersion#0;class#Blockchain#0" expanded="false" />
-                <element signature="e#11156#11157#0" expanded="true" />
-                <element signature="e#11212#11213#0" expanded="true" />
-                <element signature="e#11243#11244#0" expanded="true" />
-                <element signature="e#11270#11271#0" expanded="true" />
+                <element signature="e#11982#11983#0" expanded="true" />
+                <element signature="e#12038#12039#0" expanded="true" />
+                <element signature="e#12069#12070#0" expanded="true" />
+                <element signature="e#12096#12097#0" expanded="true" />
                 <element signature="docComment;method#getUpgradingPattern#0;class#Blockchain#0" expanded="false" />
-                <element signature="e#11420#11421#0" expanded="true" />
-                <element signature="e#11459#11460#0" expanded="true" />
+                <element signature="e#12246#12247#0" expanded="true" />
+                <element signature="e#12285#12286#0" expanded="true" />
                 <element signature="docComment;method#setUpgradingPattern#0;class#Blockchain#0" expanded="false" />
                 <element signature="docComment;method#updateChaincodeVersion#0;class#Blockchain#0" expanded="false" />
-                <element signature="method#updateChaincodeVersion#0;class#Blockchain#0" expanded="false" />
                 <element signature="method#recoverVersionFromError#0;class#Blockchain#0" expanded="false" />
-                <element signature="method#updateVariables#0;class#Blockchain#0" expanded="false" />
                 <element signature="docComment;method#getCurrentVersion#0;class#Blockchain#0" expanded="false" />
                 <element signature="docComment;method#resolveChaincodeVersion#0;class#Blockchain#0" expanded="false" />
                 <element signature="method#start_op#0;class#Blockchain#0" expanded="false" />
+                <element signature="method#sign_op#0;class#Blockchain#0" expanded="false" />
+                <element signature="method#end_op#0;class#Blockchain#0" expanded="false" />
                 <element signature="method#op_query#0;class#Blockchain#0" expanded="false" />
                 <element signature="method#install#0;class#Blockchain#0" expanded="false" />
                 <element signature="method#upgrade#0;class#Blockchain#0" expanded="false" />
@@ -94,11 +155,12 @@
       <file leaf-file-name="Utils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Application/Utils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="696">
-              <caret line="67" column="37" lean-forward="true" selection-start-line="67" selection-start-column="37" selection-end-line="67" selection-end-column="37" />
+            <state relative-caret-position="310">
+              <caret line="36" column="32" lean-forward="false" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#writeFile#0;class#Utils#0" expanded="false" />
+                <element signature="method#deserialize#0;class#Utils#0" expanded="false" />
+                <element signature="method#round#0;class#Utils#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -170,7 +232,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/multicert/Application/RESTController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jboss-web.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/log.txt" />
         <option value="$PROJECT_DIR$/src/main/resources/ccRoot/cc.go" />
         <option value="$PROJECT_DIR$/src/main/resources/ccRoot/cc2.go" />
@@ -187,6 +248,8 @@
         <option value="$PROJECT_DIR$/src/main/java/Manager/ManagerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/Plataform/Application/Blockchain.java" />
         <option value="$PROJECT_DIR$/src/main/java/Plataform/FireStarter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/WebService.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -217,6 +280,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -248,7 +313,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Manager" type="462c0819:PsiDirectoryNode" />
+              <item name="Plataform" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MTChain" type="b2602c69:ProjectViewProjectNode" />
@@ -257,33 +322,34 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Plataform" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MTChain" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MTChain" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="WebService.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="http.proxy" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/chaincode" />
+      <recent name="$PROJECT_DIR$/src/main/Chaincode" />
+      <recent name="$PROJECT_DIR$/Platform" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -291,15 +357,6 @@
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
       <recent name="$PROJECT_DIR$/src/main/java/Servlet" />
       <recent name="$PROJECT_DIR$/src/main/java" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/chaincode" />
-      <recent name="$PROJECT_DIR$/src/main/Chaincode" />
-      <recent name="$PROJECT_DIR$/Platform" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -443,7 +500,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1922" height="1047" extended-state="6" />
+    <frame x="-1" y="-11" width="1922" height="1047" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -465,10 +523,9 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3379679" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3379679" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1625" sideWeight="0.49441788" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1625" sideWeight="0.50558215" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -476,6 +533,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -519,7 +577,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Plataform/Application/Blockchain.java</url>
-          <line>678</line>
+          <line>691</line>
           <properties />
           <option name="timeStamp" value="13" />
         </line-breakpoint>
@@ -531,31 +589,16 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Plataform/Application/Blockchain.java</url>
-          <line>520</line>
+          <line>531</line>
           <properties />
           <option name="timeStamp" value="49" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Plataform/FireStarter.java</url>
-          <line>64</line>
-          <properties />
-          <option name="timeStamp" value="65" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="66" />
+      <option name="time" value="71" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/ClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="1866" column="0" lean-forward="false" selection-start-line="1866" selection-start-column="0" selection-end-line="1866" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Platform/src/main/java/RESTController.java" />
-    <entry file="file://$PROJECT_DIR$/Platform/src/main/java/a.java" />
     <entry file="file://$PROJECT_DIR$/Platform/src/main/resources/chaincode/chaincode.go" />
     <entry file="file://$PROJECT_DIR$/Platform/src/main/java/FireStarter.java" />
     <entry file="file://$PROJECT_DIR$/Platform/pom.xml" />
@@ -682,17 +725,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jboss-web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -743,7 +775,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -755,39 +786,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Application/Logs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/hyperledger/fabric-sdk-java/fabric-sdk-java/1.1.0-SNAPSHOT/fabric-sdk-java-1.1.0-20180430.125343-42-sources.jar!/org/hyperledger/fabric/sdk/HFClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="343" column="0" lean-forward="false" selection-start-line="343" selection-start-column="0" selection-end-line="343" selection-end-column="0" />
-          <folding>
-            <element signature="e#12882#12883#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Application/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="67" column="37" lean-forward="true" selection-start-line="67" selection-start-column="37" selection-end-line="67" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#writeFile#0;class#Utils#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Manager/ManagementApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -800,34 +809,114 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/jre/lib/rt.jar!/sun/security/provider/SHA2.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Application/Logs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Application/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="36" column="32" lean-forward="false" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#deserialize#0;class#Utils#0" expanded="false" />
+            <element signature="method#round#0;class#Utils#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hyperledger/fabric-sdk-java/fabric-sdk-java/1.1.0-SNAPSHOT/fabric-sdk-java-1.1.0-20180511.112809-43.jar!/org/hyperledger/fabric/sdk/HFClient.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="179" column="0" lean-forward="false" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
+          <folding>
+            <marker date="1526396587214" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1526396587214" expanded="false" signature="150:1248" ph="..." />
+            <marker date="1526396587214" expanded="true" signature="1400:1518" ph="{...}" />
+            <marker date="1526396587214" expanded="false" signature="1694:1705" ph=" { " />
+            <marker date="1526396587214" expanded="false" signature="1733:1739" ph=" }" />
+            <marker date="1526396587214" expanded="false" signature="1773:1784" ph=" { " />
+            <marker date="1526396587214" expanded="false" signature="1808:1814" ph=" }" />
+            <marker date="1526396587214" expanded="true" signature="1839:1846" ph="{}" />
+            <marker date="1526396587214" expanded="false" signature="1887:1898" ph=" { " />
+            <marker date="1526396587214" expanded="false" signature="1922:1928" ph=" }" />
+            <marker date="1526396587214" expanded="true" signature="2035:2396" ph="{...}" />
+            <marker date="1526396587214" expanded="false" signature="2444:2455" ph=" { " />
+            <marker date="1526396587214" expanded="false" signature="2477:2483" ph=" }" />
+            <marker date="1526396587214" expanded="true" signature="2638:3258" ph="{...}" />
+            <marker date="1526396587214" expanded="true" signature="3335:4084" ph="{...}" />
+            <marker date="1526396587214" expanded="true" signature="4285:5096" ph="{...}" />
+            <marker date="1526396587214" expanded="true" signature="5216:5459" ph="{...}" />
+            <marker date="1526396587214" expanded="true" signature="5589:6516" ph="{...}" />
+            <marker date="1526396587214" expanded="true" signature="6626:6727" ph="{...}" />
+            <marker date="1526396587214" expanded="true" signature="6814:6921" ph="{...}" />
+            <marker date="1526396587214" expanded="true" signature="6965:6976" ph=" { " />
+            <marker date="1526396587214" expanded="true" signature="7016:7022" ph=" }" />
+            <marker date="1526396587214" expanded="false" signature="7085:7096" ph=" { " />
+            <marker date="1526396587214" expanded="false" signature="7148:7154" ph=" }" />
+            <marker date="1526396587214" expanded="true" signature="7228:7300" ph="{...}" />
+            <marker date="1526396587214" expanded="false" signature="7363:7374" ph=" { " />
+            <marker date="1526396587214" expanded="false" signature="7426:7432" ph=" }" />
+            <marker date="1526396587214" expanded="true" signature="7504:7584" ph="{...}" />
+            <marker date="1526396587214" expanded="true" signature="7647:7724" ph="{...}" />
+            <marker date="1526396587214" expanded="true" signature="7807:8252" ph="{...}" />
+            <marker date="1526396587214" expanded="true" signature="8370:8497" ph="{...}" />
+            <marker date="1526396587214" expanded="true" signature="8592:8693" ph="{...}" />
+            <marker date="1526396587214" expanded="true" signature="8786:8886" ph="{...}" />
+            <marker date="1526396587214" expanded="true" signature="9002:9106" ph="{...}" />
+            <marker date="1526396587214" expanded="true" signature="9207:9808" ph="{...}" />
+            <marker date="1526396587214" expanded="true" signature="9928:10469" ph="{...}" />
+            <marker date="1526396587214" expanded="true" signature="10610:10802" ph="{...}" />
+            <marker date="1526396587214" expanded="true" signature="10961:11165" ph="{...}" />
+            <marker date="1526396587214" expanded="true" signature="11349:11576" ph="{...}" />
+            <marker date="1526396587214" expanded="true" signature="11641:11848" ph="{...}" />
+            <marker date="1526396587214" expanded="true" signature="11890:12137" ph="{...}" />
+            <marker date="1526396587214" expanded="true" signature="12150:12423" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Application/Blockchain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="325" column="20" lean-forward="false" selection-start-line="325" selection-start-column="20" selection-end-line="325" selection-end-column="20" />
+        <state relative-caret-position="717">
+          <caret line="210" column="9" lean-forward="false" selection-start-line="210" selection-start-column="9" selection-end-line="210" selection-end-column="9" />
           <folding>
             <element signature="docComment;class#Blockchain#0" expanded="false" />
-            <element signature="docComment;method#updateChaincode#0;class#Blockchain#0" expanded="false" />
+            <element signature="method#initializeBlockchainClass#0;class#Blockchain#0" expanded="false" />
             <element signature="docComment;method#upgradeChaincode#0;class#Blockchain#0" expanded="false" />
             <element signature="docComment;method#downgradeChaincode#0;class#Blockchain#0" expanded="false" />
             <element signature="method#downgradeChaincode#0;class#Blockchain#0" expanded="false" />
             <element signature="docComment;method#downgradeChaincode#1;class#Blockchain#0" expanded="false" />
             <element signature="method#downgradeChaincode#1;class#Blockchain#0" expanded="false" />
+            <element signature="method#queryDocument#0;class#Blockchain#0" expanded="false" />
             <element signature="docComment;method#getIncrementedVersion#0;class#Blockchain#0" expanded="false" />
-            <element signature="e#11156#11157#0" expanded="true" />
-            <element signature="e#11212#11213#0" expanded="true" />
-            <element signature="e#11243#11244#0" expanded="true" />
-            <element signature="e#11270#11271#0" expanded="true" />
+            <element signature="e#11982#11983#0" expanded="true" />
+            <element signature="e#12038#12039#0" expanded="true" />
+            <element signature="e#12069#12070#0" expanded="true" />
+            <element signature="e#12096#12097#0" expanded="true" />
             <element signature="docComment;method#getUpgradingPattern#0;class#Blockchain#0" expanded="false" />
-            <element signature="e#11420#11421#0" expanded="true" />
-            <element signature="e#11459#11460#0" expanded="true" />
+            <element signature="e#12246#12247#0" expanded="true" />
+            <element signature="e#12285#12286#0" expanded="true" />
             <element signature="docComment;method#setUpgradingPattern#0;class#Blockchain#0" expanded="false" />
             <element signature="docComment;method#updateChaincodeVersion#0;class#Blockchain#0" expanded="false" />
-            <element signature="method#updateChaincodeVersion#0;class#Blockchain#0" expanded="false" />
             <element signature="method#recoverVersionFromError#0;class#Blockchain#0" expanded="false" />
-            <element signature="method#updateVariables#0;class#Blockchain#0" expanded="false" />
             <element signature="docComment;method#getCurrentVersion#0;class#Blockchain#0" expanded="false" />
             <element signature="docComment;method#resolveChaincodeVersion#0;class#Blockchain#0" expanded="false" />
             <element signature="method#start_op#0;class#Blockchain#0" expanded="false" />
+            <element signature="method#sign_op#0;class#Blockchain#0" expanded="false" />
+            <element signature="method#end_op#0;class#Blockchain#0" expanded="false" />
             <element signature="method#op_query#0;class#Blockchain#0" expanded="false" />
             <element signature="method#install#0;class#Blockchain#0" expanded="false" />
             <element signature="method#upgrade#0;class#Blockchain#0" expanded="false" />
@@ -839,15 +928,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/FireStarter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="730">
-          <caret line="161" column="38" lean-forward="false" selection-start-line="161" selection-start-column="19" selection-end-line="161" selection-end-column="38" />
+        <state relative-caret-position="-1711">
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#FireStarter#0" expanded="false" />
+            <element signature="method#init#0;class#FireStarter#0" expanded="false" />
             <element signature="method#initializeHyperledgerConnection#0;class#FireStarter#0" expanded="false" />
             <element signature="method#getChaincodeList#0;class#FireStarter#0" expanded="false" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/WebService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="25" column="40" lean-forward="false" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#890#891#0" expanded="true" />
+            <element signature="e#951#952#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1147">
+          <caret line="24" column="41" lean-forward="false" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
+        <state />
       </provider>
     </entry>
   </component>
@@ -907,7 +1019,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

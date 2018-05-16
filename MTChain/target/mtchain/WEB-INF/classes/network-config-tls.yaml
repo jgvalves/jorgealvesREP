@@ -43,14 +43,13 @@ client:
 
 channels:
   # name of the channel
-  mychannel:
+  channel4:
     # Required. list of orderers designated by the application to use for transactions on this
     # channel. This list can be a result of access control ("org1" can only access "ordererA"), or
     # operational decisions to share loads from applications among the orderers.  The values must
     # be "names" of orgs defined under "organizations/peers"
     orderers:
       - orderer0.initial.com
-      - orderer1.initial.com
     # Required. list of peers from participating orgs
     peers:
       peer0.org1.initial.com:
@@ -175,18 +174,6 @@ orderers:
     #    1ntSRTAKBggqhkjOPQQDAgNIADBFAiEAvX5+F+QnNPKX/Q/kFmkzOdRovEtgIylG
     #    EArBHBpaqpkCIDNzXoW//ROIslbKToWexg/kwAH1HMhkm9doTyaDxc4k
     #    -----END CERTIFICATE-----
-
-  orderer1.initial.com:
-    url: grpcs://localhost:7052
-    grpcOptions:
-      sslProvider: openSSL
-      negotiationType: TLS
-      hostnameOverride: orderer1.initial.com
-      grpc-max-send-message-length: 15
-
-    tlsCACerts:
-        path: /home/jorge/Documents/definit/crypto-config/ordererOrganizations/initial.com/tlsca/tlsca.initial.com-cert.pem
-
 #
 # List of peers to send various requests to, including endorsement, query
 # and event listener registration.
@@ -282,7 +269,7 @@ peers:
 
 #
 # Fabric-CA is a special kind of Certificate Authority provided by Hyperledger Fabric which allows
-# certificate management to be done via REST APIs. multicert.Application may choose to use a standard
+# certificate management to be done via REST APIs. Plataform.Application may choose to use a standard
 # Certificate Authority instead of Fabric-CA, in which case this section would not be specified.
 #
 certificateAuthorities:

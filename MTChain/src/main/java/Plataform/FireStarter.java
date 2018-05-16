@@ -4,6 +4,7 @@ import Plataform.Application.Blockchain;
 import Plataform.Application.FileReader;
 import Plataform.Application.Logs;
 import Plataform.Application.Utils;
+import javafx.application.Application;
 import org.apache.log4j.Logger;
 import org.hyperledger.fabric.sdk.Channel;
 import org.hyperledger.fabric.sdk.HFClient;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
@@ -27,12 +29,12 @@ import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Stream;
 
 import static java.lang.System.exit;
 
 
-@SpringBootApplication
-public class FireStarter extends SpringBootServletInitializer{
+public class FireStarter{
 
 
     protected static HFClient client;
@@ -40,7 +42,8 @@ public class FireStarter extends SpringBootServletInitializer{
     protected static NetworkConfig networkConfig;
     protected static NetworkConfig.UserInfo adminInfo;
     protected static Channel channel = null;
-    private static List<Blockchain> chaincodeInstantiations;
+    protected static List<Blockchain> chaincodeInstantiations;
+    protected static boolean started = false;
 
     protected final static String CHANNEL_NAME = "channel4";
     protected final static String CHAINCODE_NAME = "cc2";
@@ -48,48 +51,15 @@ public class FireStarter extends SpringBootServletInitializer{
 
     private final Logger  logger = Logger.getLogger(FireStarter.class);
 
-
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        //writeFile("BUILDER!!!");
-        return application.sources(FireStarter.class);
-    }
-
-    public static void main(String[] args) {
-
-        Blockchain blockchain = null;
-
+    public static String init(){
+        if(started) return "Already Started!";
         chaincodeInstantiations = getChaincodeList();
-        SpringApplication.run(FireStarter.class, args);
-        /*try {
+        try {
             initializeHyperledgerConnection(CHANNEL_NAME);
-
-            try{
-                blockchain = (Blockchain) Utils.tryDeserialize(CHAINCODE_NAME + ":" + CHANNEL_NAME);
-            }
-            catch(IOException e) {
-                blockchain = new Blockchain(CHAINCODE_NAME);
-            }
-        }catch(Exception e){e.printStackTrace();}*/
-
+        }catch(Exception e){e.printStackTrace();}
+        started = true;
+        return "Started Sucessfuly!";
     }
-
-
-            /*blockchain.updateChaincode(client, client.getChannel(CHANNEL_NAME));
-
-            blockchain.start_op(client, client.getChannel(CHANNEL_NAME), DOCUMENT_NAME, "assinatura".getBytes());
-            blockchain.sign_op(client, client.getChannel(CHANNEL_NAME), DOCUMENT_NAME, "assinatura1".getBytes());
-            blockchain.sign_op(client, client.getChannel(CHANNEL_NAME), DOCUMENT_NAME, "assinatura2".getBytes());
-            blockchain.sign_op(client, client.getChannel(CHANNEL_NAME), DOCUMENT_NAME, "assinatura3".getBytes());
-            blockchain.end_op(client, client.getChannel(CHANNEL_NAME), DOCUMENT_NAME, "assinatura4".getBytes());
-
-            Utils.serialize(blockchain, CHAINCODE_NAME + ":" + CHANNEL_NAME);*/
-            //System.out.println("\n\n\nQUERY RESULT :\n\n" + blockchain.queryDocument(client, client.getChannel(CHANNEL_NAME), DOCUMENT_NAME) + "\n\n");
-
-            //exit(0);
-
-
-
 
 
     public static Channel initializeHyperledgerConnection(String channelName) throws Exception{
@@ -158,18 +128,63 @@ public class FireStarter extends SpringBootServletInitializer{
         }
     }
 
-    public void instantiateChaincode(){
-        Blockchain.instatiateChaincode(client, client.getChannel(CHANNEL_NAME), CHAINCODE_NAME);
+
+
+    /*********************************************************
+     *
+     *
+     *              SET OF REST CALLS TO THE
+     *                      PLATFORM
+     *
+     *
+     *
+     *********************************************************/
+
+    /**************************************
+     *
+     *  MANAGER CALLS
+     *
+     **************************************/
+
+    public static String updateChaincodeVersion(String chaincodeName){
+
+        Blockchain blockchain = getChaincode(chaincodeName);
+        String str = blockchain.updateChaincode(client, client.getChannel(CHANNEL_NAME));
+        try {
+            Utils.serialize(chaincodeInstantiations, "BlockchainObjectsList");
+        }catch(Exception e){e.printStackTrace();}
+        return str;
     }
 
-    public static void (){
-        Blockchain.upgradeChaincode(client, client.getChannel(CHANNEL_NAME), CHAINCODE_NAME);
+
+    public static String downgradeChaincodeVersion(String chaincodeName, double... version){
+        Blockchain blockchain = getChaincode(chaincodeName);
+        String str;
+        if(version.length>0){
+            str = blockchain.downgradeChaincode(client, client.getChannel(CHANNEL_NAME), version[0]);
+        }
+        else{
+            str = blockchain.downgradeChaincode(client, client.getChannel(CHANNEL_NAME));
+        }
+        try {
+            Utils.serialize(chaincodeInstantiations, "BlockchainObjectsList");
+        }catch(Exception e){e.printStackTrace();}
+        return str;
     }
+
+
+    /***************************************
+     *
+     *  APPLICATION CALLS
+     *
+     ***************************************/
 
     public static String signOpChaincode(String document) throws Exception{
+        Blockchain blockchain = getChaincode(CHAINCODE_NAME);
         try {
+
             byte[] hash = ("" + document.hashCode()).getBytes();
-            Blockchain.sign_op(client, client.getChannel(CHANNEL_NAME), CHAINCODE_NAME,document, hash);
+            blockchain.sign_op(client, client.getChannel(CHANNEL_NAME), document, hash);
             return "Added \"" + document + "\" with signOp to the blockchain!";
         }catch(Exception e){
             e.printStackTrace();
@@ -180,9 +195,9 @@ public class FireStarter extends SpringBootServletInitializer{
     public static String endOpChaincode(String document) throws Exception{
         byte[] ass = "assinaturaPlat".getBytes();
 
-        Blockchain.setCurrentVersion(1);
+        Blockchain blockchain = getChaincode(CHAINCODE_NAME);
         try {
-            Blockchain.end_op(client, client.getChannel(CHANNEL_NAME), CHAINCODE_NAME, document, ass);
+            blockchain.end_op(client, client.getChannel(CHANNEL_NAME), document, ass);
             return "Added \"" + document + "\" with endOp to the blockchain!";
         }
         catch(Exception e){
@@ -194,9 +209,9 @@ public class FireStarter extends SpringBootServletInitializer{
     public static String startOpChaincode(String document) throws Exception{
         byte[] ass = "assinaturaPlat".getBytes();
 
-        Blockchain.setCurrentVersion(1);
+        Blockchain blockchain = getChaincode(CHAINCODE_NAME);
         try {
-            Blockchain.start_op(client, client.getChannel(CHANNEL_NAME), CHAINCODE_NAME, document, ass);
+            blockchain.start_op(client, client.getChannel(CHANNEL_NAME), document, ass);
             return "Added \"" + document + "\" with startOp to the blockchain!";
         }
         catch(Exception e){
@@ -206,114 +221,9 @@ public class FireStarter extends SpringBootServletInitializer{
     }
 
     public static String queryChaincode(String document) throws Exception{
-        Blockchain.setCurrentVersion(1);
-        return Blockchain.queryDocument(client, client.getChannel(CHANNEL_NAME), CHAINCODE_NAME, document);
+        Blockchain blockchain = getChaincode(CHAINCODE_NAME);
+        return blockchain.queryDocument(client, client.getChannel(CHANNEL_NAME), document);
     }
 }
 
 
-@RestController
-class ApplicationController{
-
-    @RequestMapping("/init")
-    String hello(@RequestParam(value="chaincode") String chaincodeName) {
-
-
-        try{
-            Blockchain blockchain = FireStarter.getChaincode(chaincodeName);
-            blockchain.upgradeChaincode(FireStarter.client, FireStarter.channel);
-            blockchain.upgradeChaincode(FireStarter.client, FireStarter.channel);
-        }
-        catch (Exception e){return "ERROR!";}
-        return "Success Initializing Client. Connected to " + FireStarter.CHAINCODE_NAME + "!";
-    }
-
-    @RequestMapping("/install")
-    public String installBlockchain() {//@RequestParam(value="name", defaultValue="World") String name) {
-
-        try {
-            FireStarter.install();
-        } catch (Exception a) {
-            return a.getMessage();
-        }
-        return "GOOD";
-    }
-
-    @RequestMapping("/instant")
-    public String instantBlockchain() {//@RequestParam(value="name", defaultValue="World") String name) {
-
-        try {
-            FireStarter.instant();
-        } catch (Exception a) {
-            return a.getMessage();
-        }
-        return "GOOD";
-    }
-
-    @RequestMapping("/upgrade")
-    public void upgradeBlockchain() {//@RequestParam(value="name", defaultValue="World") String name) {
-
-        try {
-            FireStarter.upgradeChaincode();
-        } catch (Exception a) {
-            a.printStackTrace();
-        }
-    }
-
-    @RequestMapping("/query")
-    public String queryBlockchain(@RequestParam(value="document", defaultValue="null") String document) {
-
-        try {
-            return FireStarter.queryChaincode(document);
-        } catch (Exception a) {
-            a.printStackTrace();
-        }
-        return "ERROR";
-    }
-
-    @RequestMapping("/start")
-    public String startBlockchain(@RequestParam(value="document") String document) {
-
-        if(document.equals(null)){
-            return "Please, provide a document!";
-        }
-
-        try {
-            return FireStarter.startOpChaincode(document);
-        } catch (Exception a) {
-            a.printStackTrace();
-        }
-        return "ERROR";
-    }
-
-    @RequestMapping("/sign")
-    public String signBlockchain(@RequestParam(value="document") String document) {
-
-        if(document.equals(null)){
-            return "Please, provide a document!";
-        }
-
-        try {
-            return FireStarter.signOpChaincode(document);
-        } catch (Exception a) {
-            a.printStackTrace();
-        }
-        return "ERROR";
-    }
-
-    @RequestMapping("/end")
-    public String endBlockchain(@RequestParam(value="document") String document) {
-
-        if(document.equals(null)){
-            return "Please, provide a document!";
-        }
-
-        try {
-            return FireStarter.endOpChaincode(document);
-        } catch (Exception a) {
-            a.printStackTrace();
-        }
-        return "ERROR";
-    }
-
-}

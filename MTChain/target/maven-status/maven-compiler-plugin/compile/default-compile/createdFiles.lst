@@ -1,7 +1,9 @@
-multicert/Application/Platform.class
-multicert/FireStarter.class
-multicert/ApplicationController.class
-multicert/Application/Blockchain.class
-multicert/Application/Logs.class
-multicert/Application/FileReader.class
-multicert/Application/RESTController.class
+Plataform/ApplicationController.class
+Plataform/FireStarter.class
+Plataform/Application/Utils.class
+Plataform/Application/RESTController.class
+Plataform/Application/Blockchain.class
+Plataform/Application/FileReader.class
+Plataform/Application/Platform.class
+Plataform/WebService.class
+Plataform/Application/Logs.class

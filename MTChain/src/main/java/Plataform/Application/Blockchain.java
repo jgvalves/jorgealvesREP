@@ -97,14 +97,14 @@ public class Blockchain implements Serializable {
 
     /**
      *
-     * To be used for the first installation of chaincode, and only then. Started the chaincode cycle
+     * To be used for the installation of chaincode. Instantiates if not instantiated, upgrades if instantiated
      *
      * @param client
      * @param channel
      * @param endorsementPolicies
      * @return
      */
-    public int updateChaincode(HFClient client, Channel channel, ChaincodeEndorsementPolicy... endorsementPolicies){
+    public String updateChaincode(HFClient client, Channel channel, ChaincodeEndorsementPolicy... endorsementPolicies){
 
         if(instantiated && currentVersion!=0){
             Logs.write("Upgrading chaincode!");
@@ -128,7 +128,7 @@ public class Blockchain implements Serializable {
             catch(Exception e){
                 Logs.write("Error installing chaincode. " + e.getLocalizedMessage());
                 setCurrentVersion(0);
-                return -1;
+                return "Error installing chaincode: " + e.getLocalizedMessage();
             }
 
             chaincodeVersions.add(new Double(getCurrentVersion()));
@@ -145,14 +145,14 @@ public class Blockchain implements Serializable {
         }
         catch(Exception e){
             Logs.write("Error instantiating the chaincode.");
-            return -1;
+            return "Error instantiating the chaincode: " + e.getLocalizedMessage();
         }
 
         instantiated = true;
         updateVariables();
         Logs.write("Success deploying new chaincode version! Current Version: " + getCurrentVersion());
 
-        return 0;
+        return "Success deploying new chaincode version! Current Version: " + getCurrentVersion();
 
     }
 
@@ -169,7 +169,7 @@ public class Blockchain implements Serializable {
      *      0, is ok
      *      -1, ups
      */
-    public int upgradeChaincode(HFClient client, Channel channel, ChaincodeEndorsementPolicy... endorsementPolicies){
+    public String upgradeChaincode(HFClient client, Channel channel, ChaincodeEndorsementPolicy... endorsementPolicies){
 
 
         //If upgrading from a downgraded version...
@@ -190,7 +190,7 @@ public class Blockchain implements Serializable {
             } catch (Exception e) {
                 Logs.write("Error installing chaincode upgrade. Failed to upgrade to version " + getCurrentVersion());
                 recoverVersionFromError(false);
-                return -1;
+                return "Error installing chaincode upgrade. Failed to upgrade to version " + getCurrentVersion();
             }
 
             chaincodeVersions.add(new Double(getCurrentVersion()));
@@ -207,12 +207,12 @@ public class Blockchain implements Serializable {
         catch(Exception e){
             Logs.write("Error upgrading chaincode. Failed to upgrade to " + getCurrentVersion());
             recoverVersionFromError(true);
-            return -1;
+            return "Error upgrading chaincode. Failed to upgrade to " + getCurrentVersion();
         }
 
 
         Logs.write("Success deploying new chaincode version! Current Version: " + getCurrentVersion());
-        return 0;
+        return "Success deploying new chaincode version! Current Version: " + getCurrentVersion();
 
     }
 
@@ -226,20 +226,20 @@ public class Blockchain implements Serializable {
      * @param endorsementPolicies
      * @return
      */
-    public int downgradeChaincode(HFClient client, Channel channel, ChaincodeEndorsementPolicy... endorsementPolicies){
+    public String downgradeChaincode(HFClient client, Channel channel, ChaincodeEndorsementPolicy... endorsementPolicies){
 
         if(currentVersion == 0){
             if(!instantiated) {
                 Logs.write("Cannot upgrade chaincode if no version is running");
-                return -1;
+                return "Cannot upgrade chaincode if no version is running";
             }
             resolveChaincodeVersion(client, channel);
         }
 
-        Logs.write("Downgrading version " + getCurrentVersion() + " to " + chaincodeVersions.get(chaincodeVersions.size()-1) + "...");
+        Logs.write("Downgrading version " + getCurrentVersion() + " to " + chaincodeVersions.get(chaincodeVersions.size()-2) + "...");
 
-        updateChaincodeVersion(chaincodeVersions.get(chaincodeVersions.size()-1));
-        return 0;
+        updateChaincodeVersion(chaincodeVersions.get(chaincodeVersions.size()-2));
+        return "Downgraded to version " + getCurrentVersion();
     }
 
 
@@ -253,12 +253,12 @@ public class Blockchain implements Serializable {
      * @param endorsementPolicies
      * @return
      */
-    public int downgradeChaincode(HFClient client, Channel channel, double version, ChaincodeEndorsementPolicy... endorsementPolicies){
+    public String downgradeChaincode(HFClient client, Channel channel, double version, ChaincodeEndorsementPolicy... endorsementPolicies){
 
         if(currentVersion == 0){
             if(!instantiated) {
                 Logs.write("Cannot upgrade chaincode if no version is running");
-                return -1;
+                return "Cannot upgrade chaincode if no version is running";
             }
             resolveChaincodeVersion(client, channel);
         }
@@ -269,11 +269,16 @@ public class Blockchain implements Serializable {
             updateChaincodeVersion(version);
         }
         else{
-            if(instantiated) Logs.write("Version " + version + " is not installed.");
-            else Logs.write("Chaincode not instantiated.");
-            return -1;
+            if(instantiated) {
+                Logs.write("Version " + version + " is not installed.");
+                return "Version " + version + " is not installed.";
+            }
+            else {
+                Logs.write("Chaincode not instantiated.");
+                return "Chaincode not instantiated.";
+            }
         }
-        return 0;
+        return "Downgraded successfuly. Current version: " + getCurrentVersion();
     }
 
 
@@ -396,6 +401,8 @@ public class Blockchain implements Serializable {
      */
     public double getCurrentVersion(){return currentVersion;}
 
+    public List<Double> getVersions(){return chaincodeVersions;}
+
     public void setCurrentVersion(double newVersion){currentVersion = newVersion;}
 
     /**
@@ -432,11 +439,14 @@ public class Blockchain implements Serializable {
         TransactionProposalRequest transactionRequest = client.newTransactionProposalRequest();
 
 
+
         ChaincodeID ccId = ChaincodeID.newBuilder().setName(name).setVersion(""+currentVersion).build();
         transactionRequest.setChaincodeID(ccId);
         transactionRequest.setFcn("op_start");
         transactionRequest.setArgs(id.toString(), documentName);
         transactionRequest.setArgs(signature);
+
+        Logs.write("Getting chaincode " + ccId.getName() + ":" + ccId.getVersion());
 
         Logs.write("Sending transaction proposal to all peers...");
         Logs.write(documentName + ": " + new String(signature, StandardCharsets.UTF_8));
@@ -490,6 +500,7 @@ public class Blockchain implements Serializable {
         transactionRequest.setArgs(id.toString(), documentName);
         transactionRequest.setArgs(hash);
 
+        Logs.write("Getting chaincode " + ccId.getName() + ":" + ccId.getVersion());
         Logs.write("Sending transaction proposal to all peers...");
         Logs.write(documentName + ": " + new String(hash, StandardCharsets.UTF_8));
 
@@ -541,6 +552,7 @@ public class Blockchain implements Serializable {
         transactionRequest.setArgs(id.toString(), documentName);
         transactionRequest.setArgs(signature);
 
+        Logs.write("Getting chaincode " + ccId.getName() + ":" + ccId.getVersion());
         Logs.write("Sending transaction proposal to all peers...");
         Logs.write(documentName + ": " + new String(signature, StandardCharsets.UTF_8));
 
@@ -586,6 +598,7 @@ public class Blockchain implements Serializable {
         qpr.setArgs(id.toString());
 
 
+        Logs.write("Getting chaincode " + ccId.getName() + ":" + ccId.getVersion());
         Logs.write("Querying the peers...");
 
         Collection<ProposalResponse> res = channel.queryByChaincode(qpr);

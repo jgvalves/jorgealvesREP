@@ -1,6 +1,8 @@
-/home/jorge/Documents/MTChain/src/main/java/multicert/FireStarter.java
-/home/jorge/Documents/MTChain/src/main/java/multicert/Application/RESTController.java
-/home/jorge/Documents/MTChain/src/main/java/multicert/Application/Logs.java
-/home/jorge/Documents/MTChain/src/main/java/multicert/Application/Platform.java
-/home/jorge/Documents/MTChain/src/main/java/multicert/Application/Blockchain.java
-/home/jorge/Documents/MTChain/src/main/java/multicert/Application/FileReader.java
+/home/jorge/Documents/MTChain/src/main/java/Plataform/Application/Utils.java
+/home/jorge/Documents/MTChain/src/main/java/Plataform/WebService.java
+/home/jorge/Documents/MTChain/src/main/java/Plataform/Application/Blockchain.java
+/home/jorge/Documents/MTChain/src/main/java/Plataform/Application/Logs.java
+/home/jorge/Documents/MTChain/src/main/java/Plataform/FireStarter.java
+/home/jorge/Documents/MTChain/src/main/java/Plataform/Application/RESTController.java
+/home/jorge/Documents/MTChain/src/main/java/Plataform/Application/FileReader.java
+/home/jorge/Documents/MTChain/src/main/java/Plataform/Application/Platform.java
