@@ -78,11 +78,11 @@ channels:
         ledgerQuery: true
         eventSource: true
 
-      peer2.org1.initial.com:
-        endorsingPeer: true
-        chaincodeQuery: true
-        ledgerQuery: true
-        eventSource: true
+#      peer2.org1.initial.com:
+#        endorsingPeer: true
+#        chaincodeQuery: true
+#        ledgerQuery: true
+#        eventSource: true
 #
 # list of participating organizations in this network
 #
@@ -93,7 +93,7 @@ organizations:
     peers:
       - peer0.org1.initial.com
       - peer1.org1.initial.com
-      - peer2.org1.initial.com
+#      - peer2.org1.initial.com
 
     # [Optional]. Certificate Authorities issue certificates for identification purposes in a Fabric based
     # network. Typically certificates provisioning is done in a separate process outside of the
@@ -226,17 +226,17 @@ peers:
       tlsCACerts:
         path: /home/jorge/Documents/definit/crypto-config/peerOrganizations/org1.initial.com/peers/peer1.org1.initial.com/tls/server.crt
 
-  peer2.org1.initial.com:
-      url: grpcs://localhost:9051
-      eventUrl: grpcs://localhost:9053
-      grpcOptions:
-        ssl-target-name-override: peer2.org1.initial.com
-        grpc.http2.keepalive_time: 15
-        negotiationType: TLS
-        sslProvider: openSSL
-        hostnameOverride: peer2.org1.initial.com
-      tlsCACerts:
-        path: /home/jorge/Documents/definit/crypto-config/peerOrganizations/org1.initial.com/peers/peer2.org1.initial.com/tls/server.crt
+#  peer2.org1.initial.com:
+#      url: grpcs://localhost:9051
+#      eventUrl: grpcs://localhost:9053
+#      grpcOptions:
+#        ssl-target-name-override: peer2.org1.initial.com
+#        grpc.http2.keepalive_time: 15
+#        negotiationType: TLS
+#        sslProvider: openSSL
+#        hostnameOverride: peer2.org1.initial.com
+#      tlsCACerts:
+#        path: /home/jorge/Documents/definit/crypto-config/peerOrganizations/org1.initial.com/peers/peer2.org1.initial.com/tls/server.crt
 
 #   peer1.org1.example.com:
 #     url: grpcs://localhost:7056

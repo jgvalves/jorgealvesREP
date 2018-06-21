@@ -33,7 +33,7 @@ public final class Utils {
 
     public static void serialize(Object object, String name) throws IOException {
         try (ObjectOutputStream oos = new ObjectOutputStream(Files.newOutputStream(
-                Paths.get("src/main/resources/JSON/" + name + ".jso")))) {
+                Paths.get("./src/", (name + ".jso"))))) {
             oos.writeObject(object);
         }
     }
@@ -46,7 +46,7 @@ public final class Utils {
      * @throws Exception
      */
     public static Object tryDeserialize(String name) throws Exception {
-        if (Files.exists(Paths.get("src/main/resources/JSON/" + name + ".jso"))) {
+        if (Files.exists(Paths.get("./src/", (name + ".jso")))) {
             return deserialize(name);
         }
         throw new IOException();
@@ -54,7 +54,7 @@ public final class Utils {
 
     private static Object deserialize(String name) throws Exception {
         try (ObjectInputStream decoder = new ObjectInputStream(
-                Files.newInputStream(Paths.get("src/main/resources/JSON/" + name + ".jso")))) {
+                Files.newInputStream(Paths.get("./src/", (name + ".jso"))))) {
             return decoder.readObject();
         }
     }

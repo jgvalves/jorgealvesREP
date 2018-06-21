@@ -3,6 +3,8 @@ package Plataform.Application;
 import org.hyperledger.fabric.protos.peer.Query;
 import org.hyperledger.fabric.sdk.*;
 import org.hyperledger.fabric.sdk.exception.ProposalException;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.ResourceLoader;
 
 import java.io.Serializable;
 import java.nio.charset.StandardCharsets;
@@ -57,34 +59,6 @@ public class Blockchain implements Serializable {
     }
 
     public void initializeBlockchainClass(String chaincodeName){
-        //Getting IDHashtable from file
-        /*try {
-            IDHashtable = (Hashtable<String, List<UUID>>) Utils.tryDeserialize("IDHashtable:" + name);
-        }
-        catch(Exception e) {
-            IDHashtable = new Hashtable<>();
-        }
-
-        //Getting ChaincodeVersionHashtable from file
-        try{
-            ChaincodeVersionHashtable = (Hashtable<String, Object>) Utils.tryDeserialize("ChaincodeVersionHashtable:" + chaincodeName);
-            currentVersion = (Double) ChaincodeVersionHashtable.get("currentVersion");
-            upgradingPattern = (Double) ChaincodeVersionHashtable.get("upgradingPattern");
-            chaincodeVersions = (List<Double>) ChaincodeVersionHashtable.get("chaincodeVersions");
-            instantiated = (boolean) ChaincodeVersionHashtable.get("instantiated");
-        }
-        catch(Exception e){
-            ChaincodeVersionHashtable = new Hashtable<>();
-            currentVersion = 0; ChaincodeVersionHashtable.put("currentVersion", currentVersion);
-            upgradingPattern = 0.1; ChaincodeVersionHashtable.put("upgradingPattern", upgradingPattern);
-            instantiated = false; ChaincodeVersionHashtable.put("instantiated", instantiated);
-            chaincodeVersions = new ArrayList<>(); ChaincodeVersionHashtable.put("chaincodeVersions", chaincodeVersions);
-
-            try {
-                Utils.serialize(ChaincodeVersionHashtable, "ChaincodeVersionHashtable:" + chaincodeName);
-            }
-            catch(Exception a){a.printStackTrace();}
-        }*/
 
         IDHashtable = new Hashtable<>();
         ChaincodeVersionHashtable = new Hashtable<>();
@@ -644,7 +618,7 @@ public class Blockchain implements Serializable {
         //ChaincodeID chaincodeID = ChaincodeID.newBuilder().setPath("main/resources/chaincode/").setName(chaincodeName).setVersion(""+currentVersion).build();
 
         ChaincodeID.Builder chaincodeIDBuilder = ChaincodeID.newBuilder().setName(chaincodeName);
-        chaincodeIDBuilder.setPath("main/resources/chaincode/");
+        chaincodeIDBuilder.setPath("chaincode/");
         ChaincodeID chaincodeID = chaincodeIDBuilder.build();
 
         InstallProposalRequest installProposalRequest = client.newInstallProposalRequest();
@@ -694,7 +668,7 @@ public class Blockchain implements Serializable {
         Collection<ProposalResponse> failed = new LinkedList<>();
 
         ChaincodeID.Builder chaincodeIDBuilder = ChaincodeID.newBuilder().setName(chaincodeName).setVersion(""+currentVersion);
-        chaincodeIDBuilder.setPath("main/resources/chaincode/");
+        chaincodeIDBuilder.setPath("chaincode/");
         ChaincodeID chaincodeID = chaincodeIDBuilder.build();
 
 
@@ -749,8 +723,8 @@ public class Blockchain implements Serializable {
 
     private void instantiate(HFClient client, Channel channel, String chaincodeName, ChaincodeEndorsementPolicy... endorsementPolicies) throws Exception{
 
-        ChaincodeID chaincodeID = ChaincodeID.newBuilder().setPath("main/resources/chaincode/").setName(chaincodeName).setVersion(""+currentVersion).build();
-        //ChaincodeID chaincodeID = chaincodeIDHashtable.get(chaincodeName);
+
+        ChaincodeID chaincodeID = ChaincodeID.newBuilder().setPath("chaincode/").setName(chaincodeName).setVersion(""+currentVersion).build();
         Collection<ProposalResponse> responses;
         Collection<ProposalResponse> successful = new LinkedList<>();
         Collection<ProposalResponse> failed = new LinkedList<>();

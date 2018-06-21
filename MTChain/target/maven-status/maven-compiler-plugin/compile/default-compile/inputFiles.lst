@@ -1,8 +1,13 @@
+/home/jorge/Documents/MTChain/src/main/java/Plataform/Entities/IUsersService.java
+/home/jorge/Documents/MTChain/src/main/java/Plataform/Application/FileReader.java
+/home/jorge/Documents/MTChain/src/main/java/Plataform/Application/Platform.java
+/home/jorge/Documents/MTChain/src/main/java/Plataform/Entities/EntityControllers.java
+/home/jorge/Documents/MTChain/src/main/java/Plataform/Application/ApplicationController.java
 /home/jorge/Documents/MTChain/src/main/java/Plataform/Application/Utils.java
 /home/jorge/Documents/MTChain/src/main/java/Plataform/WebService.java
 /home/jorge/Documents/MTChain/src/main/java/Plataform/Application/Blockchain.java
 /home/jorge/Documents/MTChain/src/main/java/Plataform/Application/Logs.java
+/home/jorge/Documents/MTChain/src/main/java/Plataform/Entities/UsersRepository.java
 /home/jorge/Documents/MTChain/src/main/java/Plataform/FireStarter.java
-/home/jorge/Documents/MTChain/src/main/java/Plataform/Application/RESTController.java
-/home/jorge/Documents/MTChain/src/main/java/Plataform/Application/FileReader.java
-/home/jorge/Documents/MTChain/src/main/java/Plataform/Application/Platform.java
+/home/jorge/Documents/MTChain/src/main/java/Plataform/Entities/UsersImpl.java
+/home/jorge/Documents/MTChain/src/main/java/Plataform/Entities/Models/Users.java

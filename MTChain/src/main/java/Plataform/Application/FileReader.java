@@ -2,9 +2,14 @@ package Plataform.Application;
 
 import org.hyperledger.fabric.sdk.ChaincodeEndorsementPolicy;
 import org.hyperledger.fabric.sdk.NetworkConfig;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.util.ResourceUtils;
 
+import javax.servlet.ServletContext;
 import java.io.File;
 import java.io.IOException;
+import java.util.*;
+//import javax.json.Json.*;
 
 public class FileReader {
 
@@ -29,7 +34,7 @@ public class FileReader {
         switch(path.length){
             case 0:
                 String fname = "chaincodeendorsementpolicy.yaml";
-                String pname = "/home/jorge/Documents/MTChain/src/main/resources/";
+                String pname = "resources/";
                 ret = new File(pname, fname);
                 break;
             case 1:
@@ -49,7 +54,7 @@ public class FileReader {
             Logs.write("Error reading Endorsement from file.");
         }
 
-        Logs.write("Reading from file" + ret.getAbsolutePath() + ret.getAbsoluteFile());
+        Logs.write("Reading from file" + ret.getAbsoluteFile());
         return chaincodeEndorsementPolicy;
     }
 
@@ -72,9 +77,11 @@ public class FileReader {
             case 0:
                 String fname = "network-config-tls.yaml";
                 String pname = "/home/jorge/Documents/MTChain/src/main/resources/";
+                //String pname = "/opt/jboss/wildfly/standalone/configuration/hyperledgerNetwork/";
                 ret = new File(pname, fname);
                 break;
             case 1:
+                Logs.write("PATH: " + path[0]);
                 ret = new File(path[0]);
                 break;
             case 2:
@@ -84,13 +91,23 @@ public class FileReader {
                 break;
         }
 
-        Logs.write("Reading from file" + ret.getAbsolutePath() + ret.getAbsoluteFile());
+
+                //ret = new File(new ClassPathResource("/resources/network-config-tls.yaml").getPath());
+        try {
+            Logs.write("Reading from file " + ret.getAbsoluteFile() + "\nFILE: " + ret.getCanonicalPath());
+        }
+        catch(Exception e){
+            Logs.write("ENTAO BOA SORTE: "); e.printStackTrace();
+        }
 
         try {
+
             networkConfig = NetworkConfig.fromYamlFile(ret);
         }
         catch(IOException e){
             Logs.write("Error reading Network configuration file.");
+            e.printStackTrace();
+            return null;
         }
 
         Logs.write("Success reading file!");
@@ -128,7 +145,7 @@ public class FileReader {
                 else{ Logs.writeInLine(false," , ");}
             }
             Logs.writeInLine(false,"\n");
-            Logs.write("Peer Admin: " + org.getPeerAdmin().getName());
+            Logs.write("Peer AdminEntity: " + org.getPeerAdmin().getName());
         }
 
         return networkConfig;

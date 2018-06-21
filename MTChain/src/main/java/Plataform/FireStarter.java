@@ -11,6 +11,7 @@ import org.hyperledger.fabric.sdk.HFClient;
 import org.hyperledger.fabric.sdk.NetworkConfig;
 import org.hyperledger.fabric.sdk.security.CryptoSuite;
 import org.hyperledger.fabric_ca.sdk.HFCAClient;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -34,7 +35,8 @@ import java.util.stream.Stream;
 import static java.lang.System.exit;
 
 
-public class FireStarter{
+public class FireStarter {
+
 
 
     protected static HFClient client;
@@ -44,12 +46,13 @@ public class FireStarter{
     protected static Channel channel = null;
     protected static List<Blockchain> chaincodeInstantiations;
     protected static boolean started = false;
+    private static List<BlockchainNodes> blockchainNodesInfo;
 
     protected final static String CHANNEL_NAME = "channel4";
     protected final static String CHAINCODE_NAME = "cc2";
     protected final static String DOCUMENT_NAME = "documento";
 
-    private final Logger  logger = Logger.getLogger(FireStarter.class);
+    private final Logger logger = Logger.getLogger(FireStarter.class);
 
     public static String init(){
         if(started) return "Already Started!";
@@ -61,12 +64,18 @@ public class FireStarter{
         return "Started Sucessfuly!";
     }
 
+    public static NetworkConfig getNetworkConfig(){
+        return networkConfig;
+    }
 
     public static Channel initializeHyperledgerConnection(String channelName) throws Exception{
 
+
+
+
         CryptoSuite cs = CryptoSuite.Factory.getCryptoSuite();
         Logs.write("Starting reading of config file...");
-        networkConfig = FileReader.getNetworkConfigFileYAML();
+        networkConfig = FileReader.getNetworkConfigFileYAML();//TLSConfigFile);
 
         NetworkConfig.CAInfo caInfo = networkConfig.getClientOrganization().getCertificateAuthorities().get(0);
 
@@ -90,8 +99,10 @@ public class FireStarter{
             Logs.write("Error creating channel. Verify if all machines to connect are running, if all IPs are correct and check TLS!");
             return null;
         }
-
         Logs.write("Channel started successfully: " + channelName);
+
+        populateBlockchainNodeList(channel);
+
         return channel;
     }
 
@@ -116,18 +127,34 @@ public class FireStarter{
         }
     }
 
-    private static List<Blockchain> getChaincodeList(){
-        try{
-            List<Blockchain> l = (List<Blockchain>) Utils.tryDeserialize("BlockchainObjectsList");
-            Logs.write("Found BlockchainObjectsList file, getting blockchain objects...");
-            return l;
-        }
-        catch(Exception e){
-            Logs.write("Didn't find BlockchainObjectsList file. Initializing new List...");
-            return new ArrayList<>();
+    private static void populateBlockchainNodeList(Channel channel){
+
+        blockchainNodesInfo = new ArrayList<>();
+
+        for(NetworkConfig.OrgInfo org: networkConfig.getOrganizationInfos()){
+            for(String peer: networkConfig.getOrganizationInfo(org.getName()).getPeerNames()){
+                blockchainNodesInfo.add(new BlockchainNodes(peer, org.getName(), "Endorsing", channel.getName()));
+            }
+
+            for(String orderer: networkConfig.getOrdererNames()){
+                blockchainNodesInfo.add(new BlockchainNodes(orderer, org.getName(), "Orderer", channel.getName()));
+            }
         }
     }
 
+    public static List<BlockchainNodes> getBlockchainNodeList(){
+        return blockchainNodesInfo;
+    }
+
+    public static List<Blockchain> getChaincodeList(){
+        try{
+            List<Blockchain> l = (List<Blockchain>) Utils.tryDeserialize("BlockchainObjectsList");
+            return l;
+        }
+        catch(Exception e){
+            return new ArrayList<>();
+        }
+    }
 
 
     /*********************************************************
@@ -149,8 +176,10 @@ public class FireStarter{
     public static String updateChaincodeVersion(String chaincodeName){
 
         Blockchain blockchain = getChaincode(chaincodeName);
-        String str = blockchain.updateChaincode(client, client.getChannel(CHANNEL_NAME));
+        String str = "ERROR";
         try {
+        str = blockchain.updateChaincode(client, client.getChannel(CHANNEL_NAME));
+
             Utils.serialize(chaincodeInstantiations, "BlockchainObjectsList");
         }catch(Exception e){e.printStackTrace();}
         return str;
@@ -225,5 +254,58 @@ public class FireStarter{
         return blockchain.queryDocument(client, client.getChannel(CHANNEL_NAME), document);
     }
 }
+
+class BlockchainNodes {
+
+    public enum State {
+        UP,
+        DOWN
+    }
+
+    private String name;
+    private String org;
+    private String type;
+    private String channel;
+
+    public BlockchainNodes(String name, String org, String type, String channel){
+        this.name = name;
+        this.org = org;
+        this.type = type;
+        this.channel = channel;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getOrg() {
+        return org;
+    }
+
+    public void setOrg(String org) {
+        this.org = org;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getChannel() {
+        return channel;
+    }
+
+    public void setChannel(String channel) {
+        this.channel = channel;
+    }
+}
+
 
 

@@ -12,36 +12,40 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="MTChain" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FireStarter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/FireStarter.java">
+      <file leaf-file-name="spring-security.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/spring-security.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1711">
-              <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#init#0;class#FireStarter#0" expanded="false" />
-                <element signature="method#initializeHyperledgerConnection#0;class#FireStarter#0" expanded="false" />
-                <element signature="method#getChaincodeList#0;class#FireStarter#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="18" column="56" lean-forward="true" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WebService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/WebService.java">
+      <file leaf-file-name="EntityControllers.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/Users/EntityControllers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="25" column="40" lean-forward="false" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#890#891#0" expanded="true" />
-                <element signature="e#951#952#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="521">
+              <caret line="122" column="0" lean-forward="true" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sb-admin-datatables.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/sb-admin-datatables.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1054">
+              <caret line="62" column="32" lean-forward="false" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -49,130 +53,17 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1147">
-              <caret line="24" column="41" lean-forward="false" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
-              <folding />
+            <state relative-caret-position="564">
+              <caret line="46" column="32" lean-forward="true" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
+              <folding>
+                <element signature="n#plugin#0;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="false" />
+                <element signature="n#resources#0;n#build#0;n#project#0;n#!!top" expanded="false" />
+                <element signature="n#repositories#0;n#project#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
           <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
             <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HFClient.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/hyperledger/fabric-sdk-java/fabric-sdk-java/1.1.0-SNAPSHOT/fabric-sdk-java-1.1.0-20180511.112809-43.jar!/org/hyperledger/fabric/sdk/HFClient.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="179" column="0" lean-forward="false" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
-              <folding>
-                <marker date="1526396587214" expanded="false" signature="0:104" ph="/.../" />
-                <marker date="1526396587214" expanded="false" signature="150:1248" ph="..." />
-                <marker date="1526396587214" expanded="true" signature="1400:1518" ph="{...}" />
-                <marker date="1526396587214" expanded="false" signature="1694:1705" ph=" { " />
-                <marker date="1526396587214" expanded="false" signature="1733:1739" ph=" }" />
-                <marker date="1526396587214" expanded="false" signature="1773:1784" ph=" { " />
-                <marker date="1526396587214" expanded="false" signature="1808:1814" ph=" }" />
-                <marker date="1526396587214" expanded="true" signature="1839:1846" ph="{}" />
-                <marker date="1526396587214" expanded="false" signature="1887:1898" ph=" { " />
-                <marker date="1526396587214" expanded="false" signature="1922:1928" ph=" }" />
-                <marker date="1526396587214" expanded="true" signature="2035:2396" ph="{...}" />
-                <marker date="1526396587214" expanded="false" signature="2444:2455" ph=" { " />
-                <marker date="1526396587214" expanded="false" signature="2477:2483" ph=" }" />
-                <marker date="1526396587214" expanded="true" signature="2638:3258" ph="{...}" />
-                <marker date="1526396587214" expanded="true" signature="3335:4084" ph="{...}" />
-                <marker date="1526396587214" expanded="true" signature="4285:5096" ph="{...}" />
-                <marker date="1526396587214" expanded="true" signature="5216:5459" ph="{...}" />
-                <marker date="1526396587214" expanded="true" signature="5589:6516" ph="{...}" />
-                <marker date="1526396587214" expanded="true" signature="6626:6727" ph="{...}" />
-                <marker date="1526396587214" expanded="true" signature="6814:6921" ph="{...}" />
-                <marker date="1526396587214" expanded="true" signature="6965:6976" ph=" { " />
-                <marker date="1526396587214" expanded="true" signature="7016:7022" ph=" }" />
-                <marker date="1526396587214" expanded="false" signature="7085:7096" ph=" { " />
-                <marker date="1526396587214" expanded="false" signature="7148:7154" ph=" }" />
-                <marker date="1526396587214" expanded="true" signature="7228:7300" ph="{...}" />
-                <marker date="1526396587214" expanded="false" signature="7363:7374" ph=" { " />
-                <marker date="1526396587214" expanded="false" signature="7426:7432" ph=" }" />
-                <marker date="1526396587214" expanded="true" signature="7504:7584" ph="{...}" />
-                <marker date="1526396587214" expanded="true" signature="7647:7724" ph="{...}" />
-                <marker date="1526396587214" expanded="true" signature="7807:8252" ph="{...}" />
-                <marker date="1526396587214" expanded="true" signature="8370:8497" ph="{...}" />
-                <marker date="1526396587214" expanded="true" signature="8592:8693" ph="{...}" />
-                <marker date="1526396587214" expanded="true" signature="8786:8886" ph="{...}" />
-                <marker date="1526396587214" expanded="true" signature="9002:9106" ph="{...}" />
-                <marker date="1526396587214" expanded="true" signature="9207:9808" ph="{...}" />
-                <marker date="1526396587214" expanded="true" signature="9928:10469" ph="{...}" />
-                <marker date="1526396587214" expanded="true" signature="10610:10802" ph="{...}" />
-                <marker date="1526396587214" expanded="true" signature="10961:11165" ph="{...}" />
-                <marker date="1526396587214" expanded="true" signature="11349:11576" ph="{...}" />
-                <marker date="1526396587214" expanded="true" signature="11641:11848" ph="{...}" />
-                <marker date="1526396587214" expanded="true" signature="11890:12137" ph="{...}" />
-                <marker date="1526396587214" expanded="true" signature="12150:12423" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Blockchain.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Application/Blockchain.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="717">
-              <caret line="210" column="9" lean-forward="false" selection-start-line="210" selection-start-column="9" selection-end-line="210" selection-end-column="9" />
-              <folding>
-                <element signature="docComment;class#Blockchain#0" expanded="false" />
-                <element signature="method#initializeBlockchainClass#0;class#Blockchain#0" expanded="false" />
-                <element signature="docComment;method#upgradeChaincode#0;class#Blockchain#0" expanded="false" />
-                <element signature="docComment;method#downgradeChaincode#0;class#Blockchain#0" expanded="false" />
-                <element signature="method#downgradeChaincode#0;class#Blockchain#0" expanded="false" />
-                <element signature="docComment;method#downgradeChaincode#1;class#Blockchain#0" expanded="false" />
-                <element signature="method#downgradeChaincode#1;class#Blockchain#0" expanded="false" />
-                <element signature="method#queryDocument#0;class#Blockchain#0" expanded="false" />
-                <element signature="docComment;method#getIncrementedVersion#0;class#Blockchain#0" expanded="false" />
-                <element signature="e#11982#11983#0" expanded="true" />
-                <element signature="e#12038#12039#0" expanded="true" />
-                <element signature="e#12069#12070#0" expanded="true" />
-                <element signature="e#12096#12097#0" expanded="true" />
-                <element signature="docComment;method#getUpgradingPattern#0;class#Blockchain#0" expanded="false" />
-                <element signature="e#12246#12247#0" expanded="true" />
-                <element signature="e#12285#12286#0" expanded="true" />
-                <element signature="docComment;method#setUpgradingPattern#0;class#Blockchain#0" expanded="false" />
-                <element signature="docComment;method#updateChaincodeVersion#0;class#Blockchain#0" expanded="false" />
-                <element signature="method#recoverVersionFromError#0;class#Blockchain#0" expanded="false" />
-                <element signature="docComment;method#getCurrentVersion#0;class#Blockchain#0" expanded="false" />
-                <element signature="docComment;method#resolveChaincodeVersion#0;class#Blockchain#0" expanded="false" />
-                <element signature="method#start_op#0;class#Blockchain#0" expanded="false" />
-                <element signature="method#sign_op#0;class#Blockchain#0" expanded="false" />
-                <element signature="method#end_op#0;class#Blockchain#0" expanded="false" />
-                <element signature="method#op_query#0;class#Blockchain#0" expanded="false" />
-                <element signature="method#install#0;class#Blockchain#0" expanded="false" />
-                <element signature="method#upgrade#0;class#Blockchain#0" expanded="false" />
-                <element signature="method#instantiate#0;class#Blockchain#0" expanded="false" />
-                <element signature="method#requestInfo#0;class#Blockchain#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Utils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Application/Utils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="36" column="32" lean-forward="false" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#deserialize#0;class#Utils#0" expanded="false" />
-                <element signature="method#round#0;class#Utils#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Logs.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Application/Logs.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-              <folding />
-            </state>
           </provider>
         </entry>
       </file>
@@ -183,6 +74,7 @@
       <list>
         <option value="JavaFXApplication" />
         <option value="FxmlFile" />
+        <option value="HTML File" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -193,6 +85,11 @@
       <find>put</find>
       <find>IDHashtable</find>
       <find>serialize</find>
+      <find>TLSConfigFile</find>
+      <find>logouy</find>
+      <find>logout</find>
+      <find>href</find>
+      <find>action</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -203,55 +100,65 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/chaincode/chaincode.cc.go" />
-        <option value="$PROJECT_DIR$/src/main/java/FileReader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Logs.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Blockchain.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ManagerTestInterface.form" />
-        <option value="$PROJECT_DIR$/src/main/java/ManagerTestInterface.java" />
-        <option value="$PROJECT_DIR$/src/main/Manager/c.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/Platform.java" />
-        <option value="$PROJECT_DIR$/src/main/Manager/ManagerInterface.form" />
-        <option value="$PROJECT_DIR$/src/main/Manager/ManagerInterface.java" />
-        <option value="$PROJECT_DIR$/manifest.yml" />
-        <option value="$PROJECT_DIR$/MTChain.iml" />
-        <option value="$PROJECT_DIR$/Platform/pom.xml" />
-        <option value="$PROJECT_DIR$/Platform/src/main/java/FireStarter.java" />
-        <option value="$PROJECT_DIR$/.idea/compiler.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/MemberRegistrationTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/RESTController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/Servlet/ServletInitializer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Servlet/WsApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/WsApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Application/FireStarter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Application/RESTController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ServletInitializer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/FireStarter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/multicert/ServletInitializer.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/multicert/Application/RESTController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jboss-web.xml" />
-        <option value="$PROJECT_DIR$/log.txt" />
-        <option value="$PROJECT_DIR$/src/main/resources/ccRoot/cc.go" />
-        <option value="$PROJECT_DIR$/src/main/resources/ccRoot/cc2.go" />
-        <option value="$PROJECT_DIR$/src/main/resources/network-config-tls.yaml" />
-        <option value="$PROJECT_DIR$/.factorypath" />
-        <option value="$PROJECT_DIR$/src/main/resources/chaincode/fabcar.go" />
-        <option value="$PROJECT_DIR$/src/main/Chaincode/cc2.go" />
-        <option value="$PROJECT_DIR$/src/main/resources/chaincode/cc2.go" />
-        <option value="$PROJECT_DIR$/src/main/java/multicert/Application/Utils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/multicert/FireStarter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/multicert/Application/Blockchain.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Manager/ManagementApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/Application/Utils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Manager/ManagerController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/Application/Blockchain.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/jquery.spring-friendly.js" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Models/Users.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/EntityControllers.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Models/Chaincodes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Users/UsersRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Chaincodes/Chaincodes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Chaincodes/Model/ChaincodeRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Chaincodes/ChaincodeRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Chaincodes/Model/Chaincodes.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/upgrade.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/edit.html" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Chaincodes/Model/NotInstalledChaincodes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Chaincodes/ChaincodesImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/NotInstalledChaincode/Model/NotInstalledChaincodes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/NotInstalledChaincode/ChaincodeRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/NotInstalledChaincode/ChaincodesImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/NotInstalledChaincode/NotChaincodesImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Users/UsersImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/import.sql" />
         <option value="$PROJECT_DIR$/src/main/java/Plataform/FireStarter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Application/Blockchain.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Users/UsersServices.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Users/Model/Users.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Cryptography/Certification.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Admin/Model/Admin.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Admin/AdminServices.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Admin/AdminRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/network-config-tls.yaml" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Application/xd.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Admin/Model/AdminEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Application/CustomAuthenticationProvider.java" />
         <option value="$PROJECT_DIR$/src/main/java/Plataform/WebService.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Security/CustomAuthenticationProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-security.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Security/SecSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring-security.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Security/SecurityController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/chaincode.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/userform.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/editchaincode.html" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Admin/AdminController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/sb-admin-datatables.js" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Application/ApplicationController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Chaincodes/ChaincodesControllers.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/NotInstalledChaincode/NotInstalledChaincodesControllers.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Users/EntityControllers.java" />
       </list>
     </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -260,9 +167,15 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/admin/package.json" />
+    </packageJsonPaths>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="960" />
     <option name="y" value="24" />
-    <option name="width" value="958" />
+    <option name="width" value="960" />
     <option name="height" value="1011" />
   </component>
   <component name="ProjectView">
@@ -280,8 +193,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -289,74 +201,45 @@
               <item name="MTChain" type="b2602c69:ProjectViewProjectNode" />
               <item name="MTChain" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="MTChain" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MTChain" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MTChain" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MTChain" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MTChain" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MTChain" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MTChain" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MTChain" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Plataform" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MTChain" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MTChain" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Plataform" type="462c0819:PsiDirectoryNode" />
-              <item name="WebService.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="http.proxy" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/static/ce" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
+      <recent name="$PROJECT_DIR$/src/main/java/Plataform/Entities/NotInstalledChaincode" />
+      <recent name="$PROJECT_DIR$/src/main/Chaincode" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Plataform.Entities.NotInstalledChaincode" />
+      <recent name="Plataform" />
+      <recent name="" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/chaincode" />
       <recent name="$PROJECT_DIR$/src/main/Chaincode" />
       <recent name="$PROJECT_DIR$/Platform" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
-      <recent name="$PROJECT_DIR$/src/main/java/Servlet" />
-      <recent name="$PROJECT_DIR$/src/main/java" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -380,9 +263,9 @@
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
     </configuration>
-    <configuration name="FireStarter" type="Application" factoryName="Application" temporary="true">
+    <configuration name="Unnamed" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="Plataform.FireStarter" />
+      <option name="MAIN_CLASS_NAME" value="Plataform.WebService" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -468,11 +351,6 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
-    <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.FireStarter" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -487,8 +365,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1524577642116</updated>
+      <workItem from="1528390986170" duration="101000" />
     </task>
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="101000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -500,74 +382,45 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-11" width="1922" height="1047" extended-state="6" />
+    <frame x="960" y="24" width="1922" height="1047" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Job Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38716578" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3187166" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3379679" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1625" sideWeight="0.49441788" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1625" sideWeight="0.50558215" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Project Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Job Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38716578" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3187166" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3187166" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3379679" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2053476" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1625" sideWeight="0.49441788" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12708333" sideWeight="0.49441788" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1625" sideWeight="0.50558215" order="8" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1625" sideWeight="0.50558215" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -576,386 +429,444 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Plataform/Application/Blockchain.java</url>
-          <line>691</line>
+          <url>file://$PROJECT_DIR$/src/main/java/Plataform/FireStarter.java</url>
+          <line>131</line>
           <properties />
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.0.1.RELEASE/spring-boot-2.0.1.RELEASE.jar!/org/springframework/boot/SpringApplication.class</url>
-          <line>167</line>
-          <properties />
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Plataform/Application/Blockchain.java</url>
-          <line>531</line>
-          <properties />
-          <option name="timeStamp" value="49" />
+          <option name="timeStamp" value="83" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="71" />
+      <option name="time" value="86" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Platform/src/main/resources/chaincode/chaincode.go" />
-    <entry file="file://$PROJECT_DIR$/Platform/src/main/java/FireStarter.java" />
-    <entry file="file://$PROJECT_DIR$/Platform/pom.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp" />
-    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="44" lean-forward="false" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/arquillian.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="31" lean-forward="false" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.settings/org.eclipse.jdt.apt.core.prefs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/import.sql" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/beans.xml" />
-    <entry file="file://$PROJECT_DIR$/MTChain.iml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/JSON/BlockchainObjectsList.jso">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" column="55" lean-forward="false" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="55" />
+          <caret line="3" column="7" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/default.xhtml" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/MemberRegistrationTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/IUsersService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/Chaincodes/Model/ChaincodeRepository.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Application/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="54" column="2" lean-forward="false" selection-start-line="54" selection-start-column="2" selection-end-line="54" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Servlet.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/gfx/logo.png" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/gfx/banner.png" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/WsApplication.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Application/Platform.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/multicert/ServletInitializer.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Application/FileReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.0.1.RELEASE/spring-boot-2.0.1.RELEASE-sources.jar!/org/springframework/boot/SpringApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19499">
-          <caret line="1254" column="0" lean-forward="false" selection-start-line="1254" selection-start-column="0" selection-end-line="1254" selection-end-column="0" />
-          <folding>
-            <element signature="e#9666#9667#0" expanded="false" />
-            <element signature="e#9699#9700#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.5.RELEASE/spring-core-5.0.5.RELEASE-sources.jar!/org/springframework/util/ClassUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5406">
-          <caret line="355" column="0" lean-forward="false" selection-start-line="355" selection-start-column="0" selection-end-line="355" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.5.RELEASE/spring-core-5.0.5.RELEASE-sources.jar!/org/springframework/util/Assert.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2992">
-          <caret line="194" column="0" lean-forward="false" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/net/URL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="489" column="0" lean-forward="false" selection-start-line="489" selection-start-column="0" selection-end-line="489" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jboss-web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="25" lean-forward="false" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Application/RESTController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="43" lean-forward="false" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hyperledger/fabric-sdk-java/fabric-sdk-java/1.1.0-SNAPSHOT/fabric-sdk-java-1.1.0-20180430.125343-42-sources.jar!/org/hyperledger/fabric/sdk/ChaincodeID.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.factorypath" />
-    <entry file="file://$PROJECT_DIR$/log.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="68" lean-forward="true" selection-start-line="3" selection-start-column="68" selection-end-line="3" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/chaincode/fabcar.go" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/chaincode/cc2.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/network-config-tls.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="70" column="93" lean-forward="false" selection-start-line="70" selection-start-column="93" selection-end-line="70" selection-end-column="93" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hyperledger/fabric-sdk-java/fabric-sdk-java/1.1.0-SNAPSHOT/fabric-sdk-java-1.1.0-20180430.125343-42-sources.jar!/org/hyperledger/fabric/sdk/HFClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="343" column="0" lean-forward="false" selection-start-line="343" selection-start-column="0" selection-end-line="343" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Manager/ManagementApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Manager/ManagerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/jre/lib/rt.jar!/sun/security/provider/SHA2.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="1105">
+          <caret line="73" column="59" lean-forward="false" selection-start-line="73" selection-start-column="59" selection-end-line="73" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Application/Logs.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-          <folding />
+          <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Application/Utils.java">
+    <entry file="file://$PROJECT_DIR$/src/chaincode/cc2.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="36" column="32" lean-forward="false" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#deserialize#0;class#Utils#0" expanded="false" />
-            <element signature="method#round#0;class#Utils#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="493">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hyperledger/fabric-sdk-java/fabric-sdk-java/1.1.0-SNAPSHOT/fabric-sdk-java-1.1.0-20180511.112809-43.jar!/org/hyperledger/fabric/sdk/HFClient.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/Chaincodes/Model/NotInstalledChaincodes.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/NotInstalledChaincode/Model/Chaincodes.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/Chaincodes/ChaincodesImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/NotInstalledChaincode/NotChaincodesImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/Chaincodes/Model/Chaincodes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="45" column="5" lean-forward="true" selection-start-line="36" selection-start-column="4" selection-end-line="45" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/NotInstalledChaincode/NotChaincodeRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/NotInstalledChaincode/Model/NotInstalledChaincodes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="73" column="21" lean-forward="false" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/Chaincodes/ChaincodeRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="65" lean-forward="false" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/Users/UsersService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Application/FileReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/import.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hyperledger/fabric-sdk-java/fabric-sdk-java/1.1.0-SNAPSHOT/fabric-sdk-java-1.1.0-SNAPSHOT-sources.jar!/org/hyperledger/fabric/sdk/NetworkConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
-          <caret line="179" column="0" lean-forward="false" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
-          <folding>
-            <marker date="1526396587214" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1526396587214" expanded="false" signature="150:1248" ph="..." />
-            <marker date="1526396587214" expanded="true" signature="1400:1518" ph="{...}" />
-            <marker date="1526396587214" expanded="false" signature="1694:1705" ph=" { " />
-            <marker date="1526396587214" expanded="false" signature="1733:1739" ph=" }" />
-            <marker date="1526396587214" expanded="false" signature="1773:1784" ph=" { " />
-            <marker date="1526396587214" expanded="false" signature="1808:1814" ph=" }" />
-            <marker date="1526396587214" expanded="true" signature="1839:1846" ph="{}" />
-            <marker date="1526396587214" expanded="false" signature="1887:1898" ph=" { " />
-            <marker date="1526396587214" expanded="false" signature="1922:1928" ph=" }" />
-            <marker date="1526396587214" expanded="true" signature="2035:2396" ph="{...}" />
-            <marker date="1526396587214" expanded="false" signature="2444:2455" ph=" { " />
-            <marker date="1526396587214" expanded="false" signature="2477:2483" ph=" }" />
-            <marker date="1526396587214" expanded="true" signature="2638:3258" ph="{...}" />
-            <marker date="1526396587214" expanded="true" signature="3335:4084" ph="{...}" />
-            <marker date="1526396587214" expanded="true" signature="4285:5096" ph="{...}" />
-            <marker date="1526396587214" expanded="true" signature="5216:5459" ph="{...}" />
-            <marker date="1526396587214" expanded="true" signature="5589:6516" ph="{...}" />
-            <marker date="1526396587214" expanded="true" signature="6626:6727" ph="{...}" />
-            <marker date="1526396587214" expanded="true" signature="6814:6921" ph="{...}" />
-            <marker date="1526396587214" expanded="true" signature="6965:6976" ph=" { " />
-            <marker date="1526396587214" expanded="true" signature="7016:7022" ph=" }" />
-            <marker date="1526396587214" expanded="false" signature="7085:7096" ph=" { " />
-            <marker date="1526396587214" expanded="false" signature="7148:7154" ph=" }" />
-            <marker date="1526396587214" expanded="true" signature="7228:7300" ph="{...}" />
-            <marker date="1526396587214" expanded="false" signature="7363:7374" ph=" { " />
-            <marker date="1526396587214" expanded="false" signature="7426:7432" ph=" }" />
-            <marker date="1526396587214" expanded="true" signature="7504:7584" ph="{...}" />
-            <marker date="1526396587214" expanded="true" signature="7647:7724" ph="{...}" />
-            <marker date="1526396587214" expanded="true" signature="7807:8252" ph="{...}" />
-            <marker date="1526396587214" expanded="true" signature="8370:8497" ph="{...}" />
-            <marker date="1526396587214" expanded="true" signature="8592:8693" ph="{...}" />
-            <marker date="1526396587214" expanded="true" signature="8786:8886" ph="{...}" />
-            <marker date="1526396587214" expanded="true" signature="9002:9106" ph="{...}" />
-            <marker date="1526396587214" expanded="true" signature="9207:9808" ph="{...}" />
-            <marker date="1526396587214" expanded="true" signature="9928:10469" ph="{...}" />
-            <marker date="1526396587214" expanded="true" signature="10610:10802" ph="{...}" />
-            <marker date="1526396587214" expanded="true" signature="10961:11165" ph="{...}" />
-            <marker date="1526396587214" expanded="true" signature="11349:11576" ph="{...}" />
-            <marker date="1526396587214" expanded="true" signature="11641:11848" ph="{...}" />
-            <marker date="1526396587214" expanded="true" signature="11890:12137" ph="{...}" />
-            <marker date="1526396587214" expanded="true" signature="12150:12423" ph="{...}" />
-          </folding>
+          <caret line="1223" column="0" lean-forward="false" selection-start-line="1223" selection-start-column="0" selection-end-line="1223" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Application/Blockchain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="717">
-          <caret line="210" column="9" lean-forward="false" selection-start-line="210" selection-start-column="9" selection-end-line="210" selection-end-column="9" />
-          <folding>
-            <element signature="docComment;class#Blockchain#0" expanded="false" />
-            <element signature="method#initializeBlockchainClass#0;class#Blockchain#0" expanded="false" />
-            <element signature="docComment;method#upgradeChaincode#0;class#Blockchain#0" expanded="false" />
-            <element signature="docComment;method#downgradeChaincode#0;class#Blockchain#0" expanded="false" />
-            <element signature="method#downgradeChaincode#0;class#Blockchain#0" expanded="false" />
-            <element signature="docComment;method#downgradeChaincode#1;class#Blockchain#0" expanded="false" />
-            <element signature="method#downgradeChaincode#1;class#Blockchain#0" expanded="false" />
-            <element signature="method#queryDocument#0;class#Blockchain#0" expanded="false" />
-            <element signature="docComment;method#getIncrementedVersion#0;class#Blockchain#0" expanded="false" />
-            <element signature="e#11982#11983#0" expanded="true" />
-            <element signature="e#12038#12039#0" expanded="true" />
-            <element signature="e#12069#12070#0" expanded="true" />
-            <element signature="e#12096#12097#0" expanded="true" />
-            <element signature="docComment;method#getUpgradingPattern#0;class#Blockchain#0" expanded="false" />
-            <element signature="e#12246#12247#0" expanded="true" />
-            <element signature="e#12285#12286#0" expanded="true" />
-            <element signature="docComment;method#setUpgradingPattern#0;class#Blockchain#0" expanded="false" />
-            <element signature="docComment;method#updateChaincodeVersion#0;class#Blockchain#0" expanded="false" />
-            <element signature="method#recoverVersionFromError#0;class#Blockchain#0" expanded="false" />
-            <element signature="docComment;method#getCurrentVersion#0;class#Blockchain#0" expanded="false" />
-            <element signature="docComment;method#resolveChaincodeVersion#0;class#Blockchain#0" expanded="false" />
-            <element signature="method#start_op#0;class#Blockchain#0" expanded="false" />
-            <element signature="method#sign_op#0;class#Blockchain#0" expanded="false" />
-            <element signature="method#end_op#0;class#Blockchain#0" expanded="false" />
-            <element signature="method#op_query#0;class#Blockchain#0" expanded="false" />
-            <element signature="method#install#0;class#Blockchain#0" expanded="false" />
-            <element signature="method#upgrade#0;class#Blockchain#0" expanded="false" />
-            <element signature="method#instantiate#0;class#Blockchain#0" expanded="false" />
-            <element signature="method#requestInfo#0;class#Blockchain#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="901">
+          <caret line="67" column="49" lean-forward="false" selection-start-line="67" selection-start-column="49" selection-end-line="67" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/FireStarter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1711">
-          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+        <state relative-caret-position="459">
+          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#init#0;class#FireStarter#0" expanded="false" />
+            <element signature="e#2417#2418#0" expanded="false" />
+            <element signature="e#2453#2454#0" expanded="false" />
             <element signature="method#initializeHyperledgerConnection#0;class#FireStarter#0" expanded="false" />
+            <element signature="method#getChaincode#0;class#FireStarter#0" expanded="false" />
+            <element signature="method#populateBlockchainNodeList#0;class#FireStarter#0" expanded="false" />
+            <element signature="e#5140#5141#0" expanded="false" />
+            <element signature="e#5182#5183#0" expanded="false" />
             <element signature="method#getChaincodeList#0;class#FireStarter#0" expanded="false" />
+            <element signature="e#9064#9065#0" expanded="false" />
+            <element signature="e#9091#9092#0" expanded="false" />
+            <element signature="e#9131#9132#0" expanded="false" />
+            <element signature="e#9163#9164#0" expanded="false" />
+            <element signature="e#9193#9194#0" expanded="false" />
+            <element signature="e#9219#9220#0" expanded="false" />
+            <element signature="e#9257#9258#0" expanded="false" />
+            <element signature="e#9287#9288#0" expanded="false" />
+            <element signature="e#9318#9319#0" expanded="false" />
+            <element signature="e#9345#9346#0" expanded="false" />
+            <element signature="e#9385#9386#0" expanded="false" />
+            <element signature="e#9417#9418#0" expanded="false" />
+            <element signature="e#9451#9452#0" expanded="false" />
+            <element signature="e#9481#9482#0" expanded="false" />
+            <element signature="e#9527#9528#0" expanded="false" />
+            <element signature="e#9565#9566#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/Users/Model/Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="59" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2701#2702#0" expanded="false" />
+            <element signature="e#2743#2744#0" expanded="false" />
+            <element signature="e#2774#2775#0" expanded="false" />
+            <element signature="e#2802#2803#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/Users/UsersRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="74" lean-forward="false" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/Admin/AdminServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/Users/UsersServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="44" lean-forward="true" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/Admin/AdminRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/network-config-tls.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="223" column="28" lean-forward="false" selection-start-line="223" selection-start-column="21" selection-end-line="223" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tomcat-web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.0.4.RELEASE/spring-security-core-5.0.4.RELEASE.jar!/org/springframework/security/authentication/AuthenticationProvider.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/WebService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="25" column="40" lean-forward="false" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+        <state relative-caret-position="555">
+          <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="class#WebService#0" expanded="false" />
+            <element signature="class#ContextRefreshedListener#0" expanded="false" />
+            <element signature="class#EventHolderBean#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/ce/css/sb-admin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-security.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Security/SecSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#890#891#0" expanded="true" />
-            <element signature="e#951#952#0" expanded="true" />
+            <element signature="e#800#801#0" expanded="true" />
+            <element signature="e#823#824#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/Admin/Model/AdminEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="53" column="5" lean-forward="false" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Security/SecurityController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userform.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="46" column="31" lean-forward="false" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="14" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/chaincode.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="125" column="10" lean-forward="false" selection-start-line="125" selection-start-column="10" selection-end-line="125" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/editchaincode.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="61" column="31" lean-forward="false" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="26" column="57" lean-forward="false" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Cryptography/Certification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="53" column="19" lean-forward="false" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/Admin/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/sb-admin-datatables.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="62" column="32" lean-forward="false" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Security/CustomAuthenticationProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="53" column="26" lean-forward="false" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
+          <folding>
+            <element signature="e#2292#2293#0" expanded="true" />
+            <element signature="e#2327#2328#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Application/ApplicationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="40" column="44" lean-forward="false" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#indexPage#0;class#ApplicationController#0" expanded="false" />
+            <element signature="method#refreshNetworkLink#0;class#ApplicationController#0" expanded="false" />
+            <element signature="method#chaincodePage#0;class#ApplicationController#0" expanded="false" />
+            <element signature="method#queryBlockchain#0;class#ApplicationController#0" expanded="false" />
+            <element signature="method#startBlockchain#0;class#ApplicationController#0" expanded="false" />
+            <element signature="method#signBlockchain#0;class#ApplicationController#0" expanded="false" />
+            <element signature="method#endBlockchain#0;class#ApplicationController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/NotInstalledChaincode/NotInstalledChaincodesControllers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-720">
+          <caret line="48" column="39" lean-forward="false" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
+          <folding>
+            <element signature="method#getNotChaincodeList#0;class#NotInstalledChaincodesControllers#0" expanded="false" />
+            <element signature="method#formatList#0;class#NotInstalledChaincodesControllers#0" expanded="false" />
+            <element signature="e#3903#3904#0" expanded="true" />
+            <element signature="e#3961#3962#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/Chaincodes/ChaincodesControllers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-210">
+          <caret line="86" column="43" lean-forward="false" selection-start-line="86" selection-start-column="43" selection-end-line="86" selection-end-column="43" />
+          <folding>
+            <element signature="method#formatList#0;class#ChaincodesControllers#0" expanded="false" />
+            <element signature="class#Version#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-security.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="18" column="56" lean-forward="true" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/Users/EntityControllers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="122" column="0" lean-forward="true" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1147">
-          <caret line="24" column="41" lean-forward="false" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
-          <folding />
+        <state relative-caret-position="564">
+          <caret line="46" column="32" lean-forward="true" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
+          <folding>
+            <element signature="n#plugin#0;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="false" />
+            <element signature="n#resources#0;n#build#0;n#project#0;n#!!top" expanded="false" />
+            <element signature="n#repositories#0;n#project#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
       <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">

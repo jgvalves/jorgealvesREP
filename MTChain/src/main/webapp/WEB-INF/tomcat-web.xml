@@ -1,0 +1,3 @@
+<tomcat-web>
+	<context-root>mtchain</context-root>
+</tomcat-web>
