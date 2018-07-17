@@ -93,6 +93,11 @@ do
 	case $OPTION in
 		r)
 			restart
+			echo "Regular Start"
+			docker-compose -f docker-compose.yml up -d
+			docker cp ca.initial.com:/etc/hyperledger/fabric-ca-server/ca-cert.pem ./crypto-config/peerOrganizations/org1.initial.com/ca/ca-cert.pem
+			mv ./crypto-config/peerOrganizations/org1.initial.com/users/Admin@org1.initial.com/msp/keystore/* ./crypto-config/peerOrganizations/org1.initial.com/users/Admin@org1.initial.com/msp/keystore/admin1-key.pem
+			mv /home/jorge/Documents/definit/crypto-config/peerOrganizations/org1.initial.com/tlsca/*_sk /home/jorge/Documents/definit/crypto-config/peerOrganizations/org1.initial.com/tlsca/tlsca-key.pem
 	esac
 done
 
@@ -107,18 +112,6 @@ echo
 docker ps -a
 
 sleep 2
-
-
-while getopts "r" OPTION
-do
-	case $OPTION in
-		r)
-			docker cp ca.initial.com:/etc/hyperledger/fabric-ca-server/ca-cert.pem ./crypto-config/peerOrganizations/org1.initial.com/ca/ca-cert.pem
-			mv ./crypto-config/peerOrganizations/org1.initial.com/users/Admin@org1.initial.com/msp/keystore/* ./crypto-config/peerOrganizations/org1.initial.com/users/Admin@org1.initial.com/msp/keystore/admin1-key.pem
-			mv /home/jorge/Documents/definit/crypto-config/peerOrganizations/org1.initial.com/tlsca/*_sk /home/jorge/Documents/definit/crypto-config/peerOrganizations/org1.initial.com/tlsca/tlsca-key.pem
-	esac
-done
-
 
 echo
 echo

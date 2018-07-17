@@ -1,0 +1,73 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 1 (0x1)
+    Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=PT, ST=Portugal, L=LX, O=mtc\xC3\x82\xC2\xB4, OU=mtc, CN=mtc/emailAddress=mtc
+        Validity
+            Not Before: Jun 22 16:41:35 2018 GMT
+            Not After : Jun 22 16:41:35 2019 GMT
+        Subject: C=PT, ST=Portugal, L=lx, O=mt, OU=mt, CN=localhost/emailAddress=localhost@mtc.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:e6:4f:54:47:30:98:6b:6a:d9:79:c4:9e:46:39:
+                    e6:8f:97:48:79:b5:25:be:62:fb:b1:f0:b4:e2:6e:
+                    3e:b9:b2:61:0d:89:13:c8:61:e0:ee:82:43:55:17:
+                    ee:9d:67:cc:93:8f:8e:25:fc:40:78:52:0f:93:26:
+                    c3:5e:6b:b5:d3:aa:66:6a:e9:ab:41:36:a2:7e:f2:
+                    40:cc:f8:f9:c3:c7:62:d4:ab:a5:d2:e2:83:9b:48:
+                    ea:d2:f4:23:27:cf:2c:03:fd:86:b5:19:67:c4:2e:
+                    7d:ce:f7:a6:fa:3d:9d:f2:16:63:1f:ea:f6:3a:e1:
+                    27:b4:f3:61:bb:75:4a:20:a1:28:3b:ca:f1:66:00:
+                    b3:d1:5d:14:bc:1d:71:45:c0:f4:c7:a9:05:34:de:
+                    52:a0:e5:62:0c:68:f6:e4:5a:ec:47:3b:4e:3e:ef:
+                    44:1b:e0:fb:ec:cb:c6:02:55:00:0c:b4:3c:2f:7f:
+                    00:fc:85:63:c5:5a:57:f6:e5:10:8d:93:56:5e:08:
+                    6b:15:0a:d5:7a:3d:8c:1d:5c:80:fc:42:c5:42:37:
+                    4d:f1:7c:20:42:6a:63:3f:92:e9:0f:c1:b9:76:93:
+                    ee:5a:7b:79:a7:31:74:02:f5:5c:7b:5f:98:f1:1a:
+                    46:eb:14:cd:ce:6c:9a:90:25:26:82:16:93:a1:a2:
+                    f3:6f
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                OpenSSL Generated Certificate
+            X509v3 Subject Key Identifier: 
+                17:2B:6C:28:CC:BA:EB:D3:13:C4:4C:59:A0:6D:A0:EB:2B:1A:8E:EA
+            X509v3 Authority Key Identifier: 
+                keyid:4D:E3:12:44:3A:D1:CD:1D:99:45:0B:B0:6D:FB:E6:72:F9:76:44:50
+
+    Signature Algorithm: sha256WithRSAEncryption
+         24:ef:4d:bd:08:63:1e:e0:d2:db:e0:7e:9e:b4:20:55:7d:dd:
+         49:32:7b:d2:fe:6d:05:a2:8b:02:e4:5d:e8:09:f8:de:57:db:
+         61:54:04:77:4a:14:ca:d2:90:1f:7d:6a:2d:5f:78:87:5a:69:
+         88:b3:e6:fc:1e:ca:50:71:c8:fb:02:21:5b:78:8f:69:a8:35:
+         4a:90:11:25:b7:7f:b7:0f:c1:c7:46:9b:6b:f5:8d:94:3a:af:
+         0a:e7:ab:6c:5c:52:a7:24:69:a8:4d:26:24:41:58:94:44:d9:
+         67:52:df:0d:0d:46:8f:e4:11:05:a5:b9:56:76:36:4d:bb:b8:
+         08:8a
+-----BEGIN CERTIFICATE-----
+MIIDYTCCAsqgAwIBAgIBATANBgkqhkiG9w0BAQsFADBvMQswCQYDVQQGEwJQVDER
+MA8GA1UECAwIUG9ydHVnYWwxCzAJBgNVBAcMAkxYMRAwDgYDVQQKDAdtdGPDgsK0
+MQwwCgYDVQQLDANtdGMxDDAKBgNVBAMMA210YzESMBAGCSqGSIb3DQEJARYDbXRj
+MB4XDTE4MDYyMjE2NDEzNVoXDTE5MDYyMjE2NDEzNVowfTELMAkGA1UEBhMCUFQx
+ETAPBgNVBAgMCFBvcnR1Z2FsMQswCQYDVQQHDAJseDELMAkGA1UECgwCbXQxCzAJ
+BgNVBAsMAm10MRIwEAYDVQQDDAlsb2NhbGhvc3QxIDAeBgkqhkiG9w0BCQEWEWxv
+Y2FsaG9zdEBtdGMuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA
+5k9URzCYa2rZecSeRjnmj5dIebUlvmL7sfC04m4+ubJhDYkTyGHg7oJDVRfunWfM
+k4+OJfxAeFIPkybDXmu106pmaumrQTaifvJAzPj5w8di1Kul0uKDm0jq0vQjJ88s
+A/2GtRlnxC59zvem+j2d8hZjH+r2OuEntPNhu3VKIKEoO8rxZgCz0V0UvB1xRcD0
+x6kFNN5SoOViDGj25FrsRztOPu9EG+D77MvGAlUADLQ8L38A/IVjxVpX9uUQjZNW
+XghrFQrVej2MHVyA/ELFQjdN8XwgQmpjP5LpD8G5dpPuWnt5pzF0AvVce1+Y8RpG
+6xTNzmyakCUmghaToaLzbwIDAQABo3sweTAJBgNVHRMEAjAAMCwGCWCGSAGG+EIB
+DQQfFh1PcGVuU1NMIEdlbmVyYXRlZCBDZXJ0aWZpY2F0ZTAdBgNVHQ4EFgQUFyts
+KMy669MTxExZoG2g6ysajuowHwYDVR0jBBgwFoAUTeMSRDrRzR2ZRQuwbfvmcvl2
+RFAwDQYJKoZIhvcNAQELBQADgYEAJO9NvQhjHuDS2+B+nrQgVX3dSTJ70v5tBaKL
+AuRd6An43lfbYVQEd0oUytKQH31qLV94h1ppiLPm/B7KUHHI+wIhW3iPaag1SpAR
+Jbd/tw/Bx0aba/WNlDqvCuerbFxSpyRpqE0mJEFYlETZZ1LfDQ1Gj+QRBaW5VnY2
+Tbu4CIo=
+-----END CERTIFICATE-----

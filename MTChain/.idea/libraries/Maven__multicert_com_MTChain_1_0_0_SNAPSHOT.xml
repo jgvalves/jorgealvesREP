@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Maven: multicert.com:MTChain:1.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/multicert/com/MTChain/1.0.0-SNAPSHOT/MTChain-1.0.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/MTChain-1.0.0-SNAPSHOT-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/multicert/com/MTChain/1.0.0-SNAPSHOT/MTChain-1.0.0-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/MTChain-1.0.0-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/multicert/com/MTChain/1.0.0-SNAPSHOT/MTChain-1.0.0-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

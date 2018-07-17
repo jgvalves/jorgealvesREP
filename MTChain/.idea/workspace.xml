@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/client/src/main/java/com/multicert/mtchain/users/service/ServiceController.java" line="361" mnemonic="2" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="8e646b05-64e9-4b33-8b15-51065fc677ee" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/Platform/target/" />
+    <ignored path="$PROJECT_DIR$/admin/target/" />
+    <ignored path="$PROJECT_DIR$/backoffice/target/" />
+    <ignored path="$PROJECT_DIR$/client/target/" />
+    <ignored path="$PROJECT_DIR$/core/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,50 +27,112 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="spring-security.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/spring-security.xml">
+      <file leaf-file-name="ServiceController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/main/java/com/multicert/mtchain/users/service/ServiceController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="18" column="56" lean-forward="false" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EntityControllers.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/Users/EntityControllers.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
+            <state relative-caret-position="169">
               <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sb-admin-datatables.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/sb-admin-datatables.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1054">
-              <caret line="62" column="32" lean-forward="false" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="564">
-              <caret line="46" column="32" lean-forward="false" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
               <folding>
-                <element signature="n#plugin#0;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="false" />
-                <element signature="n#resources#0;n#build#0;n#project#0;n#!!top" expanded="false" />
-                <element signature="n#repositories#0;n#project#0;n#!!top" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="method#generateSignatureHtml#0;class#ServiceController#0" expanded="false" />
+                <element signature="method#queryDocument#0;class#ServiceController#0" expanded="false" />
+                <element signature="method#queryDocumentSignatures#0;class#ServiceController#0" expanded="false" />
+                <element signature="method#getAllAppUsers#0;class#ServiceController#0" expanded="false" />
+                <element signature="class#DocumentMimic#0" expanded="false" />
+                <element signature="e#17667#17668#0" expanded="true" />
+                <element signature="e#17694#17695#0" expanded="true" />
+                <element signature="e#19619#19620#0" expanded="true" />
+                <element signature="e#19646#19647#0" expanded="true" />
+                <element signature="e#19686#19687#0" expanded="true" />
+                <element signature="e#19718#19719#0" expanded="true" />
+                <element signature="e#19754#19755#0" expanded="true" />
+                <element signature="e#19787#19788#0" expanded="true" />
+                <element signature="e#19838#19839#0" expanded="true" />
+                <element signature="e#19882#19883#0" expanded="true" />
               </folding>
             </state>
           </provider>
-          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
-            <state />
+        </entry>
+      </file>
+      <file leaf-file-name="applicationform.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backoffice/src/main/resources/templates/applicationform.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-204">
+              <caret line="54" column="120" lean-forward="true" selection-start-line="54" selection-start-column="120" selection-end-line="54" selection-end-column="120" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Certification.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/main/java/com/multicert/mtchain/users/cryptography/Certification.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Document.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/main/java/com/multicert/mtchain/users/repository/document/model/Document.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="211" column="0" lean-forward="false" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
+              <folding>
+                <element signature="e#2057#2058#0" expanded="true" />
+                <element signature="e#2084#2085#0" expanded="true" />
+                <element signature="e#4719#4720#0" expanded="true" />
+                <element signature="e#4778#4779#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/main/resources/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="362" column="0" lean-forward="false" selection-start-line="362" selection-start-column="0" selection-end-line="362" selection-end-column="0" />
+              <folding>
+                <element signature="n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#section#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#section#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="signature-performer.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/src/main/resources/static/js/signature-performer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="550">
+              <caret line="107" column="39" lean-forward="true" selection-start-line="107" selection-start-column="39" selection-end-line="107" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Blockchain.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/main/java/com/multicert/mtchain/core/Blockchain.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="177">
+              <caret line="477" column="0" lean-forward="false" selection-start-line="477" selection-start-column="0" selection-end-line="477" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DocumentService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/main/java/com/multicert/mtchain/users/repository/document/DocumentService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -83,13 +152,18 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>put</find>
-      <find>IDHashtable</find>
       <find>serialize</find>
       <find>TLSConfigFile</find>
       <find>logouy</find>
       <find>logout</find>
-      <find>href</find>
       <find>action</find>
+      <find>href</find>
+      <find>log</find>
+      <find>IDHashtable</find>
+      <find>chaincodeVersions</find>
+      <find>started</find>
+      <find>dbContains</find>
+      <find>sign_op</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -100,57 +174,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/jquery.spring-friendly.js" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Models/Users.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/EntityControllers.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Models/Chaincodes.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Users/UsersRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Chaincodes/Chaincodes.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Chaincodes/Model/ChaincodeRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Chaincodes/ChaincodeRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Chaincodes/Model/Chaincodes.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/upgrade.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/edit.html" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Chaincodes/Model/NotInstalledChaincodes.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Chaincodes/ChaincodesImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/NotInstalledChaincode/Model/NotInstalledChaincodes.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/NotInstalledChaincode/ChaincodeRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/NotInstalledChaincode/ChaincodesImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/NotInstalledChaincode/NotChaincodesImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Users/UsersImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/import.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/FireStarter.java" />
+        <option value="$PROJECT_DIR$/client/src/main/java/users/repository/users/UsersRepository.java" />
+        <option value="$PROJECT_DIR$/backoffice/src/main/java/Plataform/Cryptography/Certification.java" />
+        <option value="$PROJECT_DIR$/client/src/main/java/users/repository/app/AppRepository.java" />
+        <option value="$PROJECT_DIR$/client/src/main/java/users/service/Blockchain.java" />
+        <option value="$PROJECT_DIR$/client/src/main/java/users/repository/document/DocumentService.java" />
+        <option value="$PROJECT_DIR$/backoffice/src/main/java/Plataform/Entities/NotInstalledChaincode/NotInstalledChaincodesControllers.java" />
+        <option value="$PROJECT_DIR$/backoffice/src/main/java/Plataform/Application/Blockchain.java" />
+        <option value="$PROJECT_DIR$/client/src/main/java/users/repository/blockchain/Model/BlockchainInfo.java" />
+        <option value="$PROJECT_DIR$/client/src/main/java/users/repository/blockchain/BlockchainInfoService.java" />
+        <option value="$PROJECT_DIR$/client/src/main/java/users/repository/blockchain/BlockchainInfoRepository.java" />
+        <option value="$PROJECT_DIR$/client/src/main/java/users/ClientStarter.java" />
+        <option value="$PROJECT_DIR$/client/src/main/java/users/service/Initializator.java" />
+        <option value="$PROJECT_DIR$/client/src/main/java/users/cryptography/Certification.java" />
+        <option value="$PROJECT_DIR$/client/src/main/java/users/repository/document/model/Document.java" />
+        <option value="$PROJECT_DIR$/backoffice/src/chaincode/cc2.go" />
         <option value="$PROJECT_DIR$/src/main/java/Plataform/Application/Blockchain.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Users/UsersServices.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Users/Model/Users.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/Cryptography/Certification.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Admin/Model/Admin.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Admin/AdminServices.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Admin/AdminRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/network-config-tls.yaml" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/Application/xd.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Admin/Model/AdminEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/Application/CustomAuthenticationProvider.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/WebService.java" />
+        <option value="$PROJECT_DIR$/backoffice/src/main/java/Plataform/FireStarter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Plataform/FireStarter.java" />
+        <option value="$PROJECT_DIR$/backoffice/src/main/java/Plataform/Application/ApplicationController.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/bb.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/Blockchain.java" />
+        <option value="$PROJECT_DIR$/backoffice/src/main/java/Plataform/Entities/Chaincodes/ChaincodesControllers.java" />
+        <option value="$PROJECT_DIR$/backoffice/src/main/java/Plataform/WebService.java" />
+        <option value="$PROJECT_DIR$/client/src/main/java/users/repository/blockchain/ChaincodeRepository.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/multicert/mtcchain/core/utils/Blockchain.java" />
+        <option value="$PROJECT_DIR$/client/src/main/java/users/repository/blockchain/Model/Chaincodes.java" />
+        <option value="$PROJECT_DIR$/client/src/main/java/users/service/ServiceController.java" />
+        <option value="$PROJECT_DIR$/client/src/main/java/users/repository/blockchain/ChaincodeService.java" />
+        <option value="$PROJECT_DIR$/client/src/main/java/com/multicert/mtchain/users/repository/blockchain/ChaincodeService.java" />
+        <option value="$PROJECT_DIR$/backoffice/src/main/java/com/multicert/mtchain/backoffice/Entities/Chaincodes/Model/Chaincodes.java" />
+        <option value="$PROJECT_DIR$/backoffice/src/main/java/com/multicert/mtchain/backoffice/Entities/Chaincodes/ChaincodesControllers.java" />
+        <option value="$PROJECT_DIR$/backoffice/src/main/java/com/multicert/mtchain/backoffice/Entities/Chaincodes/ChaincodesImpl.java" />
+        <option value="$PROJECT_DIR$/backoffice/src/main/java/com/multicert/mtchain/backoffice/Entities/NotInstalledChaincode/NotInstalledChaincodesControllers.java" />
+        <option value="$PROJECT_DIR$/backoffice/src/main/java/com/multicert/mtchain/backoffice/FireStarter.java" />
+        <option value="$PROJECT_DIR$/backoffice/src/main/java/com/multicert/mtchain/backoffice/WebService.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/Security/CustomAuthenticationProvider.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-security.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/Security/SecSecurityConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring-security.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/Security/SecurityController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/chaincode.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/userform.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/editchaincode.html" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Admin/AdminController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/sb-admin-datatables.js" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/Application/ApplicationController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Chaincodes/ChaincodesControllers.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/NotInstalledChaincode/NotInstalledChaincodesControllers.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Plataform/Entities/Users/EntityControllers.java" />
+        <option value="$PROJECT_DIR$/core/pom.xml" />
+        <option value="$PROJECT_DIR$/client/pom.xml" />
+        <option value="$PROJECT_DIR$/backoffice/pom.xml" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/multicert/mtchain/core/utils/FileReader.java" />
+        <option value="$PROJECT_DIR$/client/src/main/java/com/multicert/mtchain/users/utils/FileReader.java" />
+        <option value="$PROJECT_DIR$/backoffice/src/main/java/com/multicert/mtchain/backoffice/Application/FileReader.java" />
+        <option value="$PROJECT_DIR$/client/src/main/resources/static/css/resume.css" />
+        <option value="$PROJECT_DIR$/client/src/main/resources/static/css/agency.css" />
+        <option value="$PROJECT_DIR$/client/src/main/java/com/multicert/mtchain/users/cryptography/Certification.java" />
+        <option value="$PROJECT_DIR$/client/src/main/java/com/multicert/mtchain/users/repository/document/model/Document.java" />
+        <option value="$PROJECT_DIR$/client/src/main/java/com/multicert/mtchain/users/service/ServiceController.java" />
+        <option value="$PROJECT_DIR$/backoffice/src/main/resources/templates/userform.html" />
+        <option value="$PROJECT_DIR$/backoffice/src/main/resources/templates/applicationform.html" />
+        <option value="$PROJECT_DIR$/client/src/main/resources/templates/index.html" />
+        <option value="$PROJECT_DIR$/client/src/main/resources/static/js/signature-performer.js" />
       </list>
     </option>
   </component>
@@ -173,10 +247,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="960" />
-    <option name="y" value="24" />
-    <option name="width" value="960" />
-    <option name="height" value="1011" />
+    <option name="y" value="-4" />
+    <option name="width" value="1920" />
+    <option name="height" value="1039" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -193,7 +266,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -201,42 +276,98 @@
               <item name="MTChain" type="b2602c69:ProjectViewProjectNode" />
               <item name="MTChain" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="MTChain" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MTChain" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MTChain" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MTChain" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MTChain" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MTChain" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MTChain" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MTChain" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MTChain" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MTChain" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MTChain" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MTChain" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MTChain" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MTChain" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/core" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/jorge/Documents/MTChain/client/src/main/java/users/repository/document/DocumentService.java" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/static/ce" />
-      <recent name="$PROJECT_DIR$/src/main/resources" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
-      <recent name="$PROJECT_DIR$/src/main/java/Plataform/Entities/NotInstalledChaincode" />
-      <recent name="$PROJECT_DIR$/src/main/Chaincode" />
+      <recent name="$PROJECT_DIR$/core/src/main/java" />
+      <recent name="$PROJECT_DIR$/client/src/main/resources/static/css" />
+      <recent name="$PROJECT_DIR$/client/src/main/resources/static/js" />
+      <recent name="$PROJECT_DIR$/client/src/main/resources/templates" />
+      <recent name="$PROJECT_DIR$/client/src/main/resources/public" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="users.repository.document.model" />
+      <recent name="cryptography" />
+      <recent name="service" />
+      <recent name="utils" />
       <recent name="Plataform.Entities.NotInstalledChaincode" />
-      <recent name="Plataform" />
-      <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/fallback" />
       <recent name="$PROJECT_DIR$/src/main/resources/chaincode" />
       <recent name="$PROJECT_DIR$/src/main/Chaincode" />
       <recent name="$PROJECT_DIR$/Platform" />
@@ -255,7 +386,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Remote.client-remote">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -291,6 +422,34 @@
       <module name="" />
       <envs />
     </configuration>
+    <configuration name="bo" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="Plataform.WebService" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="backoffice" />
+      <envs />
+    </configuration>
+    <configuration name="client" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="users.ClientStarter" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="client" />
+      <envs />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -311,12 +470,48 @@
       <envs />
       <patterns />
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="MTChain" />
+      <envs />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+    </configuration>
+    <configuration name="bo-remote" type="Remote" factoryName="Remote">
+      <module name="backoffice" />
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="8000" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="8000" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+    </configuration>
+    <configuration name="client-remote" type="Remote" factoryName="Remote">
+      <module name="client" />
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="8000" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="8000" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -351,6 +546,13 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Application.bo" />
+      <item index="1" class="java.lang.String" itemvalue="Application.client" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Unnamed" />
+      <item index="3" class="java.lang.String" itemvalue="Remote.client-remote" />
+      <item index="4" class="java.lang.String" itemvalue="Remote.bo-remote" />
+    </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -382,11 +584,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="960" y="24" width="1922" height="1047" extended-state="6" />
+    <frame x="0" y="-4" width="1920" height="1039" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29839572" sideWeight="0.50625" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -396,26 +599,27 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38716578" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40106952" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3187166" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29839572" sideWeight="0.49375" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2053476" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12708333" sideWeight="0.49441788" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15260416" sideWeight="0.49441788" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1625" sideWeight="0.50558215" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21497326" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -428,448 +632,438 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Plataform/FireStarter.java</url>
-          <line>131</line>
+          <url>file://$PROJECT_DIR$/backoffice/src/main/java/com/multicert/mtchain/backoffice/Entities/Chaincodes/ChaincodesImpl.java</url>
+          <line>18</line>
           <properties />
-          <option name="timeStamp" value="83" />
+          <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backoffice/src/main/java/com/multicert/mtchain/backoffice/Security/CustomAuthenticationProvider.java</url>
+          <line>30</line>
+          <properties />
+          <option name="timeStamp" value="162" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Plataform/Application/Blockchain.java</url>
+          <line>542</line>
+          <properties />
+          <option name="timeStamp" value="173" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Plataform/Application/Blockchain.java</url>
+          <line>501</line>
+          <properties />
+          <option name="timeStamp" value="174" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="86" />
+      <option name="time" value="197" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/JSON/BlockchainObjectsList.jso">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="7" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/IUsersService.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/Chaincodes/Model/ChaincodeRepository.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Application/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="73" column="59" lean-forward="false" selection-start-line="73" selection-start-column="59" selection-end-line="73" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Application/Logs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/chaincode/cc2.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/Chaincodes/Model/NotInstalledChaincodes.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/NotInstalledChaincode/Model/Chaincodes.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/Chaincodes/ChaincodesImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/NotInstalledChaincode/NotChaincodesImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/Chaincodes/Model/Chaincodes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="45" column="5" lean-forward="true" selection-start-line="36" selection-start-column="4" selection-end-line="45" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/NotInstalledChaincode/NotChaincodeRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/NotInstalledChaincode/Model/NotInstalledChaincodes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="73" column="21" lean-forward="false" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/Chaincodes/ChaincodeRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="65" lean-forward="false" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/Users/UsersService.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Application/FileReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/import.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hyperledger/fabric-sdk-java/fabric-sdk-java/1.1.0-SNAPSHOT/fabric-sdk-java-1.1.0-SNAPSHOT-sources.jar!/org/hyperledger/fabric/sdk/NetworkConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="1223" column="0" lean-forward="false" selection-start-line="1223" selection-start-column="0" selection-end-line="1223" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Application/Blockchain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="67" column="49" lean-forward="false" selection-start-line="67" selection-start-column="49" selection-end-line="67" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/FireStarter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding>
-            <element signature="e#2417#2418#0" expanded="false" />
-            <element signature="e#2453#2454#0" expanded="false" />
-            <element signature="method#initializeHyperledgerConnection#0;class#FireStarter#0" expanded="false" />
-            <element signature="method#getChaincode#0;class#FireStarter#0" expanded="false" />
-            <element signature="method#populateBlockchainNodeList#0;class#FireStarter#0" expanded="false" />
-            <element signature="e#5140#5141#0" expanded="false" />
-            <element signature="e#5182#5183#0" expanded="false" />
-            <element signature="method#getChaincodeList#0;class#FireStarter#0" expanded="false" />
-            <element signature="e#9064#9065#0" expanded="false" />
-            <element signature="e#9091#9092#0" expanded="false" />
-            <element signature="e#9131#9132#0" expanded="false" />
-            <element signature="e#9163#9164#0" expanded="false" />
-            <element signature="e#9193#9194#0" expanded="false" />
-            <element signature="e#9219#9220#0" expanded="false" />
-            <element signature="e#9257#9258#0" expanded="false" />
-            <element signature="e#9287#9288#0" expanded="false" />
-            <element signature="e#9318#9319#0" expanded="false" />
-            <element signature="e#9345#9346#0" expanded="false" />
-            <element signature="e#9385#9386#0" expanded="false" />
-            <element signature="e#9417#9418#0" expanded="false" />
-            <element signature="e#9451#9452#0" expanded="false" />
-            <element signature="e#9481#9482#0" expanded="false" />
-            <element signature="e#9527#9528#0" expanded="false" />
-            <element signature="e#9565#9566#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/Users/Model/Users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="59" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2701#2702#0" expanded="false" />
-            <element signature="e#2743#2744#0" expanded="false" />
-            <element signature="e#2774#2775#0" expanded="false" />
-            <element signature="e#2802#2803#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/Users/UsersRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="74" lean-forward="false" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/Admin/AdminServices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/Users/UsersServices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="15" column="44" lean-forward="true" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/Admin/AdminRepository.java">
+    <entry file="file://$PROJECT_DIR$/client/src/main/java/com/multicert/mtchain/users/ClientStarter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/network-config-tls.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="223" column="28" lean-forward="false" selection-start-line="223" selection-start-column="21" selection-end-line="223" selection-end-column="28" />
+          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tomcat-web.xml">
+    <entry file="file://$PROJECT_DIR$/client/src/main/java/com/multicert/mtchain/users/service/Initializator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="356">
+          <caret line="36" column="43" lean-forward="false" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.0.4.RELEASE/spring-security-core-5.0.4.RELEASE.jar!/org/springframework/security/authentication/AuthenticationProvider.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/WebService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="class#WebService#0" expanded="false" />
-            <element signature="class#ContextRefreshedListener#0" expanded="false" />
-            <element signature="class#EventHolderBean#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/ce/css/sb-admin.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-security.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+    <entry file="file://$PROJECT_DIR$/client/src/main/java/com/multicert/mtchain/users/repository/users/UsersServices.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-          <folding />
+          <caret line="22" column="85" lean-forward="false" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="85" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/backoffice/src/main/java/com/multicert/mtchain/backoffice/Security/SecurityController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-          <folding />
+        <state relative-caret-position="85">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Security/SecSecurityConfig.java">
+    <entry file="file://$PROJECT_DIR$/backoffice/src/main/java/com/multicert/mtchain/backoffice/Entities/Users/UsersServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/FireStarter.java" />
+    <entry file="file://$PROJECT_DIR$/backoffice/src/main/java/com/multicert/mtchain/backoffice/Application/ApplicationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/main/java/com/multicert/mtchain/users/repository/app/AppRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="49" lean-forward="false" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Application/Blockchain.java" />
+    <entry file="file://$PROJECT_DIR$/client/src/main/java/com/multicert/mtchain/users/repository/users/Model/Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="126" column="0" lean-forward="false" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fallback/Blockchain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="67" lean-forward="true" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/main/java/com/multicert/mtchain/users/repository/users/UsersRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="7" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/main/java/com/multicert/mtchain/users/repository/app/AppController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MTChain.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#800#801#0" expanded="false" />
-            <element signature="e#823#824#0" expanded="false" />
-          </folding>
+          <caret line="129" column="108" lean-forward="true" selection-start-line="129" selection-start-column="108" selection-end-line="129" selection-end-column="108" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/Admin/Model/AdminEntity.java">
+    <entry file="file://$PROJECT_DIR$/client/src/main/java/com/multicert/mtchain/users/repository/blockchain/Model/Chaincodes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="53" column="5" lean-forward="false" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+        <state relative-caret-position="493">
+          <caret line="33" column="16" lean-forward="false" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Security/SecurityController.java">
+    <entry file="file://$PROJECT_DIR$/client/src/main/java/com/multicert/mtchain/users/repository/blockchain/ChaincodeRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+        <state relative-caret-position="119">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userform.html">
+    <entry file="file://$PROJECT_DIR$/backoffice/src/main/java/com/multicert/mtchain/backoffice/WebService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="46" column="31" lean-forward="false" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="31" />
+        <state relative-caret-position="374">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backoffice/src/main/Chaincode/cc2.go" />
+    <entry file="file://$PROJECT_DIR$/client/src/main/java/com/multicert/mtchain/users/repository/blockchain/BlockchainInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backoffice/src/main/java/com/multicert/mtchain/backoffice/Entities/Chaincodes/ChaincodesImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="36" column="13" lean-forward="false" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
+    <entry file="file://$PROJECT_DIR$/backoffice/src/main/java/com/multicert/mtchain/backoffice/Entities/Chaincodes/ChaincodesControllers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="14" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="14" />
-          <folding />
+        <state relative-caret-position="391">
+          <caret line="37" column="41" lean-forward="false" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/chaincode.html">
+    <entry file="file://$PROJECT_DIR$/backoffice/src/main/java/com/multicert/mtchain/backoffice/Entities/Chaincodes/Model/Chaincodes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="125" column="10" lean-forward="false" selection-start-line="125" selection-start-column="10" selection-end-line="125" selection-end-column="10" />
-          <folding />
+        <state relative-caret-position="442">
+          <caret line="42" column="17" lean-forward="false" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/editchaincode.html">
+    <entry file="file://$PROJECT_DIR$/client/src/main/java/com/multicert/mtchain/users/repository/blockchain/ChaincodeService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="61" column="31" lean-forward="false" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="31" />
-          <folding />
+        <state relative-caret-position="357">
+          <caret line="21" column="19" lean-forward="false" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="26" column="57" lean-forward="false" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Cryptography/Certification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="53" column="19" lean-forward="false" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/Admin/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/sb-admin-datatables.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="62" column="32" lean-forward="false" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Security/CustomAuthenticationProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="53" column="26" lean-forward="false" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
-          <folding>
-            <element signature="e#2292#2293#0" expanded="false" />
-            <element signature="e#2327#2328#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Application/ApplicationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="40" column="44" lean-forward="false" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#indexPage#0;class#ApplicationController#0" expanded="false" />
-            <element signature="method#refreshNetworkLink#0;class#ApplicationController#0" expanded="false" />
-            <element signature="method#chaincodePage#0;class#ApplicationController#0" expanded="false" />
-            <element signature="method#queryBlockchain#0;class#ApplicationController#0" expanded="false" />
-            <element signature="method#startBlockchain#0;class#ApplicationController#0" expanded="false" />
-            <element signature="method#signBlockchain#0;class#ApplicationController#0" expanded="false" />
-            <element signature="method#endBlockchain#0;class#ApplicationController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/NotInstalledChaincode/NotInstalledChaincodesControllers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-720">
-          <caret line="48" column="39" lean-forward="false" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
-          <folding>
-            <element signature="method#getNotChaincodeList#0;class#NotInstalledChaincodesControllers#0" expanded="false" />
-            <element signature="method#formatList#0;class#NotInstalledChaincodesControllers#0" expanded="false" />
-            <element signature="e#3903#3904#0" expanded="false" />
-            <element signature="e#3961#3962#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/Chaincodes/ChaincodesControllers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-210">
-          <caret line="86" column="43" lean-forward="false" selection-start-line="86" selection-start-column="43" selection-end-line="86" selection-end-column="43" />
-          <folding>
-            <element signature="method#formatList#0;class#ChaincodesControllers#0" expanded="false" />
-            <element signature="class#Version#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-security.xml">
+    <entry file="file://$PROJECT_DIR$/core/core.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="18" column="56" lean-forward="false" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="35" lean-forward="false" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Plataform/Entities/Users/EntityControllers.java">
+    <entry file="file://$PROJECT_DIR$/client/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+        <state relative-caret-position="340">
+          <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="46" column="32" lean-forward="false" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
+        <state relative-caret-position="17">
+          <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backoffice/src/main/java/com/multicert/mtchain/backoffice/Entities/NotInstalledChaincode/NotInstalledChaincodesControllers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="109" column="13" lean-forward="false" selection-start-line="109" selection-start-column="13" selection-end-line="109" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/multicert/mtchain/core/utils/FileReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="73" column="62" lean-forward="false" selection-start-line="73" selection-start-column="62" selection-end-line="73" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/main/java/com/multicert/mtchain/users/utils/FileReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-291">
+          <caret line="73" column="62" lean-forward="false" selection-start-line="73" selection-start-column="62" selection-end-line="73" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backoffice/src/main/java/com/multicert/mtchain/backoffice/Application/FileReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="73" column="61" lean-forward="false" selection-start-line="73" selection-start-column="61" selection-end-line="73" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.4.RELEASE/spring-web-5.0.4.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="208" column="0" lean-forward="false" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backoffice/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="43" column="34" lean-forward="false" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backoffice/src/main/java/com/multicert/mtchain/backoffice/FireStarter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/multicert/mtchain/core/utils/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/main/resources/static/css/agency.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="14" lean-forward="false" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/main/resources/static/css/resume.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2635">
+          <caret line="155" column="0" lean-forward="false" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backoffice/src/chaincode/cc2.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="33" lean-forward="false" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/main/java/com/multicert/mtchain/users/repository/document/DocumentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/main/java/com/multicert/mtchain/users/cryptography/Certification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/main/java/com/multicert/mtchain/users/repository/document/model/Document.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="211" column="0" lean-forward="false" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
           <folding>
-            <element signature="n#plugin#0;n#plugins#0;n#build#0;n#project#0;n#!!top" expanded="false" />
-            <element signature="n#resources#0;n#build#0;n#project#0;n#!!top" expanded="false" />
-            <element signature="n#repositories#0;n#project#0;n#!!top" expanded="false" />
+            <element signature="e#2057#2058#0" expanded="true" />
+            <element signature="e#2084#2085#0" expanded="true" />
+            <element signature="e#4719#4720#0" expanded="true" />
+            <element signature="e#4778#4779#0" expanded="true" />
           </folding>
         </state>
       </provider>
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/multicert/mtchain/core/Blockchain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="477" column="0" lean-forward="false" selection-start-line="477" selection-start-column="0" selection-end-line="477" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backoffice/src/main/resources/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backoffice/src/main/resources/templates/userform.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-645">
+          <caret line="63" column="83" lean-forward="true" selection-start-line="63" selection-start-column="83" selection-end-line="63" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backoffice/src/main/resources/templates/editchaincode.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-561">
+          <caret line="51" column="24" lean-forward="false" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backoffice/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3334">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/main/java/com/multicert/mtchain/users/service/ServiceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#generateSignatureHtml#0;class#ServiceController#0" expanded="false" />
+            <element signature="method#queryDocument#0;class#ServiceController#0" expanded="false" />
+            <element signature="method#queryDocumentSignatures#0;class#ServiceController#0" expanded="false" />
+            <element signature="method#getAllAppUsers#0;class#ServiceController#0" expanded="false" />
+            <element signature="class#DocumentMimic#0" expanded="false" />
+            <element signature="e#17667#17668#0" expanded="true" />
+            <element signature="e#17694#17695#0" expanded="true" />
+            <element signature="e#19619#19620#0" expanded="true" />
+            <element signature="e#19646#19647#0" expanded="true" />
+            <element signature="e#19686#19687#0" expanded="true" />
+            <element signature="e#19718#19719#0" expanded="true" />
+            <element signature="e#19754#19755#0" expanded="true" />
+            <element signature="e#19787#19788#0" expanded="true" />
+            <element signature="e#19838#19839#0" expanded="true" />
+            <element signature="e#19882#19883#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backoffice/src/main/resources/templates/chaincode.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backoffice/src/main/resources/templates/applicationform.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="54" column="120" lean-forward="true" selection-start-line="54" selection-start-column="120" selection-end-line="54" selection-end-column="120" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="362" column="0" lean-forward="false" selection-start-line="362" selection-start-column="0" selection-end-line="362" selection-end-column="0" />
+          <folding>
+            <element signature="n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#section#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#section#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/main/resources/static/js/signature-performer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="107" column="39" lean-forward="true" selection-start-line="107" selection-start-column="39" selection-end-line="107" selection-end-column="39" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>

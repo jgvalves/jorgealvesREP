@@ -6,11 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="MTChain" />
+        <module name="admin" />
+        <module name="backoffice" />
+        <module name="client" />
+        <module name="core" />
         <module name="wearewebappu" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="admin" target="1.8" />
+      <module name="backoffice" target="1.8" />
+      <module name="client" target="1.8" />
+      <module name="core" target="1.8" />
       <module name="MTChain" target="1.8" />
       <module name="Platform" target="1.8" />
     </bytecodeTargetLevel>

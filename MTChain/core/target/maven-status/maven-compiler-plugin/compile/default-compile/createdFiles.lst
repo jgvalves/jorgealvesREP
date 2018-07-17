@@ -1,0 +1,4 @@
+com/multicert/mtchain/core/utils/Utils.class
+com/multicert/mtchain/core/Blockchain.class
+com/multicert/mtchain/core/utils/Logs.class
+com/multicert/mtchain/core/utils/FileReader.class

@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MTChain.iml" filepath="$PROJECT_DIR$/MTChain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backoffice/backoffice.iml" filepath="$PROJECT_DIR$/backoffice/backoffice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/client/client.iml" filepath="$PROJECT_DIR$/client/client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
     </modules>
   </component>
 </project>

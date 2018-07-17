@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:sec="http://www.springframework.org/schema/security" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+    http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.2.xsd">
+
+
+	<bean id="customAuthenticationProvider"
+		  class="Plataform.Security.CustomAuthenticationProvider" />
+
+
+	<bean id="customX509AuthenticationFilter"
+		  class="org.springframework.users.security.web.authentication.preauth.x509.X509AuthenticationFilter">
+		<property name="authenticationManager" ref="authenticationManager" />
+	</bean>
+
+
+	<sec:authentication-manager id="authenticationManager">
+		<sec:authentication-provider ref="customAuthenticationProvider" />
+	</sec:authentication-manager>
+
+
+	<sec:http auto-config="true" use-expressions="true"
+			  authentication-manager-ref="authenticationManager">
+
+        <!--<sec:csrf disabled="true"/>-->
+
+		<!-- For all -->
+		<!--<sec:intercept-url pattern="/login" access="permitAll()" />-->
+
+		<!-- For Pre AUTH -->
+		<!--<sec:intercept-url pattern="/login/protected/**" access="isAuthenticated()" />-->
+
+		<sec:intercept-url pattern="/static/**" access="permitAll()" />
+		<sec:intercept-url pattern="/public/**" access="permitAll()" />
+
+		<!-- Error URLs-->
+        <sec:intercept-url pattern="/**" access="permitAll"/>
+        <!--<sec:intercept-url pattern="/**" access="isAuthenticated()"/>-->
+
+
+
+		<!-- For all authenticated-->
+		<!--<sec:intercept-url pattern="/index*" access="hasAnyRole('ADMIN','OPERATOR', 'SECURITY_OPERATOR')" />-->
+		<!--<sec:intercept-url pattern="/chaincode*" access="hasAnyRole('ADMIN','OPERATOR', 'SECURITY_OPERATOR')" />-->
+
+		<sec:form-login
+				login-page="/login"
+				default-target-url="/admin/index"
+				always-use-default-target="true"
+				authentication-failure-url="/error"
+		/>
+        <!--<sec:logout logout-url="/logout" delete-cookies="JSESSIONID" logout-success-url="/login"/>-->
+		<!--<sec:csrf />-->
+		<!--<sec:access-denied-handler error-page="/error" />-->
+
+		<sec:custom-filter ref="customX509AuthenticationFilter" position="X509_FILTER" />
+
+
+	</sec:http>
+
+
+</beans>
